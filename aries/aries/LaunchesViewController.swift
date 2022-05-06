@@ -6,19 +6,37 @@
 //
 
 import UIKit
+import Alamofire
 
 class LaunchesViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    var launches: [String] = ["Rocket 1", "Rocket 2", "Rocket 3"]
+    var launches: [String] = []
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+
+        fetchLaunches()
+    }
+
+    public func fetchLaunches() {
+
+        AF.request("https://api.spacexdata.com/v4/launches/upcoming").responseDecodable(of: [Launch].self) { response in
+            debugPrint("Response: \(response.description)")
+
+            if let upcomingLaunches = response.value {
+                print(upcomingLaunches)
+                for launch in upcomingLaunches {
+                    self.launches.append(launch.name)
+                }
+                self.tableView.reloadData()
+            }
+        }
     }
 
 
