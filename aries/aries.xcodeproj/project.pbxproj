@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		3EDD731E28256867000FAFD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD731D28256867000FAFD8 /* AppDelegate.swift */; };
 		3EDD732028256867000FAFD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD731F28256867000FAFD8 /* SceneDelegate.swift */; };
-		3EDD732228256867000FAFD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD732128256867000FAFD8 /* ViewController.swift */; };
+		3EDD732228256867000FAFD8 /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD732128256867000FAFD8 /* LaunchesViewController.swift */; };
 		3EDD732528256867000FAFD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD732328256867000FAFD8 /* Main.storyboard */; };
 		3EDD73272825686A000FAFD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD73262825686A000FAFD8 /* Assets.xcassets */; };
 		3EDD732A2825686A000FAFD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD73282825686A000FAFD8 /* LaunchScreen.storyboard */; };
 		3EDD73352825686A000FAFD8 /* ariesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD73342825686A000FAFD8 /* ariesTests.swift */; };
 		3EDD733F2825686A000FAFD8 /* ariesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD733E2825686A000FAFD8 /* ariesUITests.swift */; };
 		3EDD73412825686A000FAFD8 /* ariesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD73402825686A000FAFD8 /* ariesUITestsLaunchTests.swift */; };
+		3EDD734E28256E3B000FAFD8 /* LaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD734D28256E3B000FAFD8 /* LaunchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		3EDD731A28256867000FAFD8 /* aries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDD731D28256867000FAFD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EDD731F28256867000FAFD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3EDD732128256867000FAFD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3EDD732128256867000FAFD8 /* LaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewController.swift; sourceTree = "<group>"; };
 		3EDD732428256867000FAFD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EDD73262825686A000FAFD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EDD73292825686A000FAFD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		3EDD733A2825686A000FAFD8 /* ariesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ariesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDD733E2825686A000FAFD8 /* ariesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ariesUITests.swift; sourceTree = "<group>"; };
 		3EDD73402825686A000FAFD8 /* ariesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ariesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3EDD734D28256E3B000FAFD8 /* LaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,8 @@
 			children = (
 				3EDD731D28256867000FAFD8 /* AppDelegate.swift */,
 				3EDD731F28256867000FAFD8 /* SceneDelegate.swift */,
-				3EDD732128256867000FAFD8 /* ViewController.swift */,
+				3EDD732128256867000FAFD8 /* LaunchesViewController.swift */,
+				3EDD734D28256E3B000FAFD8 /* LaunchCell.swift */,
 				3EDD732328256867000FAFD8 /* Main.storyboard */,
 				3EDD73262825686A000FAFD8 /* Assets.xcassets */,
 				3EDD73282825686A000FAFD8 /* LaunchScreen.storyboard */,
@@ -258,8 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EDD732228256867000FAFD8 /* ViewController.swift in Sources */,
+				3EDD732228256867000FAFD8 /* LaunchesViewController.swift in Sources */,
 				3EDD731E28256867000FAFD8 /* AppDelegate.swift in Sources */,
+				3EDD734E28256E3B000FAFD8 /* LaunchCell.swift in Sources */,
 				3EDD732028256867000FAFD8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
