@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct UpcomingLaunches: Codable {
+    var upcomingLaunches: Launch
+}
+
+struct Launch: Codable {
+    let name: String
+}
