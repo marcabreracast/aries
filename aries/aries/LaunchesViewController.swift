@@ -26,7 +26,7 @@ class LaunchesViewController: UIViewController {
 
     public func fetchLaunches() {
 
-        AF.request("https://api.spacexdata.com/v4/launches/upcoming").responseDecodable(of: [Launch].self) { response in
+        AF.request("https://api.spacexdata.com/v4/launches").responseDecodable(of: [Launch].self) { response in
             debugPrint("Response: \(response.description)")
 
             if let upcomingLaunches = response.value {
