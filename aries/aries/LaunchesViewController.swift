@@ -30,7 +30,6 @@ class LaunchesViewController: UIViewController {
             debugPrint("Response: \(response.description)")
 
             if let upcomingLaunches = response.value {
-                print(upcomingLaunches)
                 for launch in upcomingLaunches {
                     self.launches.append(launch.name)
                 }
