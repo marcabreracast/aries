@@ -14,7 +14,6 @@ class LaunchesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    var launches: [Launch] = [] // This will be removed once the filtering is implementes
     var pastLaunches: [Launch] = []
     var upcomingLaunches: [Launch] = []
     
@@ -35,8 +34,6 @@ class LaunchesViewController: UIViewController {
 
             if let launches = response.value {
                 for launch in launches {
-                    self.launches.append(launch)
-                    
                     if launch.upcoming {
                         self.upcomingLaunches.append(launch)
                     } else {
