@@ -20,28 +20,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="launchCell" id="3za-Ae-Dqk" customClass="LaunchCell" customModule="aries" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="launchCell" rowHeight="81" id="3za-Ae-Dqk" customClass="LaunchCell" customModule="aries" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3za-Ae-Dqk" id="MbR-zJ-3LX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vD-pB-vQs">
-                                                    <rect key="frame" x="30" y="11" width="348" height="21"/>
+                                                    <rect key="frame" x="20" y="16" width="374" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K73-6V-hlU">
+                                                    <rect key="frame" x="20" y="49.5" width="374" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGray2Color"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="3vD-pB-vQs" secondAttribute="trailing" constant="16" id="VPZ-z1-cvR"/>
-                                                <constraint firstItem="3vD-pB-vQs" firstAttribute="top" secondItem="MbR-zJ-3LX" secondAttribute="topMargin" id="sHh-aK-bMv"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="3vD-pB-vQs" secondAttribute="bottom" id="uo2-Iu-UPl"/>
-                                                <constraint firstItem="3vD-pB-vQs" firstAttribute="leading" secondItem="MbR-zJ-3LX" secondAttribute="leadingMargin" constant="10" id="ypa-wS-dPm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3vD-pB-vQs" secondAttribute="trailing" id="23L-1m-gve"/>
+                                                <constraint firstItem="K73-6V-hlU" firstAttribute="leading" secondItem="MbR-zJ-3LX" secondAttribute="leadingMargin" id="C43-c2-MER"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="K73-6V-hlU" secondAttribute="trailing" id="Hx2-Px-ThE"/>
+                                                <constraint firstItem="3vD-pB-vQs" firstAttribute="leading" secondItem="MbR-zJ-3LX" secondAttribute="leadingMargin" id="IOi-c2-SFl"/>
+                                                <constraint firstItem="3vD-pB-vQs" firstAttribute="top" secondItem="MbR-zJ-3LX" secondAttribute="topMargin" constant="5" id="IU1-5D-tGp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="K73-6V-hlU" secondAttribute="bottom" id="Vne-K2-gOy"/>
+                                                <constraint firstItem="K73-6V-hlU" firstAttribute="top" secondItem="3vD-pB-vQs" secondAttribute="bottom" constant="13" id="prw-Q5-Wcq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="K73-6V-hlU" id="3s2-62-hdf"/>
                                             <outlet property="nameLabel" destination="3vD-pB-vQs" id="fJM-3v-JUk"/>
                                         </connections>
                                     </tableViewCell>
@@ -69,6 +79,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

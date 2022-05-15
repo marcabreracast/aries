@@ -16,7 +16,7 @@ static func formatShortUnixDate(date: Double) -> String {
     dateFormatter.calendar = Calendar(identifier: .iso8601)
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000XXXXX"
     dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
-    dateFormatter.dateStyle = .short
+    dateFormatter.dateStyle = .medium
 
     let dateFormatted = dateFormatter.string(from: dateUnformatted)
     return dateFormatted

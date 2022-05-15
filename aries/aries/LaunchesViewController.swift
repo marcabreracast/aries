@@ -34,8 +34,6 @@ class LaunchesViewController: UIViewController {
             if let launches = response.value {
                 for launch in launches {
                     self.launches.append(launch)
-                    let launchDate = DateHelper.formatShortUnixDate(date: launch.dateUnix)
-                    print(launchDate)
                     
                     if launch.upcoming {
                         self.upcomingLaunches.append(launch)

@@ -11,12 +11,14 @@ import UIKit
 class LaunchCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     // MARK: - Properties
     
     // MARK: - Methods
     func setup(model: Launch) {
         nameLabel.text = model.name
+        dateLabel.text = DateHelper.formatShortUnixDate(date: model.dateUnix)
     }
     
     
