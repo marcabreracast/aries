@@ -28,36 +28,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vD-pB-vQs">
-                                                    <rect key="frame" x="30" y="11" width="41.5" height="21"/>
+                                                    <rect key="frame" x="30" y="11" width="348" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnk-ao-3Ro">
-                                                    <rect key="frame" x="359" y="9" width="25" height="25"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="25" id="P82-iM-jJ8"/>
-                                                        <constraint firstAttribute="height" constant="25" id="R6A-hF-XwE"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain">
-                                                        <backgroundConfiguration key="background" image="star" catalog="system"/>
-                                                    </buttonConfiguration>
-                                                    <connections>
-                                                        <action selector="favoriteButtonTapped:" destination="3za-Ae-Dqk" eventType="touchUpInside" id="cSJ-7g-DOF"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mnk-ao-3Ro" firstAttribute="centerY" secondItem="3vD-pB-vQs" secondAttribute="centerY" id="C03-Zw-5D4"/>
-                                                <constraint firstItem="mnk-ao-3Ro" firstAttribute="trailing" secondItem="MbR-zJ-3LX" secondAttribute="trailingMargin" constant="-10" id="cx8-bx-7S8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3vD-pB-vQs" secondAttribute="trailing" constant="16" id="VPZ-z1-cvR"/>
                                                 <constraint firstItem="3vD-pB-vQs" firstAttribute="top" secondItem="MbR-zJ-3LX" secondAttribute="topMargin" id="sHh-aK-bMv"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="3vD-pB-vQs" secondAttribute="bottom" id="uo2-Iu-UPl"/>
                                                 <constraint firstItem="3vD-pB-vQs" firstAttribute="leading" secondItem="MbR-zJ-3LX" secondAttribute="leadingMargin" constant="10" id="ypa-wS-dPm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="favoriteButton" destination="mnk-ao-3Ro" id="oi2-e0-YNc"/>
                                             <outlet property="nameLabel" destination="3vD-pB-vQs" id="fJM-3v-JUk"/>
                                         </connections>
                                     </tableViewCell>
@@ -83,7 +67,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
