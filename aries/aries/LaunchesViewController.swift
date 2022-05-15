@@ -13,7 +13,9 @@ class LaunchesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    var launches: [String] = []
+    var launches: [Launch] = [] // This will be removed once the filtering is implementes
+    var pastLaunches: [Launch] = []
+    var upcomingLaunches: [Launch] = []
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -27,11 +29,19 @@ class LaunchesViewController: UIViewController {
     public func fetchLaunches() {
 
         AF.request("https://api.spacexdata.com/v4/launches").responseDecodable(of: [Launch].self) { response in
-            debugPrint("Response: \(response.description)")
+         //   debugPrint("Response: \(response.description)")
 
-            if let upcomingLaunches = response.value {
-                for launch in upcomingLaunches {
-                    self.launches.append(launch.name)
+            if let launches = response.value {
+                for launch in launches {
+                    self.launches.append(launch)
+                    let launchDate = DateHelper.formatISODate(date: launch.dateLocal)
+                    
+                    if launch.upcoming {
+                        self.upcomingLaunches.append(launch)
+                    } else {
+                        self.pastLaunches.append(launch)
+                    }
+
                 }
                 self.tableView.reloadData()
             }
@@ -44,9 +54,10 @@ class LaunchesViewController: UIViewController {
 // MARK: - Table View Delegate
 extension LaunchesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "launchCell", for: indexPath) as! LaunchCell
         
-        cell.nameLabel.text = launches[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "launchCell", for: indexPath) as! LaunchCell
+        cell.setup(model: launches[indexPath.row])
+        
         return cell
     }
 }
