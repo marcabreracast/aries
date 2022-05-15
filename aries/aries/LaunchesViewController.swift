@@ -29,12 +29,13 @@ class LaunchesViewController: UIViewController {
     public func fetchLaunches() {
 
         AF.request("https://api.spacexdata.com/v4/launches").responseDecodable(of: [Launch].self) { response in
-         //   debugPrint("Response: \(response.description)")
+            debugPrint("Response: \(response.description)")
 
             if let launches = response.value {
                 for launch in launches {
                     self.launches.append(launch)
-                    let launchDate = DateHelper.formatISODate(date: launch.dateLocal)
+                    let launchDate = DateHelper.formatShortUnixDate(date: launch.dateUnix)
+                    print(launchDate)
                     
                     if launch.upcoming {
                         self.upcomingLaunches.append(launch)

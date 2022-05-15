@@ -9,12 +9,12 @@ import Foundation
 
 struct Launch: Codable {
     let name: String
-    let dateLocal: String
+    let dateUnix: Double
     let upcoming: Bool
 
     enum CodingKeys: String, CodingKey {
         case name
-        case dateLocal = "date_local"
+        case dateUnix = "date_unix"
         case upcoming
     }
 }

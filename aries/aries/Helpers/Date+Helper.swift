@@ -9,13 +9,16 @@ import Foundation
 
 class DateHelper {
     
-    static func formatISODate(date: String) -> String {
-         let formatter = DateFormatter()
-         formatter.locale = Locale(identifier: "en_US_POSIX")
-         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-         guard let formattedDate = formatter.date(from: date) else { return ""}
-        
-        let date = formatter.string(from: formattedDate )
-        return date
+static func formatShortUnixDate(date: Double) -> String {
+    let dateFormatter = DateFormatter()
+    let dateUnformatted = Date(timeIntervalSince1970: date)
+    
+    dateFormatter.calendar = Calendar(identifier: .iso8601)
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000XXXXX"
+    dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+    dateFormatter.dateStyle = .short
+
+    let dateFormatted = dateFormatter.string(from: dateUnformatted)
+    return dateFormatted
     }
 }
