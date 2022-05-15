@@ -10,6 +10,7 @@ import Alamofire
 
 class LaunchesViewController: UIViewController {
     // MARK: - IBOutlets
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
@@ -26,6 +27,7 @@ class LaunchesViewController: UIViewController {
         fetchLaunches()
     }
 
+    // MARK: - Private Methods
     public func fetchLaunches() {
 
         AF.request("https://api.spacexdata.com/v4/launches").responseDecodable(of: [Launch].self) { response in
@@ -46,6 +48,12 @@ class LaunchesViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: - IBActions
+    @IBAction func segmentedControlTapped(_ sender: Any) {
+        self.tableView.reloadData()
+    }
+    
 
 
 }
@@ -55,7 +63,16 @@ extension LaunchesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "launchCell", for: indexPath) as! LaunchCell
-        cell.setup(model: launches[indexPath.row])
+        let selectedIndex = self.segmentedControl.selectedSegmentIndex
+        switch selectedIndex {
+        case 0:
+            cell.setup(model: upcomingLaunches[indexPath.row])
+        case 1:
+            cell.setup(model: pastLaunches[indexPath.row])
+        default:
+            break
+        }
+
         
         return cell
     }
@@ -64,7 +81,17 @@ extension LaunchesViewController: UITableViewDelegate {
 // MARK: - Table View Data Source
 extension LaunchesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return launches.count
+        
+        let selectedIndex = self.segmentedControl.selectedSegmentIndex
+        
+        switch selectedIndex {
+        case 0:
+            return upcomingLaunches.count
+        case 1:
+            return pastLaunches.count
+        default:
+            return 0
+        }
     }
 }
  

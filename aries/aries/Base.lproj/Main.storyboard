@@ -16,8 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bY8-Ep-sAs">
+                                <rect key="frame" x="124.5" y="60" width="165" height="32"/>
+                                <segments>
+                                    <segment title="Upcoming"/>
+                                    <segment title="Past"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="3dP-q9-ecz"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PPY-Zz-thc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="107" width="414" height="789"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="launchCell" rowHeight="81" id="3za-Ae-Dqk" customClass="LaunchCell" customModule="aries" customModuleProvider="target">
@@ -62,12 +72,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="PPY-Zz-thc" secondAttribute="bottom" id="0b3-DY-JB9"/>
+                            <constraint firstItem="bY8-Ep-sAs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Zn-VV-9aq"/>
                             <constraint firstItem="PPY-Zz-thc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7S6-rh-apQ"/>
+                            <constraint firstItem="bY8-Ep-sAs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="M3j-DU-TTq"/>
                             <constraint firstItem="PPY-Zz-thc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="egU-44-6Zh"/>
-                            <constraint firstItem="PPY-Zz-thc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xkJ-hU-F01"/>
+                            <constraint firstItem="PPY-Zz-thc" firstAttribute="top" secondItem="bY8-Ep-sAs" secondAttribute="bottom" constant="16" id="u2e-XO-tlb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="segmentedControl" destination="bY8-Ep-sAs" id="Bq7-Kb-48L"/>
                         <outlet property="tableView" destination="PPY-Zz-thc" id="OGY-49-phi"/>
                     </connections>
                 </viewController>
