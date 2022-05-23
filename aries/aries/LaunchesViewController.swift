@@ -80,7 +80,7 @@ extension LaunchesViewController: UITableViewDelegate {
         
         return cell
     }
-    q
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // We have to make sure that depending on the section of the segmented control selected, the info
         // can come from the upcoming or past arraysgi
