@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5C64962826D5F900831887 /* Date+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C64952826D5F900831887 /* Date+Helper.swift */; };
 		3EDD731E28256867000FAFD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD731D28256867000FAFD8 /* AppDelegate.swift */; };
 		3EDD732028256867000FAFD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD731F28256867000FAFD8 /* SceneDelegate.swift */; };
-		3EDD732228256867000FAFD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD732128256867000FAFD8 /* ViewController.swift */; };
+		3EDD732228256867000FAFD8 /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD732128256867000FAFD8 /* LaunchesViewController.swift */; };
 		3EDD732528256867000FAFD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD732328256867000FAFD8 /* Main.storyboard */; };
 		3EDD73272825686A000FAFD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD73262825686A000FAFD8 /* Assets.xcassets */; };
 		3EDD732A2825686A000FAFD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EDD73282825686A000FAFD8 /* LaunchScreen.storyboard */; };
 		3EDD73352825686A000FAFD8 /* ariesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD73342825686A000FAFD8 /* ariesTests.swift */; };
 		3EDD733F2825686A000FAFD8 /* ariesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD733E2825686A000FAFD8 /* ariesUITests.swift */; };
 		3EDD73412825686A000FAFD8 /* ariesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD73402825686A000FAFD8 /* ariesUITestsLaunchTests.swift */; };
+		3EDD734E28256E3B000FAFD8 /* LaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD734D28256E3B000FAFD8 /* LaunchCell.swift */; };
+		3EDD7351282575CB000FAFD8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3EDD7350282575CB000FAFD8 /* Alamofire */; };
+		3EDD7353282576E9000FAFD8 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD7352282576E9000FAFD8 /* Launch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E5C64952826D5F900831887 /* Date+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helper.swift"; sourceTree = "<group>"; };
 		3EDD731A28256867000FAFD8 /* aries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDD731D28256867000FAFD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EDD731F28256867000FAFD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3EDD732128256867000FAFD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3EDD732128256867000FAFD8 /* LaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewController.swift; sourceTree = "<group>"; };
 		3EDD732428256867000FAFD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EDD73262825686A000FAFD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EDD73292825686A000FAFD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,8 @@
 		3EDD733A2825686A000FAFD8 /* ariesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ariesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDD733E2825686A000FAFD8 /* ariesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ariesUITests.swift; sourceTree = "<group>"; };
 		3EDD73402825686A000FAFD8 /* ariesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ariesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3EDD734D28256E3B000FAFD8 /* LaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCell.swift; sourceTree = "<group>"; };
+		3EDD7352282576E9000FAFD8 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EDD7351282575CB000FAFD8 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E5C64972826D7B700831887 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3E5C64952826D5F900831887 /* Date+Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		3EDD731128256867000FAFD8 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +115,16 @@
 		3EDD731C28256867000FAFD8 /* aries */ = {
 			isa = PBXGroup;
 			children = (
+				3E5C64972826D7B700831887 /* Helpers */,
 				3EDD731D28256867000FAFD8 /* AppDelegate.swift */,
 				3EDD731F28256867000FAFD8 /* SceneDelegate.swift */,
-				3EDD732128256867000FAFD8 /* ViewController.swift */,
+				3EDD732128256867000FAFD8 /* LaunchesViewController.swift */,
+				3EDD734D28256E3B000FAFD8 /* LaunchCell.swift */,
 				3EDD732328256867000FAFD8 /* Main.storyboard */,
 				3EDD73262825686A000FAFD8 /* Assets.xcassets */,
 				3EDD73282825686A000FAFD8 /* LaunchScreen.storyboard */,
 				3EDD732B2825686A000FAFD8 /* Info.plist */,
+				3EDD7352282576E9000FAFD8 /* Launch.swift */,
 			);
 			path = aries;
 			sourceTree = "<group>";
@@ -143,6 +162,9 @@
 			dependencies = (
 			);
 			name = aries;
+			packageProductDependencies = (
+				3EDD7350282575CB000FAFD8 /* Alamofire */,
+			);
 			productName = aries;
 			productReference = 3EDD731A28256867000FAFD8 /* aries.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +237,9 @@
 				Base,
 			);
 			mainGroup = 3EDD731128256867000FAFD8;
+			packageReferences = (
+				3EDD734F282575CB000FAFD8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 3EDD731B28256867000FAFD8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EDD732228256867000FAFD8 /* ViewController.swift in Sources */,
+				3EDD732228256867000FAFD8 /* LaunchesViewController.swift in Sources */,
 				3EDD731E28256867000FAFD8 /* AppDelegate.swift in Sources */,
+				3EDD734E28256E3B000FAFD8 /* LaunchCell.swift in Sources */,
+				3EDD7353282576E9000FAFD8 /* Launch.swift in Sources */,
 				3EDD732028256867000FAFD8 /* SceneDelegate.swift in Sources */,
+				3E5C64962826D5F900831887 /* Date+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +465,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XCCW4QCM5F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = aries/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -464,6 +493,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XCCW4QCM5F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = aries/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -596,6 +626,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3EDD734F282575CB000FAFD8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3EDD7350282575CB000FAFD8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3EDD734F282575CB000FAFD8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3EDD731228256867000FAFD8 /* Project object */;
 }
