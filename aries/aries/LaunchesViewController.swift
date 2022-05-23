@@ -69,7 +69,7 @@ extension LaunchesViewController: UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "launchCell", for: indexPath) as! LaunchCell
         cell.selectionStyle = .none
-g
+        
         let selectedIndex = self.segmentedControl.selectedSegmentIndex
         switch selectedIndex {
         case 0:
