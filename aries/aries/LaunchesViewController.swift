@@ -22,7 +22,8 @@ class LaunchesViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+        tableView.separatorColor = .white
+
         self.title = "Launches"
 
         fetchLaunches()
@@ -67,6 +68,8 @@ extension LaunchesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "launchCell", for: indexPath) as! LaunchCell
+        cell.selectionStyle = .none
+g
         let selectedIndex = self.segmentedControl.selectedSegmentIndex
         switch selectedIndex {
         case 0:
