@@ -30,7 +30,7 @@ class LaunchesViewController: UIViewController {
 
     // MARK: - Private Methods
     public func fetchLaunches() {
-
+        // Better to take request call out of this screen to make it more reusable
         AF.request("https://api.spacexdata.com/v4/launches").responseDecodable(of: [Launch].self) { response in
             debugPrint("Response: \(response.description)")
 
@@ -53,8 +53,13 @@ class LaunchesViewController: UIViewController {
         self.tableView.reloadData()
     }
     
-
-
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Send launch info here to Launch Info VC
+        if let vc = segue.destination as? LaunchInfoViewController, let launchInfo = sender as? Launch {
+            vc.launchInfo = launchInfo
+        }
+    }
 }
 
 // MARK: - Table View Delegate
@@ -75,9 +80,23 @@ extension LaunchesViewController: UITableViewDelegate {
         
         return cell
     }
-    
+    q
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToLaunchInfo", sender: nil)
+        // We have to make sure that depending on the section of the segmented control selected, the info
+        // can come from the upcoming or past arraysgi
+        let selectedIndex = self.segmentedControl.selectedSegmentIndex
+        var launch: Launch?
+
+        switch selectedIndex {
+        case 0:
+            launch = upcomingLaunches[indexPath.row]
+        case 1:
+            launch = pastLaunches[indexPath.row]
+        default:
+            break
+        }
+
+        performSegue(withIdentifier: "goToLaunchInfo", sender: launch)
     }
 }
 
