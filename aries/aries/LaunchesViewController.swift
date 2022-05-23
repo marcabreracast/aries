@@ -22,6 +22,8 @@ class LaunchesViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.title = "Launches"
 
         fetchLaunches()
     }
@@ -72,6 +74,10 @@ extension LaunchesViewController: UITableViewDelegate {
 
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToLaunchInfo", sender: nil)
     }
 }
 

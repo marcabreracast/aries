@@ -84,6 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E5B8FEB283BD3C30015B107 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3EDD734D28256E3B000FAFD8 /* LaunchCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3E5B8FEC283BD3DF0015B107 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3EDD7352282576E9000FAFD8 /* Launch.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3E5C64972826D7B700831887 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,16 +131,16 @@
 		3EDD731C28256867000FAFD8 /* aries */ = {
 			isa = PBXGroup;
 			children = (
+				3E5B8FEC283BD3DF0015B107 /* Models */,
+				3E5B8FEB283BD3C30015B107 /* Cells */,
 				3E5C64972826D7B700831887 /* Helpers */,
 				3EDD731D28256867000FAFD8 /* AppDelegate.swift */,
 				3EDD731F28256867000FAFD8 /* SceneDelegate.swift */,
 				3EDD732128256867000FAFD8 /* LaunchesViewController.swift */,
-				3EDD734D28256E3B000FAFD8 /* LaunchCell.swift */,
 				3EDD732328256867000FAFD8 /* Main.storyboard */,
 				3EDD73262825686A000FAFD8 /* Assets.xcassets */,
 				3EDD73282825686A000FAFD8 /* LaunchScreen.storyboard */,
 				3EDD732B2825686A000FAFD8 /* Info.plist */,
-				3EDD7352282576E9000FAFD8 /* Launch.swift */,
 			);
 			path = aries;
 			sourceTree = "<group>";
