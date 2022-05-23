@@ -20,7 +20,4 @@ class LaunchCell: UITableViewCell {
         nameLabel.text = model.name
         dateLabel.text = DateHelper.formatShortUnixDate(date: model.dateUnix)
     }
-    
-    
-    
 }
