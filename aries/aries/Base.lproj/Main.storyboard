@@ -113,7 +113,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djO-IB-JA0">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="292"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="462"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cd-Jo-3FG">
                                                 <rect key="frame" x="15" y="60" width="384" height="31.5"/>
@@ -136,15 +136,25 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coh-rN-wDe" customClass="YTPlayerView">
+                                                <rect key="frame" x="15" y="162" width="384" height="200"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="g4c-Bd-Nyb"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.2117646933" green="0.21960783" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="8Cd-Jo-3FG" firstAttribute="top" secondItem="djO-IB-JA0" secondAttribute="top" constant="60" id="1ld-1r-em0"/>
+                                            <constraint firstAttribute="bottom" secondItem="coh-rN-wDe" secondAttribute="bottom" constant="100" id="35H-HW-9lp"/>
+                                            <constraint firstAttribute="trailing" secondItem="coh-rN-wDe" secondAttribute="trailing" constant="15" id="57h-HP-Wxd"/>
+                                            <constraint firstItem="coh-rN-wDe" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="F9k-0Q-uOS"/>
                                             <constraint firstAttribute="trailing" secondItem="EYc-0a-VdM" secondAttribute="trailing" constant="15" id="LCz-My-Hbd"/>
                                             <constraint firstItem="U3m-YC-iYc" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="M5M-3D-zfP"/>
                                             <constraint firstAttribute="trailing" secondItem="U3m-YC-iYc" secondAttribute="trailing" constant="15" id="ND0-Wd-kuL"/>
-                                            <constraint firstAttribute="bottom" secondItem="U3m-YC-iYc" secondAttribute="bottom" constant="160" id="O9c-9P-JaT"/>
                                             <constraint firstItem="U3m-YC-iYc" firstAttribute="top" secondItem="8Cd-Jo-3FG" secondAttribute="bottom" constant="20" id="WOh-XL-tXn"/>
+                                            <constraint firstItem="coh-rN-wDe" firstAttribute="top" secondItem="U3m-YC-iYc" secondAttribute="bottom" constant="30" id="WRr-xE-Icq"/>
                                             <constraint firstAttribute="trailing" secondItem="8Cd-Jo-3FG" secondAttribute="trailing" constant="15" id="bFm-57-Oma"/>
                                             <constraint firstItem="8Cd-Jo-3FG" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="hra-9B-cS3"/>
                                             <constraint firstItem="EYc-0a-VdM" firstAttribute="top" secondItem="djO-IB-JA0" secondAttribute="top" constant="15" id="jB0-8x-rbR"/>
@@ -174,6 +184,7 @@
                     <connections>
                         <outlet property="detailsLabel" destination="U3m-YC-iYc" id="KPA-Oc-7MP"/>
                         <outlet property="nameLabel" destination="8Cd-Jo-3FG" id="JSr-WC-wEa"/>
+                        <outlet property="playerView" destination="coh-rN-wDe" id="lw3-0x-9i5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ytg-7r-djw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -182,8 +193,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.right" catalog="system" width="32" height="32"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">

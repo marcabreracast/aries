@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import youtube_ios_player_helper
 
 class LaunchInfoViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
+    @IBOutlet weak var playerView: YTPlayerView!
     
     // MARK: - Properties
     var launchInfo: Launch?
@@ -30,7 +32,12 @@ class LaunchInfoViewController: UIViewController {
             detailsLabel.text = "There are not details available for this launch."
         }
         
-
+        playerView.layer.cornerRadius = 10
+        if let youtubeId = launchInfo.links?.youtubeId {
+            playerView.load(withVideoId: youtubeId)
+        } else {
+            playerView.backgroundColor = .black
+        }
     }
     
     // MARK: - IBActions
