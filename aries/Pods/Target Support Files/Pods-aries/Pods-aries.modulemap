@@ -1,0 +1,6 @@
+framework module Pods_aries {
+  umbrella header "Pods-aries-umbrella.h"
+
+  export *
+  module * { export * }
+}

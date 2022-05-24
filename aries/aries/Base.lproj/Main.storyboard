@@ -151,6 +151,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.2117646933" green="0.21960783" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="djO-IB-JA0" secondAttribute="bottom" id="9oL-QT-iqT"/>
                                     <constraint firstItem="djO-IB-JA0" firstAttribute="top" secondItem="Lwc-Pf-0UH" secondAttribute="top" id="age-aG-Cvz"/>
@@ -181,7 +182,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="32" height="32"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
