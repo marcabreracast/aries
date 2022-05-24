@@ -9,16 +9,33 @@ import UIKit
 
 class LaunchInfoViewController: UIViewController {
     // MARK: - IBOutlets
-
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var detailsLabel: UILabel!
+    
     // MARK: - Properties
     var launchInfo: Launch?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = launchInfo?.name
+        guard let launchInfo = launchInfo else {
+            return
+        }
 
-        // Do any additional setup after loading the view.
+        nameLabel.text = launchInfo.name
+        
+        if let launchDetails = launchInfo.details {
+            detailsLabel.text = launchDetails
+        } else {
+            detailsLabel.text = "There are not details available for this launch."
+        }
+        
+
+    }
+    
+    // MARK: - IBActions
+    @IBAction func didTapCloseButton(_ sender: Any) {
+        self.dismiss(animated: true)
     }
     
     /*
