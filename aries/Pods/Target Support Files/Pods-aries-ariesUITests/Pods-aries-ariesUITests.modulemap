@@ -1,0 +1,6 @@
+framework module Pods_aries_ariesUITests {
+  umbrella header "Pods-aries-ariesUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
