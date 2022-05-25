@@ -28,27 +28,31 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         loginButton.showLoading()
-        let email = "skroob@example.com"
-        let password = "1234567"
-       // let email = emailTextfield.text
-       // let password = passwordTextField.text
+        let email = emailTextfield.text ?? ""
+        let password = passwordTextField.text ?? ""
         app.login(credentials: Credentials.emailPassword(email: email, password: password)) { (result) in
             DispatchQueue.main.async {
                 self.loginButton.hideLoading()
                 switch result {
                 case .failure(let error):
                     print("Login failed: \(error.localizedDescription)")
-                    
-                    
+                    self.presentErrorAlert()
+
                 case .success(let user):
                     print("Successfully logged in as user \(user)")
-                    // Now logged in, do something with user
-                    // Remember to dispatch to main if you are doing anything on the UI thread
                     self.performSegue(withIdentifier: "goToLaunches", sender: nil)
                 }
 
             }
         }
+    }
+    
+    private func presentErrorAlert() {
+        let alert = UIAlertController(title: "Error", message: "Invalid credentials", preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
     }
     
 
