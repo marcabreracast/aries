@@ -94,7 +94,7 @@
                     <connections>
                         <outlet property="segmentedControl" destination="bY8-Ep-sAs" id="Bq7-Kb-48L"/>
                         <outlet property="tableView" destination="PPY-Zz-thc" id="OGY-49-phi"/>
-                        <segue destination="sTF-1v-KSS" kind="show" identifier="goToLaunchInfo" id="eaE-l4-wjB"/>
+                        <segue destination="sTF-1v-KSS" kind="presentation" identifier="goToLaunchInfo" id="eaE-l4-wjB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -177,11 +177,11 @@
             <objects>
                 <viewController id="sTF-1v-KSS" customClass="LaunchInfoViewController" customModule="aries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MeH-vQ-Zco">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwc-Pf-0UH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djO-IB-JA0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="462"/>

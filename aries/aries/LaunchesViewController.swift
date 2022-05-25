@@ -20,11 +20,13 @@ class LaunchesViewController: UIViewController {
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorColor = .white
 
         self.title = "Launches"
+        self.navigationItem.setHidesBackButton(true, animated: true)
 
         fetchLaunches()
     }
