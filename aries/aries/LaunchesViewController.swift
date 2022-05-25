@@ -21,17 +21,30 @@ class LaunchesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.separatorColor = .white
-
-        self.title = "Launches"
-        self.navigationItem.setHidesBackButton(true, animated: true)
+        setTableView()
+        setNavBar()
+        setTabBar()
 
         fetchLaunches()
     }
 
     // MARK: - Private Methods
+    private func setTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorColor = .white
+    }
+    
+    private func setNavBar() {
+        self.title = "Launches"
+        self.navigationItem.setHidesBackButton(true, animated: true)
+    }
+    
+    private func setTabBar() {
+        self.tabBarController?.tabBar.tintColor = .white
+        self.tabBarController?.tabBar.unselectedItemTintColor = .lightGray
+    }
+    
     public func fetchLaunches() {
         // Better to take request call out of this screen to make it more reusable
         AF.request("https://api.spacexdata.com/v4/launches").responseDecodable(of: [Launch].self) { response in
