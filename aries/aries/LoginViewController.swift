@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
+    @IBOutlet weak var loginButton: LoadingButton!
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -27,12 +27,14 @@ class LoginViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func loginButtonTapped(_ sender: Any) {
+        loginButton.showLoading()
         let email = "skroob@example.com"
         let password = "1234567"
        // let email = emailTextfield.text
        // let password = passwordTextField.text
         app.login(credentials: Credentials.emailPassword(email: email, password: password)) { (result) in
             DispatchQueue.main.async {
+                self.loginButton.hideLoading()
                 switch result {
                 case .failure(let error):
                     print("Login failed: \(error.localizedDescription)")

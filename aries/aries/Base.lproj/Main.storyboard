@@ -131,7 +131,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DF-Q4-xlD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DF-Q4-xlD" customClass="LoadingButton" customModule="aries" customModuleProvider="target">
                                 <rect key="frame" x="30" y="388" width="354" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="LOGIN"/>
@@ -163,6 +163,7 @@
                     <navigationItem key="navigationItem" id="rfp-57-pRd"/>
                     <connections>
                         <outlet property="emailTextfield" destination="YMN-5B-ERm" id="r99-XM-Z37"/>
+                        <outlet property="loginButton" destination="7DF-Q4-xlD" id="AhH-1X-AxT"/>
                         <outlet property="passwordTextField" destination="MpT-VU-pxX" id="Bp5-Mp-HpP"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToLaunches" id="LmR-Ms-BZ3"/>
                     </connections>
