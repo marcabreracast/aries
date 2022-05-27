@@ -34,17 +34,18 @@ class LaunchesViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorColor = .white
     }
-    
+
     private func setNavBar() {
         self.title = "Launches"
-        self.navigationItem.setHidesBackButton(true, animated: true)
+        self.tabBarController?.navigationItem.hidesBackButton = true // Don't know why this works instead of the navigation bar line
+      //  self.navigationItem.setHidesBackButton(true, animated: true)
     }
-    
+
     private func setTabBar() {
         self.tabBarController?.tabBar.tintColor = .white
         self.tabBarController?.tabBar.unselectedItemTintColor = .lightGray
     }
-    
+
     public func fetchLaunches() {
         // Better to take request call out of this screen to make it more reusable
         AF.request("https://api.spacexdata.com/v4/launches").responseDecodable(of: [Launch].self) { response in
