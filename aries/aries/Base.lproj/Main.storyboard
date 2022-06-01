@@ -226,10 +226,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpD-5i-EbX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpD-5i-EbX" customClass="LoadingButton" customModule="aries" customModuleProvider="target">
                                 <rect key="frame" x="30" y="488" width="354" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create"/>
+                                <connections>
+                                    <action selector="createAccountButtonTapped:" destination="z5U-fZ-eMZ" eventType="touchUpInside" id="T6m-B0-Nwu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vMl-H7-qud"/>
@@ -260,7 +263,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="j9o-pz-thP"/>
                     <connections>
-                        <segue destination="18J-92-NSH" kind="show" id="Frb-XO-8Tr"/>
+                        <outlet property="createAccountButton" destination="GpD-5i-EbX" id="NYe-5s-beU"/>
+                        <outlet property="emailTextField" destination="uoH-bc-aiz" id="CMa-SY-nMX"/>
+                        <outlet property="nameTextField" destination="IsW-oN-IMU" id="Hpc-s5-gHd"/>
+                        <outlet property="passwordTextField" destination="NvP-3i-bRx" id="a2m-hz-Pip"/>
+                        <segue destination="18J-92-NSH" kind="show" identifier="goToLaunchesVC" id="Frb-XO-8Tr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbj-rl-GGt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -458,7 +465,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="a4B-nc-ZVc"/>
+        <segue reference="Frb-XO-8Tr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.right" catalog="system" width="32" height="32"/>
