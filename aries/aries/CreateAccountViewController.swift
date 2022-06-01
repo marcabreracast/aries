@@ -33,12 +33,11 @@ class CreateAccountViewController: UIViewController {
             DispatchQueue.main.async {
                 self.createAccountButton.hideLoading()
                 guard error == nil else {
-                    print("DO SOMETHING HERE!")
+                    self.presentErrorAlert(message: "Oops! There was an error on sign up")
                     return
                 }
 
                 print("Signup Successful!")
-                // Implement login
                 self.signIn(email: email, password: password)
             }
         })
@@ -48,11 +47,10 @@ class CreateAccountViewController: UIViewController {
 
         app.login(credentials: Credentials.emailPassword(email: email, password: password)) { (result) in
             DispatchQueue.main.async {
-             //   self.loginButton.hideLoading()
                 switch result {
                 case .failure(let error):
                     print("Login failed: \(error.localizedDescription)")
-               //     self.presentErrorAlert(message: "Invalid Credentials")
+                    self.presentErrorAlert(message: "Invalid Credentials")
                     
                 case .success(let user):
                     print("Successfully logged in as user \(user)")
@@ -73,7 +71,7 @@ class CreateAccountViewController: UIViewController {
             switch result {
             case .failure(let error):
                 print("Failed to open realm: \(error.localizedDescription)")
-             //   self.presentErrorAlert(message: "Oops! An error ocurred")
+                self.presentErrorAlert(message: "Oops! An error ocurred")
 
             case .success(let realm):
                 // Realm opened

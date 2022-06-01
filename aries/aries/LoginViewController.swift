@@ -73,14 +73,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func presentErrorAlert(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
-
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     private func setCreateAccountLabel() {
         let labelTap = UITapGestureRecognizer(target: self, action: #selector(createAccountLabelTapped(_:)))
         createAccountLabel.isUserInteractionEnabled = true
