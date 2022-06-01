@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: LoadingButton!
+    @IBOutlet weak var createAccountLabel: UILabel!
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -21,6 +22,8 @@ class LoginViewController: UIViewController {
         emailTextfield.placeholder = "email@example.com"
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
+        
+        setCreateAccountLabel()
     }
     
     
@@ -76,6 +79,16 @@ class LoginViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
 
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func setCreateAccountLabel() {
+        let labelTap = UITapGestureRecognizer(target: self, action: #selector(createAccountLabelTapped(_:)))
+        createAccountLabel.isUserInteractionEnabled = true
+        createAccountLabel.addGestureRecognizer(labelTap)
+    }
+    
+    @objc func createAccountLabelTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "goToCreateAccount", sender: nil)
     }
     
 
