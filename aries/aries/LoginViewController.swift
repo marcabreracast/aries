@@ -28,27 +28,50 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         loginButton.showLoading()
-        let email = emailTextfield.text ?? ""
-        let password = passwordTextField.text ?? ""
+
+        let email = "skroob@example.com"
+        let password = "1234567"
+    //    let email = emailTextfield.text ?? ""
+     //   let password = passwordTextField.text ?? ""
+
         app.login(credentials: Credentials.emailPassword(email: email, password: password)) { (result) in
             DispatchQueue.main.async {
                 self.loginButton.hideLoading()
                 switch result {
                 case .failure(let error):
                     print("Login failed: \(error.localizedDescription)")
-                    self.presentErrorAlert()
-
+                    self.presentErrorAlert(message: "Invalid Credentials")
+                    
                 case .success(let user):
                     print("Successfully logged in as user \(user)")
-                    self.performSegue(withIdentifier: "goToLaunches", sender: nil)
-                }
+                    self.openRealmSync()
 
+                }
+            }
+        }
+    }
+
+    private func openRealmSync() {
+        // Open Sync config here
+        let user = app.currentUser!
+        // The partition determines which subset of data to access.
+        // Get a sync configuration from the user object.
+        let configuration = user.configuration(partitionValue: user.id)
+        Realm.asyncOpen(configuration: configuration) { (result) in
+            switch result {
+            case .failure(let error):
+                print("Failed to open realm: \(error.localizedDescription)")
+                self.presentErrorAlert(message: "Oops! An error ocurred")
+
+            case .success(let realm):
+                // Realm opened
+                self.performSegue(withIdentifier: "goToLaunches", sender: nil)
             }
         }
     }
     
-    private func presentErrorAlert() {
-        let alert = UIAlertController(title: "Error", message: "Invalid credentials", preferredStyle: UIAlertController.Style.alert)
+    private func presentErrorAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
 
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
 
