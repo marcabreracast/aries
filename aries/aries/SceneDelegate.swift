@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import RealmSwift
+
+let app = App(id: "aries-realm-egrhv")
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

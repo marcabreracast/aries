@@ -13,6 +13,7 @@ class LaunchInfoViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var playerView: YTPlayerView!
+    @IBOutlet weak var playerStackView: UIStackView!
     
     // MARK: - Properties
     var launchInfo: Launch?
@@ -36,6 +37,7 @@ class LaunchInfoViewController: UIViewController {
         if let youtubeId = launchInfo.links?.youtubeId {
             playerView.load(withVideoId: youtubeId)
         } else {
+            playerStackView.isHidden = true
             playerView.backgroundColor = .black
         }
     }
