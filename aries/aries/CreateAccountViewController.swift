@@ -14,7 +14,6 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var createAccountButton: LoadingButton!
-
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -54,28 +53,10 @@ class CreateAccountViewController: UIViewController {
                     
                 case .success(let user):
                     print("Successfully logged in as user \(user)")
-                    self.openRealmSync()
+                    
+                    self.performSegue(withIdentifier: "goToLaunchesVC", sender: nil)
 
                 }
-            }
-        }
-    }
-
-    private func openRealmSync() {
-        // Open Sync config here
-        let user = app.currentUser!
-        // The partition determines which subset of data to access.
-        // Get a sync configuration from the user object.
-        let configuration = user.configuration(partitionValue: user.id)
-        Realm.asyncOpen(configuration: configuration) { (result) in
-            switch result {
-            case .failure(let error):
-                print("Failed to open realm: \(error.localizedDescription)")
-                self.presentErrorAlert(message: "Oops! An error ocurred")
-
-            case .success(let realm):
-                // Realm opened
-                self.performSegue(withIdentifier: "goToLaunchesVC", sender: nil)
             }
         }
     }
