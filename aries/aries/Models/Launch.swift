@@ -31,15 +31,3 @@ struct Links: Codable {
     }
 }
 
-import RealmSwift
-class User: Object {
-    @Persisted(primaryKey: true) var _id: String = ""
-    @Persisted var _partition: String = ""
-    @Persisted var email: String = ""
-    @Persisted var name: String?
-    
-    convenience init(email: String) {
-            self.init()
-            self.email = email
-        }
-}
