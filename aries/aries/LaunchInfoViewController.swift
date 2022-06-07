@@ -49,6 +49,19 @@ class LaunchInfoViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    @IBAction func addFavoritesButtonTapped(_ sender: Any) {
+        let realm = try! Realm()
+
+        let user = realm.objects(User.self).first
+
+        guard let user = realm.objects(User.self).first else { return }
+
+        try! realm.write() {
+         //   user.launches.append(launchInfo)
+        }
+
+    }
+
     /*
     // MARK: - Navigation
 
