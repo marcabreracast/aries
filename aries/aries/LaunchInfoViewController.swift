@@ -7,6 +7,7 @@
 
 import UIKit
 import youtube_ios_player_helper
+import RealmSwift
 
 class LaunchInfoViewController: UIViewController {
     // MARK: - IBOutlets
@@ -16,7 +17,7 @@ class LaunchInfoViewController: UIViewController {
     @IBOutlet weak var playerStackView: UIStackView!
     
     // MARK: - Properties
-    var launchInfo: Launch?
+    var launchInfo: UserLaunches?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class LaunchInfoViewController: UIViewController {
         }
         
         playerView.layer.cornerRadius = 10
+
         if let youtubeId = launchInfo.links?.youtubeId {
             playerView.load(withVideoId: youtubeId)
         } else {
