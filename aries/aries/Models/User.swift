@@ -18,14 +18,15 @@ class User: Object, Codable {
 }
 
 class UserLaunches: EmbeddedObject, Codable {
+    @Persisted var id: String?
     @Persisted var dateUnix: Double?
     @Persisted var details: String?
-    @Persisted var id: String?
     @Persisted var name: String?
     @Persisted var upcoming: Bool?
     @Persisted var links: LaunchLinks?
 
     enum CodingKeys: String, CodingKey {
+        case id
         case name
         case details
         case dateUnix = "date_unix"
