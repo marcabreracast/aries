@@ -24,6 +24,7 @@ class UserLaunches: EmbeddedObject, Codable {
     @Persisted var name: String?
     @Persisted var upcoming: Bool?
     @Persisted var links: LaunchLinks?
+    @Persisted var launchpad: String?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -32,6 +33,7 @@ class UserLaunches: EmbeddedObject, Codable {
         case dateUnix = "date_unix"
         case upcoming
         case links
+        case launchpad
     }
 }
 

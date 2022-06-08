@@ -8,6 +8,8 @@
 import UIKit
 import youtube_ios_player_helper
 import RealmSwift
+import Alamofire
+import MapKit
 
 class LaunchInfoViewController: UIViewController {
     // MARK: - IBOutlets
@@ -16,6 +18,7 @@ class LaunchInfoViewController: UIViewController {
     @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var playerStackView: UIStackView!
     @IBOutlet weak var favoriteButton: FavoriteButton!
+    @IBOutlet weak var mapView: MKMapView!
 
     // MARK: - Properties
     var launchInfo: UserLaunches?
@@ -23,18 +26,30 @@ class LaunchInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setLaunchInfo()
+        fetchLaunchPadInfo()
+
+        mapView.layer.masksToBounds = true
+        mapView.layer.cornerRadius = 10
+
+        playerView.layer.masksToBounds = true
+        playerView.layer.cornerRadius = 10
+    }
+
+    // MARK: - Private Helpers
+    private func setLaunchInfo() {
         guard let launchInfo = launchInfo else {
             return
         }
 
         nameLabel.text = launchInfo.name
-        
+
         if let launchDetails = launchInfo.details {
             detailsLabel.text = launchDetails
         } else {
             detailsLabel.text = "There are not details available for this launch."
         }
-        
+
         playerView.layer.cornerRadius = 10
 
         if let youtubeId = launchInfo.links?.youtubeId {
@@ -44,7 +59,34 @@ class LaunchInfoViewController: UIViewController {
             playerView.backgroundColor = .black
         }
     }
-    
+
+    private func fetchLaunchPadInfo() {
+        guard let launchpadId  = launchInfo?.launchpad else { return }
+
+        AF.request("https://api.spacexdata.com/v4/launchpads/\(launchpadId)").responseDecodable(of: Launchpad.self) { response in
+            debugPrint("Response: \(response.description)")
+
+            if let response = response.value {
+                // Default coordinates: Dublin (because why not having launches here)
+                let initialLocation = CLLocation(latitude: response.latitude ?? 53.350140, longitude: response.longitude ?? -6.266155)
+
+                self.mapView.centerToLocation(initialLocation)
+
+                self.setMapAnnotation(launchpadInfo: response)
+            }
+        }
+    }
+
+    /**
+     Function that sets pin on map to make launchpad visible
+     */
+    private func setMapAnnotation(launchpadInfo: Launchpad) {
+        let coordinates = CLLocationCoordinate2D(latitude: launchpadInfo.latitude ?? 0.0, longitude: launchpadInfo.longitude ?? 0.0)
+        let launchpadLocation = LaunchpadLocation(title: launchpadInfo.fullName ?? "", coordinate: coordinates, info: launchpadInfo.details ?? "")
+        launchpadLocation.title = launchpadInfo.fullName ?? ""
+        self.mapView.addAnnotation(launchpadLocation)
+    }
+
     // MARK: - IBActions
     @IBAction func didTapCloseButton(_ sender: Any) {
         self.dismiss(animated: true)
@@ -83,4 +125,19 @@ class LaunchInfoViewController: UIViewController {
     }
     */
 
+}
+
+/**
+    In order to create Annotations we need a class to conform to MKAnnotation protocol and that it also inherits from NSObject
+ */
+class LaunchpadLocation: NSObject, MKAnnotation {
+    var title: String?
+    var coordinate: CLLocationCoordinate2D
+    var info: String?
+
+    init(title: String, coordinate: CLLocationCoordinate2D, info: String) {
+        self.title = title
+        self.coordinate = coordinate
+        self.info = info
+    }
 }
