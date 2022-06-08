@@ -14,6 +14,8 @@ import MapKit
 class LaunchInfoViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateView: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var thirdPartyStackView: UIStackView!
@@ -29,6 +31,8 @@ class LaunchInfoViewController: UIViewController {
         setLaunchInfo()
         fetchLaunchpadInfo()
 
+        dateView.layer.cornerRadius = 10
+
         mapView.layer.masksToBounds = true
         mapView.layer.cornerRadius = 10
 
@@ -43,6 +47,8 @@ class LaunchInfoViewController: UIViewController {
         }
 
         nameLabel.text = launchInfo.name
+
+        dateLabel.text = DateHelper.formatShortUnixDate(date: launchInfo.dateUnix ?? 0.0)
 
         if let launchDetails = launchInfo.details {
             detailsLabel.text = launchDetails
