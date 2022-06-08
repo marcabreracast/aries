@@ -11,7 +11,7 @@ import UIKit
 class FavoriteButton: UIButton {
     // MARK: - Properties
     private let unfavoritedImage = UIImage(systemName: "star")
-    private let favoritedImage = UIImage(systemName: "star.fill")
+    private let favoritedImage = UIImage(systemName: "star.fill")?.withTintColor(#colorLiteral(red: 0.9389871955, green: 0.7823597789, blue: 0.5454313159, alpha: 1), renderingMode: .alwaysOriginal)
     private var isFavorite = false
 
     // MARK: - Public Functions
