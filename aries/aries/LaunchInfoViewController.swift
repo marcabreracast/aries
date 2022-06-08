@@ -16,7 +16,7 @@ class LaunchInfoViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var playerView: YTPlayerView!
-    @IBOutlet weak var playerStackView: UIStackView!
+    @IBOutlet weak var thirdPartyStackView: UIStackView!
     @IBOutlet weak var favoriteButton: FavoriteButton!
     @IBOutlet weak var mapView: MKMapView!
 
@@ -27,7 +27,7 @@ class LaunchInfoViewController: UIViewController {
         super.viewDidLoad()
 
         setLaunchInfo()
-        fetchLaunchPadInfo()
+        fetchLaunchpadInfo()
 
         mapView.layer.masksToBounds = true
         mapView.layer.cornerRadius = 10
@@ -50,17 +50,14 @@ class LaunchInfoViewController: UIViewController {
             detailsLabel.text = "There are not details available for this launch."
         }
 
-        playerView.layer.cornerRadius = 10
-
         if let youtubeId = launchInfo.links?.youtubeId {
             playerView.load(withVideoId: youtubeId)
         } else {
-            playerStackView.isHidden = true
-            playerView.backgroundColor = .black
+            playerView.isHidden = true
         }
     }
 
-    private func fetchLaunchPadInfo() {
+    private func fetchLaunchpadInfo() {
         guard let launchpadId  = launchInfo?.launchpad else { return }
 
         AF.request("https://api.spacexdata.com/v4/launchpads/\(launchpadId)").responseDecodable(of: Launchpad.self) { response in

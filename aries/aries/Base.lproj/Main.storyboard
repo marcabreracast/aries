@@ -286,7 +286,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djO-IB-JA0">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="744"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="690"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cd-Jo-3FG">
                                                 <rect key="frame" x="15" y="60" width="384" height="31.5"/>
@@ -309,8 +309,8 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0Nr-Az-p8v">
-                                                <rect key="frame" x="15" y="162" width="384" height="250"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0Nr-Az-p8v">
+                                                <rect key="frame" x="15" y="162" width="384" height="508"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coh-rN-wDe" customClass="YTPlayerView">
                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="250"/>
@@ -319,6 +319,12 @@
                                                             <constraint firstAttribute="height" constant="250" id="g4c-Bd-Nyb"/>
                                                         </constraints>
                                                     </view>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Vy-JS-KKp">
+                                                        <rect key="frame" x="0.0" y="280" width="384" height="228"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="228" id="0Og-AC-swU"/>
+                                                        </constraints>
+                                                    </mapView>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D87-wk-39X">
@@ -340,36 +346,33 @@
                                                     <action selector="addFavoritesButtonTapped:" destination="sTF-1v-KSS" eventType="touchUpInside" id="jki-8W-XUh"/>
                                                 </connections>
                                             </button>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0Vy-JS-KKp">
-                                                <rect key="frame" x="15" y="497" width="384" height="228"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="228" id="0Og-AC-swU"/>
-                                                </constraints>
-                                            </mapView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.2117646933" green="0.21960783" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="8Cd-Jo-3FG" firstAttribute="top" secondItem="djO-IB-JA0" secondAttribute="top" constant="60" id="1ld-1r-em0"/>
-                                            <constraint firstItem="0Vy-JS-KKp" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="2fw-BH-g88"/>
-                                            <constraint firstAttribute="trailing" secondItem="0Vy-JS-KKp" secondAttribute="trailing" constant="15" id="89d-FH-erM"/>
                                             <constraint firstItem="1aY-Ga-swV" firstAttribute="centerY" secondItem="D87-wk-39X" secondAttribute="centerY" id="8aA-7g-Qac"/>
                                             <constraint firstItem="1aY-Ga-swV" firstAttribute="leading" secondItem="D87-wk-39X" secondAttribute="trailing" constant="10" id="9is-Bc-KyT"/>
                                             <constraint firstItem="1aY-Ga-swV" firstAttribute="top" secondItem="0Nr-Az-p8v" secondAttribute="bottom" constant="40.5" id="FW3-ab-DTA"/>
                                             <constraint firstItem="D87-wk-39X" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="HhB-C3-S0A"/>
-                                            <constraint firstItem="0Vy-JS-KKp" firstAttribute="top" secondItem="D87-wk-39X" secondAttribute="bottom" constant="24" id="IC8-Bc-aJ4"/>
                                             <constraint firstAttribute="trailing" secondItem="EYc-0a-VdM" secondAttribute="trailing" constant="15" id="LCz-My-Hbd"/>
                                             <constraint firstAttribute="trailing" secondItem="0Nr-Az-p8v" secondAttribute="trailing" constant="15" id="M1U-cC-vHI"/>
                                             <constraint firstItem="U3m-YC-iYc" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="M5M-3D-zfP"/>
                                             <constraint firstAttribute="trailing" secondItem="U3m-YC-iYc" secondAttribute="trailing" constant="15" id="ND0-Wd-kuL"/>
                                             <constraint firstItem="0Nr-Az-p8v" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="SRh-Rp-ZDo"/>
-                                            <constraint firstAttribute="bottom" secondItem="0Vy-JS-KKp" secondAttribute="bottom" constant="19" id="Sd9-V3-y30"/>
                                             <constraint firstItem="U3m-YC-iYc" firstAttribute="top" secondItem="8Cd-Jo-3FG" secondAttribute="bottom" constant="20" id="WOh-XL-tXn"/>
                                             <constraint firstItem="D87-wk-39X" firstAttribute="top" secondItem="0Nr-Az-p8v" secondAttribute="bottom" constant="40" id="Xfg-E3-RIf"/>
                                             <constraint firstAttribute="trailing" secondItem="8Cd-Jo-3FG" secondAttribute="trailing" constant="15" id="bFm-57-Oma"/>
                                             <constraint firstItem="8Cd-Jo-3FG" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="hra-9B-cS3"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Nr-Az-p8v" secondAttribute="bottom" constant="20" id="ihK-4j-4jV"/>
                                             <constraint firstItem="EYc-0a-VdM" firstAttribute="top" secondItem="djO-IB-JA0" secondAttribute="top" constant="15" id="jB0-8x-rbR"/>
                                             <constraint firstItem="0Nr-Az-p8v" firstAttribute="top" secondItem="U3m-YC-iYc" secondAttribute="bottom" constant="30" id="nJR-fn-ciq"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="D87-wk-39X"/>
+                                                <exclude reference="1aY-Ga-swV"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2117646933" green="0.21960783" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -397,8 +400,8 @@
                         <outlet property="favoriteButton" destination="1aY-Ga-swV" id="uV9-P5-LrA"/>
                         <outlet property="mapView" destination="0Vy-JS-KKp" id="Z9o-wF-Owc"/>
                         <outlet property="nameLabel" destination="8Cd-Jo-3FG" id="JSr-WC-wEa"/>
-                        <outlet property="playerStackView" destination="0Nr-Az-p8v" id="luQ-oI-U5v"/>
                         <outlet property="playerView" destination="coh-rN-wDe" id="lw3-0x-9i5"/>
+                        <outlet property="thirdPartyStackView" destination="0Nr-Az-p8v" id="luQ-oI-U5v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ytg-7r-djw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
