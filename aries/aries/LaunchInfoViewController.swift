@@ -7,6 +7,7 @@
 
 import UIKit
 import youtube_ios_player_helper
+import RealmSwift
 
 class LaunchInfoViewController: UIViewController {
     // MARK: - IBOutlets
@@ -14,9 +15,10 @@ class LaunchInfoViewController: UIViewController {
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var playerStackView: UIStackView!
-    
+    @IBOutlet weak var favoriteButton: FavoriteButton!
+
     // MARK: - Properties
-    var launchInfo: Launch?
+    var launchInfo: UserLaunches?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,7 @@ class LaunchInfoViewController: UIViewController {
         }
         
         playerView.layer.cornerRadius = 10
+
         if let youtubeId = launchInfo.links?.youtubeId {
             playerView.load(withVideoId: youtubeId)
         } else {
@@ -46,7 +49,30 @@ class LaunchInfoViewController: UIViewController {
     @IBAction func didTapCloseButton(_ sender: Any) {
         self.dismiss(animated: true)
     }
-    
+
+    @IBAction func addFavoritesButtonTapped(_ sender: Any) {
+        favoriteButton.flipFavoritedState()
+
+        let realm = try! Realm()
+        guard let user = realm.objects(User.self).first, let launchInfo = launchInfo else {
+            return
+        }
+
+        // If the launch is not included in the user's favorites we add it
+        if !user.launches.contains(where: {$0.id == launchInfo.id}) {
+            try! realm.write() {
+                user.launches.append(launchInfo)
+            }
+        } else {
+            // Otherwise we remove it from the array
+            try! realm.write() {
+                if let index = user.launches.firstIndex(where: { $0.id == launchInfo.id }) {
+                    user.launches.remove(at: index)
+                }
+            }
+        }
+    }
+
     /*
     // MARK: - Navigation
 

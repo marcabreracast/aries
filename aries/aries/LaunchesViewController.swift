@@ -14,8 +14,8 @@ class LaunchesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    var pastLaunches: [Launch] = []
-    var upcomingLaunches: [Launch] = []
+    var pastLaunches: [UserLaunches] = []
+    var upcomingLaunches: [UserLaunches] = []
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -38,7 +38,6 @@ class LaunchesViewController: UIViewController {
     private func setNavBar() {
         self.title = "Launches"
         self.tabBarController?.navigationItem.hidesBackButton = true // Don't know why this works instead of the navigation bar line
-      //  self.navigationItem.setHidesBackButton(true, animated: true)
     }
 
     private func setTabBar() {
@@ -48,12 +47,12 @@ class LaunchesViewController: UIViewController {
 
     public func fetchLaunches() {
         // Better to take request call out of this screen to make it more reusable
-        AF.request("https://api.spacexdata.com/v4/launches").responseDecodable(of: [Launch].self) { response in
+        AF.request("https://api.spacexdata.com/v4/launches").responseDecodable(of: [UserLaunches].self) { response in
             debugPrint("Response: \(response.description)")
 
             if let launches = response.value {
                 for launch in launches {
-                    if launch.upcoming {
+                    if launch.upcoming ?? false {
                         self.upcomingLaunches.append(launch)
                     } else {
                         self.pastLaunches.append(launch)
@@ -73,7 +72,7 @@ class LaunchesViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Send launch info here to Launch Info VC
-        if let vc = segue.destination as? LaunchInfoViewController, let launchInfo = sender as? Launch {
+        if let vc = segue.destination as? LaunchInfoViewController, let launchInfo = sender as? UserLaunches {
             vc.launchInfo = launchInfo
         }
     }
@@ -104,7 +103,7 @@ extension LaunchesViewController: UITableViewDelegate {
         // We have to make sure that depending on the section of the segmented control selected, the info
         // can come from the upcoming or past arraysgi
         let selectedIndex = self.segmentedControl.selectedSegmentIndex
-        var launch: Launch?
+        var launch: UserLaunches?
 
         switch selectedIndex {
         case 0:

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E5B8FEE283BD4D50015B107 /* LaunchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B8FED283BD4D50015B107 /* LaunchInfoViewController.swift */; };
 		3E5C64962826D5F900831887 /* Date+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C64952826D5F900831887 /* Date+Helper.swift */; };
+		3E6C8A032848FBAE0037B6C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C8A022848FBAE0037B6C6 /* User.swift */; };
 		3E763EF72847A89B00A1DDBC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */; };
 		3E763EF92847BAE000A1DDBC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */; };
 		3E7DBC10283E3ADB00B92FD7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7DBC0F283E3ADB00B92FD7 /* Realm */; };
@@ -16,6 +17,7 @@
 		3E7DBC14283E44CA00B92FD7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7DBC13283E44CA00B92FD7 /* LoginViewController.swift */; };
 		3E7DBC1A283E4D6B00B92FD7 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7DBC19283E4D6B00B92FD7 /* LoadingButton.swift */; };
 		3E7DBC1C283E629C00B92FD7 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7DBC1B283E629C00B92FD7 /* AccountViewController.swift */; };
+		3EC5524C2850A58A00672A20 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5524B2850A58A00672A20 /* FavoriteButton.swift */; };
 		3EDD731E28256867000FAFD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD731D28256867000FAFD8 /* AppDelegate.swift */; };
 		3EDD732028256867000FAFD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD731F28256867000FAFD8 /* SceneDelegate.swift */; };
 		3EDD732228256867000FAFD8 /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD732128256867000FAFD8 /* LaunchesViewController.swift */; };
@@ -27,7 +29,6 @@
 		3EDD73412825686A000FAFD8 /* ariesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD73402825686A000FAFD8 /* ariesUITestsLaunchTests.swift */; };
 		3EDD734E28256E3B000FAFD8 /* LaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD734D28256E3B000FAFD8 /* LaunchCell.swift */; };
 		3EDD7351282575CB000FAFD8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3EDD7350282575CB000FAFD8 /* Alamofire */; };
-		3EDD7353282576E9000FAFD8 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD7352282576E9000FAFD8 /* Launch.swift */; };
 		816D06BD8E7F325B17570E33 /* Pods_ariesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6072179077637756F93AE06 /* Pods_ariesTests.framework */; };
 		B709C50290A6693A1C2BA624 /* Pods_aries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46730E7A893A08EE86F3CB22 /* Pods_aries.framework */; };
 		F1A9FB416B17F846AD70E987 /* Pods_aries_ariesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45AD97146E8C2AA17220E92 /* Pods_aries_ariesUITests.framework */; };
@@ -55,11 +56,13 @@
 		30A63BA9383680D7A700F7FB /* Pods-ariesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ariesTests.release.xcconfig"; path = "Target Support Files/Pods-ariesTests/Pods-ariesTests.release.xcconfig"; sourceTree = "<group>"; };
 		3E5B8FED283BD4D50015B107 /* LaunchInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInfoViewController.swift; sourceTree = "<group>"; };
 		3E5C64952826D5F900831887 /* Date+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helper.swift"; sourceTree = "<group>"; };
+		3E6C8A022848FBAE0037B6C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		3E7DBC13283E44CA00B92FD7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3E7DBC19283E4D6B00B92FD7 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		3E7DBC1B283E629C00B92FD7 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		3EC5524B2850A58A00672A20 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		3EDD731A28256867000FAFD8 /* aries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDD731D28256867000FAFD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EDD731F28256867000FAFD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +77,6 @@
 		3EDD733E2825686A000FAFD8 /* ariesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ariesUITests.swift; sourceTree = "<group>"; };
 		3EDD73402825686A000FAFD8 /* ariesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ariesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3EDD734D28256E3B000FAFD8 /* LaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCell.swift; sourceTree = "<group>"; };
-		3EDD7352282576E9000FAFD8 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		46730E7A893A08EE86F3CB22 /* Pods_aries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D17E65999CCE59989476A2 /* Pods-aries-ariesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aries-ariesUITests.release.xcconfig"; path = "Target Support Files/Pods-aries-ariesUITests/Pods-aries-ariesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AD6B7FB6DCF63EE483327F70 /* Pods-aries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aries.release.xcconfig"; path = "Target Support Files/Pods-aries/Pods-aries.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,7 +128,7 @@
 		3E5B8FEC283BD3DF0015B107 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3EDD7352282576E9000FAFD8 /* Launch.swift */,
+				3E6C8A022848FBAE0037B6C6 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				3E7DBC19283E4D6B00B92FD7 /* LoadingButton.swift */,
+				3EC5524B2850A58A00672A20 /* FavoriteButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -480,18 +483,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E6C8A032848FBAE0037B6C6 /* User.swift in Sources */,
 				3E763EF92847BAE000A1DDBC /* UIViewController+Extension.swift in Sources */,
 				3E7DBC1A283E4D6B00B92FD7 /* LoadingButton.swift in Sources */,
 				3EDD732228256867000FAFD8 /* LaunchesViewController.swift in Sources */,
 				3EDD731E28256867000FAFD8 /* AppDelegate.swift in Sources */,
 				3E763EF72847A89B00A1DDBC /* CreateAccountViewController.swift in Sources */,
 				3EDD734E28256E3B000FAFD8 /* LaunchCell.swift in Sources */,
-				3EDD7353282576E9000FAFD8 /* Launch.swift in Sources */,
 				3E7DBC14283E44CA00B92FD7 /* LoginViewController.swift in Sources */,
 				3E7DBC1C283E629C00B92FD7 /* AccountViewController.swift in Sources */,
 				3E5B8FEE283BD4D50015B107 /* LaunchInfoViewController.swift in Sources */,
 				3EDD732028256867000FAFD8 /* SceneDelegate.swift in Sources */,
 				3E5C64962826D5F900831887 /* Date+Helper.swift in Sources */,
+				3EC5524C2850A58A00672A20 /* FavoriteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

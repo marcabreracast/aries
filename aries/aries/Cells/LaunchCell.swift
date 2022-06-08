@@ -16,8 +16,8 @@ class LaunchCell: UITableViewCell {
     // MARK: - Properties
     
     // MARK: - Methods
-    func setup(model: Launch) {
+    func setup(model: UserLaunches) {
         nameLabel.text = model.name
-        dateLabel.text = DateHelper.formatShortUnixDate(date: model.dateUnix)
+        dateLabel.text = DateHelper.formatShortUnixDate(date: model.dateUnix ?? 0.0)
     }
 }
