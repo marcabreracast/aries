@@ -31,6 +31,9 @@ class LaunchInfoViewController: UIViewController {
 
         mapView.layer.masksToBounds = true
         mapView.layer.cornerRadius = 10
+
+        playerView.layer.masksToBounds = true
+        playerView.layer.cornerRadius = 10
     }
 
     // MARK: - Private Helpers
