@@ -28,6 +28,9 @@ class LaunchInfoViewController: UIViewController {
 
         setLaunchInfo()
         fetchLaunchPadInfo()
+
+        mapView.layer.masksToBounds = true
+        mapView.layer.cornerRadius = 10
     }
 
     // MARK: - Private Helpers
@@ -77,7 +80,7 @@ class LaunchInfoViewController: UIViewController {
     private func setMapAnnotation(launchpadInfo: Launchpad) {
         let coordinates = CLLocationCoordinate2D(latitude: launchpadInfo.latitude ?? 0.0, longitude: launchpadInfo.longitude ?? 0.0)
         let launchpadLocation = LaunchpadLocation(title: launchpadInfo.fullName ?? "", coordinate: coordinates, info: launchpadInfo.details ?? "")
-
+        launchpadLocation.title = launchpadInfo.fullName ?? ""
         self.mapView.addAnnotation(launchpadLocation)
     }
 
