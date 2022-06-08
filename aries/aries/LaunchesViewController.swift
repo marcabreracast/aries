@@ -38,7 +38,6 @@ class LaunchesViewController: UIViewController {
     private func setNavBar() {
         self.title = "Launches"
         self.tabBarController?.navigationItem.hidesBackButton = true // Don't know why this works instead of the navigation bar line
-      //  self.navigationItem.setHidesBackButton(true, animated: true)
     }
 
     private func setTabBar() {
