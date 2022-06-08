@@ -26,7 +26,7 @@ class FavoriteButton: UIButton {
             let newImage = self.isFavorite ? self.favoritedImage : self.unfavoritedImage
             self.transform = self.transform.scaledBy(x: 0.8, y: 0.8)
             self.setImage(newImage, for: .normal)
-q
+
         }, completion: { _ in
             UIView.animate(withDuration: 0.1, animations: {
                 self.transform = CGAffineTransform.identity
