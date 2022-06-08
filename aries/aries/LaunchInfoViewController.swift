@@ -15,7 +15,8 @@ class LaunchInfoViewController: UIViewController {
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var playerStackView: UIStackView!
-    
+    @IBOutlet weak var favoriteButton: FavoriteButton!
+
     // MARK: - Properties
     var launchInfo: UserLaunches?
 
@@ -48,18 +49,28 @@ class LaunchInfoViewController: UIViewController {
     @IBAction func didTapCloseButton(_ sender: Any) {
         self.dismiss(animated: true)
     }
-    
+
     @IBAction func addFavoritesButtonTapped(_ sender: Any) {
+        favoriteButton.flipFavoritedState()
+
         let realm = try! Realm()
-
-        let user = realm.objects(User.self).first
-
-        guard let user = realm.objects(User.self).first else { return }
-
-        try! realm.write() {
-         //   user.launches.append(launchInfo)
+        guard let user = realm.objects(User.self).first, let launchInfo = launchInfo else {
+            return
         }
 
+        // If the launch is not included in the user's favorites we add it
+        if !user.launches.contains(where: {$0.id == launchInfo.id}) {
+            try! realm.write() {
+                user.launches.append(launchInfo)
+            }
+        } else {
+            // Otherwise we remove it from the array
+            try! realm.write() {
+                if let index = user.launches.firstIndex(where: { $0.id == launchInfo.id }) {
+                    user.launches.remove(at: index)
+                }
+            }
+        }
     }
 
     /*

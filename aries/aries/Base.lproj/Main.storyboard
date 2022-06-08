@@ -282,7 +282,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwc-Pf-0UH">
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwc-Pf-0UH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djO-IB-JA0">
@@ -327,7 +327,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aY-Ga-swV">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aY-Ga-swV" customClass="FavoriteButton" customModule="aries" customModuleProvider="target">
                                                 <rect key="frame" x="148.5" y="452.5" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="5vy-J5-4AQ"/>
@@ -335,7 +335,7 @@
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="plus.circle" catalog="system" imagePadding="0.0"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
                                                 <connections>
                                                     <action selector="addFavoritesButtonTapped:" destination="sTF-1v-KSS" eventType="touchUpInside" id="jki-8W-XUh"/>
                                                 </connections>
@@ -386,6 +386,7 @@
                     <navigationItem key="navigationItem" id="ZUp-sw-GWf"/>
                     <connections>
                         <outlet property="detailsLabel" destination="U3m-YC-iYc" id="KPA-Oc-7MP"/>
+                        <outlet property="favoriteButton" destination="1aY-Ga-swV" id="uV9-P5-LrA"/>
                         <outlet property="nameLabel" destination="8Cd-Jo-3FG" id="JSr-WC-wEa"/>
                         <outlet property="playerStackView" destination="0Nr-Az-p8v" id="luQ-oI-U5v"/>
                         <outlet property="playerView" destination="coh-rN-wDe" id="lw3-0x-9i5"/>
@@ -473,8 +474,8 @@
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="rocket" width="29" height="29"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
