@@ -15,8 +15,8 @@ class FavoriteButton: UIButton {
     private var isFavorite = false
 
     // MARK: - Public Functions
-    func flipFavoritedState() {
-        isFavorite = !isFavorite
+    func flipFavoritedState(_ state: Bool) {
+        isFavorite = state
         animate()
     }
 
@@ -26,6 +26,7 @@ class FavoriteButton: UIButton {
             let newImage = self.isFavorite ? self.favoritedImage : self.unfavoritedImage
             self.transform = self.transform.scaledBy(x: 0.8, y: 0.8)
             self.setImage(newImage, for: .normal)
+            self.isFavorite = !self.isFavorite
 
         }, completion: { _ in
             UIView.animate(withDuration: 0.1, animations: {

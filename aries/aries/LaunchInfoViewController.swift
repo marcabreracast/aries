@@ -24,12 +24,11 @@ class LaunchInfoViewController: UIViewController {
 
     // MARK: - Properties
     var launchInfo: UserLaunches?
+    let realm = try! Realm()
+    var user: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setLaunchInfo()
-        fetchLaunchpadInfo()
 
         dateView.layer.cornerRadius = 10
 
@@ -38,10 +37,15 @@ class LaunchInfoViewController: UIViewController {
 
         playerView.layer.masksToBounds = true
         playerView.layer.cornerRadius = 10
+
+        user = realm.objects(User.self).first
+
+        populateLaunchInfoFields()
+        fetchLaunchpadInfo()
     }
 
     // MARK: - Private Helpers
-    private func setLaunchInfo() {
+    private func populateLaunchInfoFields() {
         guard let launchInfo = launchInfo else {
             return
         }
@@ -60,6 +64,11 @@ class LaunchInfoViewController: UIViewController {
             playerView.load(withVideoId: youtubeId)
         } else {
             playerView.isHidden = true
+        }
+
+        // Checks if the launch is on favorites, and if it is then fills the favorite star button
+        if user?.launches.contains(where: {$0.id == launchInfo.id}) ?? false {
+            favoriteButton.flipFavoritedState(true)
         }
     }
 
@@ -96,18 +105,17 @@ class LaunchInfoViewController: UIViewController {
     }
 
     @IBAction func addFavoritesButtonTapped(_ sender: Any) {
-        favoriteButton.flipFavoritedState()
 
-        let realm = try! Realm()
-        guard let user = realm.objects(User.self).first, let launchInfo = launchInfo else {
+        guard let user = user, let launchInfo = launchInfo else {
             return
         }
-
         // If the launch is not included in the user's favorites we add it
         if !user.launches.contains(where: {$0.id == launchInfo.id}) {
             try! realm.write() {
+                print(launchInfo.isInvalidated)
                 user.launches.append(launchInfo)
             }
+            favoriteButton.flipFavoritedState(true)
         } else {
             // Otherwise we remove it from the array
             try! realm.write() {
@@ -115,6 +123,7 @@ class LaunchInfoViewController: UIViewController {
                     user.launches.remove(at: index)
                 }
             }
+            favoriteButton.flipFavoritedState(false)
         }
     }
 
