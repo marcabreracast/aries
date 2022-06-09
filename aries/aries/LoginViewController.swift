@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: Any) {
         loginButton.showLoading()
 
-        let email = "skroob@example.com"
+        let email = "mar@gmail.com"
         let password = "1234567"
     //    let email = emailTextfield.text ?? ""
      //   let password = passwordTextField.text ?? ""
