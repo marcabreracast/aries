@@ -14,35 +14,45 @@ import MapKit
 class LaunchInfoViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dateView: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var playerView: YTPlayerView!
-    @IBOutlet weak var playerStackView: UIStackView!
+    @IBOutlet weak var thirdPartyStackView: UIStackView!
     @IBOutlet weak var favoriteButton: FavoriteButton!
     @IBOutlet weak var mapView: MKMapView!
 
     // MARK: - Properties
     var launchInfo: UserLaunches?
+    let realm = try! Realm()
+    var user: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setLaunchInfo()
-        fetchLaunchPadInfo()
+        dateView.layer.cornerRadius = 10
 
         mapView.layer.masksToBounds = true
         mapView.layer.cornerRadius = 10
 
         playerView.layer.masksToBounds = true
         playerView.layer.cornerRadius = 10
+
+        user = realm.objects(User.self).first
+
+        populateLaunchInfoFields()
+        fetchLaunchpadInfo()
     }
 
     // MARK: - Private Helpers
-    private func setLaunchInfo() {
+    private func populateLaunchInfoFields() {
         guard let launchInfo = launchInfo else {
             return
         }
 
         nameLabel.text = launchInfo.name
+
+        dateLabel.text = DateHelper.formatShortUnixDate(date: launchInfo.dateUnix ?? 0.0)
 
         if let launchDetails = launchInfo.details {
             detailsLabel.text = launchDetails
@@ -50,17 +60,19 @@ class LaunchInfoViewController: UIViewController {
             detailsLabel.text = "There are not details available for this launch."
         }
 
-        playerView.layer.cornerRadius = 10
-
         if let youtubeId = launchInfo.links?.youtubeId {
             playerView.load(withVideoId: youtubeId)
         } else {
-            playerStackView.isHidden = true
-            playerView.backgroundColor = .black
+            playerView.isHidden = true
+        }
+
+        // Checks if the launch is on favorites, and if it is then fills the favorite star button
+        if user?.launches.contains(where: {$0.id == launchInfo.id}) ?? false {
+            favoriteButton.flipFavoritedState(true)
         }
     }
 
-    private func fetchLaunchPadInfo() {
+    private func fetchLaunchpadInfo() {
         guard let launchpadId  = launchInfo?.launchpad else { return }
 
         AF.request("https://api.spacexdata.com/v4/launchpads/\(launchpadId)").responseDecodable(of: Launchpad.self) { response in
@@ -93,18 +105,17 @@ class LaunchInfoViewController: UIViewController {
     }
 
     @IBAction func addFavoritesButtonTapped(_ sender: Any) {
-        favoriteButton.flipFavoritedState()
 
-        let realm = try! Realm()
-        guard let user = realm.objects(User.self).first, let launchInfo = launchInfo else {
+        guard let user = user, let launchInfo = launchInfo else {
             return
         }
-
         // If the launch is not included in the user's favorites we add it
         if !user.launches.contains(where: {$0.id == launchInfo.id}) {
             try! realm.write() {
+                print(launchInfo.isInvalidated)
                 user.launches.append(launchInfo)
             }
+            favoriteButton.flipFavoritedState(true)
         } else {
             // Otherwise we remove it from the array
             try! realm.write() {
@@ -112,6 +123,7 @@ class LaunchInfoViewController: UIViewController {
                     user.launches.remove(at: index)
                 }
             }
+            favoriteButton.flipFavoritedState(false)
         }
     }
 
