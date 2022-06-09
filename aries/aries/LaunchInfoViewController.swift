@@ -112,8 +112,10 @@ class LaunchInfoViewController: UIViewController {
         // If the launch is not included in the user's favorites we add it
         if !user.launches.contains(where: {$0.id == launchInfo.id}) {
             try! realm.write() {
-                print(launchInfo.isInvalidated)
-                user.launches.append(launchInfo)
+                // In order to add objects to the database we need to use the copy of it, otherwise it'll cause issues
+                if let launchCopy = launchInfo.copy {
+                    user.launches.append(launchCopy)
+                }
             }
             favoriteButton.flipFavoritedState(true)
         } else {
