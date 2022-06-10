@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 // https://imthath.medium.com/an-easy-way-to-deep-copy-and-compare-objects-using-codable-in-swift-3095970990e5
-
+// SLIDES - Add presentation focus to detail copy 
 public protocol Imitable: Codable {
     var copy: Self? { get }
 }
