@@ -444,29 +444,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2g-29-gh5" customClass="LoadingButton" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="166" y="432.5" width="82" height="31"/>
+                                <rect key="frame" x="15" y="101" width="384" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="LOGOUT"/>
                                 <connections>
                                     <action selector="logoutButtonTapped:" destination="iAM-wB-Bde" eventType="touchUpInside" id="iTH-0Y-vxl"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="32W-xn-L2Y">
+                                <rect key="frame" x="0.0" y="152" width="414" height="661"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteLaunchCell" textLabel="5xD-3U-vv9" style="IBUITableViewCellStyleDefault" id="59f-Zl-rH0" customClass="FavoriteLaunchCell" customModule="aries" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="59f-Zl-rH0" id="BJr-Yo-rL2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5xD-3U-vv9">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="title" destination="5xD-3U-vv9" id="WUg-0k-8xN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eFI-BU-1Wt"/>
                         <color key="backgroundColor" red="0.2117646933" green="0.21960783" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="f2g-29-gh5" firstAttribute="centerY" secondItem="PUW-Qj-qzo" secondAttribute="centerY" id="Lgl-7g-W85"/>
+                            <constraint firstItem="32W-xn-L2Y" firstAttribute="trailing" secondItem="eFI-BU-1Wt" secondAttribute="trailing" id="Bxi-qD-Pdh"/>
+                            <constraint firstItem="32W-xn-L2Y" firstAttribute="top" secondItem="f2g-29-gh5" secondAttribute="bottom" constant="20" id="GG0-Ne-8bU"/>
+                            <constraint firstItem="f2g-29-gh5" firstAttribute="top" secondItem="eFI-BU-1Wt" secondAttribute="top" constant="13" id="KhX-B8-HGy"/>
                             <constraint firstItem="f2g-29-gh5" firstAttribute="centerX" secondItem="PUW-Qj-qzo" secondAttribute="centerX" id="USm-xl-ihY"/>
+                            <constraint firstItem="eFI-BU-1Wt" firstAttribute="bottom" secondItem="32W-xn-L2Y" secondAttribute="bottom" id="iNa-sc-Hnw"/>
+                            <constraint firstItem="f2g-29-gh5" firstAttribute="leading" secondItem="eFI-BU-1Wt" secondAttribute="leading" constant="15" id="qWg-Xi-fRR"/>
+                            <constraint firstItem="32W-xn-L2Y" firstAttribute="leading" secondItem="eFI-BU-1Wt" secondAttribute="leading" id="vh2-L9-9re"/>
+                            <constraint firstItem="eFI-BU-1Wt" firstAttribute="trailing" secondItem="f2g-29-gh5" secondAttribute="trailing" constant="15" id="zsK-FY-EWZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="person.fill" catalog="system" id="93d-hU-U5n"/>
+                    <navigationItem key="navigationItem" id="rwp-yM-sjW"/>
                     <connections>
                         <outlet property="logoutButton" destination="f2g-29-gh5" id="5gv-ud-kvy"/>
+                        <outlet property="tableView" destination="32W-xn-L2Y" id="QWy-sq-qwD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqd-R7-Fzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3659" y="850"/>
+            <point key="canvasLocation" x="3657.971014492754" y="849.77678571428567"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xj4-xC-zFV">
@@ -490,7 +525,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="a4B-nc-ZVc"/>
+        <segue reference="Frb-XO-8Tr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
