@@ -17,21 +17,57 @@ class AccountViewController: UIViewController {
     let realm = try! Realm()
     var user: User?
     lazy var favoriteLaunches: List<UserLaunches>? = nil
-
+    var notificationToken: NotificationToken?
+    
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.setHidesBackButton(true, animated: true)
+        setTableView()
+
+        // Fetch favorite launches from the database
+        user = realm.objects(User.self).first
+        favoriteLaunches = user?.launches
+
+        addFavoritesListener()
+    }
+
+    deinit {
+        // Invalidate notificationToken
+        notificationToken?.invalidate()
+    }
+
+    // MARK: - Private Helpers
+    private func setTableView() {
 
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorColor = .white
+    }
 
-        // Fetch favorite launches from the database
-        user = realm.objects(User.self).first
+    // Observe the favorites for changes. When changes are received, tableView is updated
+    private func addFavoritesListener() {
+        notificationToken = favoriteLaunches?.observe { [weak self] (changes) in
+            guard let tableView = self?.tableView else { return }
 
-        favoriteLaunches = user?.launches
+            switch changes {
+            case .initial:
+                tableView.reloadData()
+            case .update(_, let deletions, let insertions, let modifications):
+                // Query results have changed so we need to apply the to the tableView
+                tableView.performBatchUpdates({
+                    tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0) }),
+                        with: .automatic)
+                    tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
+                        with: .automatic)
+                    tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
+                        with: .automatic)
+                })
+            case .error(let error):
+                fatalError("\(error)")
+            }
+        }
     }
 
     // MARK: - IBActions
@@ -45,18 +81,6 @@ class AccountViewController: UIViewController {
             }
         }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 // MARK: - TableView Delegate
