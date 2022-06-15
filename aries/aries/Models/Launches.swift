@@ -8,41 +8,6 @@
 import Foundation
 import RealmSwift
 
-/*
-class Launches: Object, Codable {
-    @Persisted(primaryKey: true) var _id: String = ""
- //   @Persisted var id: String?
-    @Persisted var dateUnix: Double?
-    @Persisted var details: String?
-    @Persisted var name: String?
-    @Persisted var upcoming: Bool?
-    @Persisted var links: LaunchLinks?
-    @Persisted var launchpad: String?
-    
-    enum CodingKeys: String, CodingKey {
-      //  case id
-        case name
-        case details
-        case dateUnix = "date_unix"
-        case upcoming
-        case links
-        case launchpad
-    }
-    
-    
-    convenience init(id: String, dateUnix: Double, details: String, name: String, upcoming: Bool, launchpad: String) {
-        self.init()
-     //   self.id = id
-        self.dateUnix = dateUnix
-        self.details = details
-        self.name = name
-        self.upcoming = upcoming
-        self.launchpad = launchpad
-    }
-}
-
-*/
-
 class IDObject: Object {
     @objc dynamic var id: String = ""
     @objc dynamic var _id: ObjectId = ObjectId.generate()
