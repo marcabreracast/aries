@@ -93,9 +93,9 @@ class LaunchesViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Send launch info here to Launch Info VC
-        if let vc = segue.destination as? LaunchInfoViewController, let launchInfo = sender as? UserLaunches {
-            
-            vc.launchInfo = launchInfo
+        if let vc = segue.destination as? LaunchInfoViewController, let launchInfo = sender as? Launch {
+            // We need to transform the data as UserLaunches for the private user partition, otherwise the schemas won't work well
+            vc.launchInfo = UserLaunches(id: launchInfo.id, dateUnix: launchInfo.date_unix, details: launchInfo.details, name: launchInfo.name, upcoming: launchInfo.upcoming, links: nil, launchpad: launchInfo.launchpad)
         }
     }
 }
