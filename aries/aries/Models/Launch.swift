@@ -23,7 +23,6 @@ class IDObject: Object {
 
 
 class Launch: IDObject {
- //   @Persisted(primaryKey: true) var _id: ObjectId
 
     @Persisted var _partition: String = ""
 
@@ -50,8 +49,6 @@ class Launch: IDObject {
     @Persisted var fairings: Launch_fairings?
 
     @Persisted var flight_number: Double?
-
- //   @Persisted var id: String?
 
     @Persisted var launch_library_id: String?
 
