@@ -48,6 +48,16 @@ class UserLaunches: EmbeddedObject, Imitable {
         case links
         case launchpad
     }
+
+    convenience init(id: String?, dateUnix: Double?, details: String?, name: String?, upcoming: Bool?, links: LaunchLinks?, launchpad: String?) {
+        self.init()
+        self.id = id
+        self.dateUnix = dateUnix
+        self.details = details
+        self.name = name
+        self.upcoming = upcoming
+        self.launchpad = launchpad
+    }
 }
 
 class LaunchLinks: EmbeddedObject, Codable {

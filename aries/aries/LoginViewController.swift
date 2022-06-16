@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
                 case .failure(let error):
                     print("Login failed: \(error.localizedDescription)")
                     self.presentErrorAlert(message: "Invalid Credentials")
-                    
+
                 case .success(let user):
                     print("Successfully logged in as user \(user)")
                     self.openRealmSync()

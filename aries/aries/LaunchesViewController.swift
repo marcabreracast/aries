@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Alamofire
+import RealmSwift
 
 class LaunchesViewController: UIViewController {
     // MARK: - IBOutlets
@@ -14,8 +14,9 @@ class LaunchesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    var pastLaunches: [UserLaunches] = []
-    var upcomingLaunches: [UserLaunches] = []
+    var pastLaunches: [Launch] = []
+    var upcomingLaunches: [Launch] = []
+    var launches: Results<Launch>?
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -25,9 +26,11 @@ class LaunchesViewController: UIViewController {
         setNavBar()
         setTabBar()
 
-        fetchLaunches()
+        openPublicPartitionRealm()
     }
 
+
+    
     // MARK: - Private Methods
     private func setTableView() {
         tableView.delegate = self
@@ -44,24 +47,42 @@ class LaunchesViewController: UIViewController {
         self.tabBarController?.tabBar.tintColor = .white
         self.tabBarController?.tabBar.unselectedItemTintColor = .lightGray
     }
+    
+    /**
+        We have to open a public Realm partition in order to get all the launches that were fetched from there
+        The database fetches the launches from SpaceX API
+     */
+    private func openPublicPartitionRealm() {
+        let user = app.currentUser!
 
-    public func fetchLaunches() {
-        // Better to take request call out of this screen to make it more reusable
-        AF.request("https://api.spacexdata.com/v4/launches").responseDecodable(of: [UserLaunches].self) { response in
-            debugPrint("Response: \(response.description)")
+        Realm.asyncOpen(configuration: user.configuration(partitionValue: "PUBLIC")) { (result) in
+            switch result {
+            case .failure(let error):
+                print("Failed to open realm: \(error.localizedDescription)")
+                self.presentErrorAlert(message: "Oops! An error ocurred")
 
-            if let launches = response.value {
-                for launch in launches {
-                    if launch.upcoming ?? false {
-                        self.upcomingLaunches.append(launch)
-                    } else {
-                        self.pastLaunches.append(launch)
-                    }
+            case .success(let realm):
 
-                }
-                self.tableView.reloadData()
+                self.launches = realm.objects(Launch.self)
+                self.populateTableView()
             }
         }
+    }
+
+    /**
+        Function that filters between upcoming and past launches and populates data coming from Realm database
+     */
+    private func populateTableView() {
+        if let launches = self.launches {
+            for launch in launches {
+                if launch.upcoming ?? false {
+                    self.upcomingLaunches.append(launch)
+                } else {
+                    self.pastLaunches.append(launch)
+                }
+            }
+        }
+        self.tableView.reloadData()
     }
     
     // MARK: - IBActions
@@ -72,7 +93,8 @@ class LaunchesViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Send launch info here to Launch Info VC
-        if let vc = segue.destination as? LaunchInfoViewController, let launchInfo = sender as? UserLaunches {
+        if let vc = segue.destination as? LaunchInfoViewController, let launchInfo = sender as? Launch {
+            // We need to transform the data as UserLaunches for the private user partition, otherwise the schemas won't work well
             vc.launchInfo = launchInfo
         }
     }
@@ -103,7 +125,7 @@ extension LaunchesViewController: UITableViewDelegate {
         // We have to make sure that depending on the section of the segmented control selected, the info
         // can come from the upcoming or past arraysgi
         let selectedIndex = self.segmentedControl.selectedSegmentIndex
-        var launch: UserLaunches?
+        var launch: Launch?
 
         switch selectedIndex {
         case 0:

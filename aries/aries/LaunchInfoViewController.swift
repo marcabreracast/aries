@@ -23,7 +23,7 @@ class LaunchInfoViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
 
     // MARK: - Properties
-    var launchInfo: UserLaunches?
+    var launchInfo: Launch?
     let realm = try! Realm()
     var user: User?
 
@@ -52,7 +52,7 @@ class LaunchInfoViewController: UIViewController {
 
         nameLabel.text = launchInfo.name
 
-        dateLabel.text = DateHelper.formatShortUnixDate(date: launchInfo.dateUnix ?? 0.0)
+        dateLabel.text = DateHelper.formatShortUnixDate(date: launchInfo.date_unix ?? 0.0)
 
         if let launchDetails = launchInfo.details {
             detailsLabel.text = launchDetails
@@ -60,7 +60,7 @@ class LaunchInfoViewController: UIViewController {
             detailsLabel.text = "There are not details available for this launch."
         }
 
-        if let youtubeId = launchInfo.links?.youtubeId {
+        if let youtubeId = launchInfo.links?.youtube_id {
             playerView.load(withVideoId: youtubeId)
         } else {
             playerView.isHidden = true
@@ -109,11 +109,16 @@ class LaunchInfoViewController: UIViewController {
         guard let user = user, let launchInfo = launchInfo else {
             return
         }
+
         // If the launch is not included in the user's favorites we add it
         if !user.launches.contains(where: {$0.id == launchInfo.id}) {
+            // We have to create a new UserLaunches object to be able to conform to User schema
+            // Data from launches is of Launch type
+            let favoriteLaunch = UserLaunches(id: launchInfo.id, dateUnix: launchInfo.date_unix, details: launchInfo.details, name: launchInfo.name, upcoming: launchInfo.upcoming, links: nil, launchpad: launchInfo.launchpad)
+
             try! realm.write() {
                 // In order to add objects to the database we need to use the copy of it, otherwise it'll cause issues
-                if let launchCopy = launchInfo.copy {
+                if let launchCopy = favoriteLaunch.copy {
                     user.launches.append(launchCopy)
                 }
             }
