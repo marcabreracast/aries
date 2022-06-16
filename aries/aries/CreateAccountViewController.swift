@@ -43,7 +43,6 @@ class CreateAccountViewController: UIViewController {
     }
 
     private func signIn(email: String, password: String) {
-
         app.login(credentials: Credentials.emailPassword(email: email, password: password)) { (result) in
             DispatchQueue.main.async {
                 switch result {
@@ -55,7 +54,6 @@ class CreateAccountViewController: UIViewController {
                     print("Successfully logged in as user \(user)")
                     
                     self.performSegue(withIdentifier: "goToLaunchesVC", sender: nil)
-
                 }
             }
         }
