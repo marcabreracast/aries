@@ -1,8 +1,8 @@
 //
-//  Launches.swift
+//  Launch.swift
 //  aries
 //
-//  Created by Mar Cabrera on 13/06/2022.
+//  Created by Mar Cabrera on 16/06/2022.
 //
 
 import Foundation
@@ -157,4 +157,3 @@ class Launch_links_reddit: EmbeddedObject {
 
     @Persisted var recovery: String?
 }
-
