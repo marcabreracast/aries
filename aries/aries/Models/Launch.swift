@@ -1,8 +1,8 @@
 //
-//  Launches.swift
+//  Launch.swift
 //  aries
 //
-//  Created by Mar Cabrera on 13/06/2022.
+//  Created by Mar Cabrera on 16/06/2022.
 //
 
 import Foundation
@@ -23,7 +23,6 @@ class IDObject: Object {
 
 
 class Launch: IDObject {
- //   @Persisted(primaryKey: true) var _id: ObjectId
 
     @Persisted var _partition: String = ""
 
@@ -50,8 +49,6 @@ class Launch: IDObject {
     @Persisted var fairings: Launch_fairings?
 
     @Persisted var flight_number: Double?
-
- //   @Persisted var id: String?
 
     @Persisted var launch_library_id: String?
 
@@ -157,4 +154,3 @@ class Launch_links_reddit: EmbeddedObject {
 
     @Persisted var recovery: String?
 }
-
