@@ -47,29 +47,9 @@ class LoginViewController: UIViewController {
 
                 case .success(let user):
                     print("Successfully logged in as user \(user)")
-                    self.openRealmSync()
 
+                    self.performSegue(withIdentifier: "goToLaunches", sender: nil)
                 }
-            }
-        }
-    }
-
-    private func openRealmSync() {
-        let user = app.currentUser!
-
-        // The partition determines which subset of data to access.
-        // Defines a default configuration so the realm being opened on other areas of the app is fetching the right partition
-        Realm.Configuration.defaultConfiguration = user.configuration(partitionValue: user.id)
-
-        Realm.asyncOpen() { (result) in
-            switch result {
-            case .failure(let error):
-                print("Failed to open realm: \(error.localizedDescription)")
-                self.presentErrorAlert(message: "Oops! An error ocurred")
-
-            case .success(_):
-                // Realm opened
-                self.performSegue(withIdentifier: "goToLaunches", sender: nil)
             }
         }
     }

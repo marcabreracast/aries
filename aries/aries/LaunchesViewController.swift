@@ -26,6 +26,7 @@ class LaunchesViewController: UIViewController {
         setNavBar()
         setTabBar()
 
+        openPrivatePartitionRealm()
         openPublicPartitionRealm()
     }
 
@@ -48,6 +49,29 @@ class LaunchesViewController: UIViewController {
         self.tabBarController?.tabBar.unselectedItemTintColor = .lightGray
     }
     
+    // MARK: - Device Sync Methods
+    /**
+     We have to open a private Realm partition to access to the data of each user
+     */
+    private func openPrivatePartitionRealm() {
+        let user = app.currentUser!
+
+        // The partition determines which subset of data to access.
+        // Defines a default configuration so the realm being opened on other areas of the app is fetching the right partition
+        Realm.Configuration.defaultConfiguration = user.configuration(partitionValue: user.id)
+
+        Realm.asyncOpen() { (result) in
+            switch result {
+            case .failure(let error):
+                print("Failed to open realm: \(error.localizedDescription)")
+                self.presentErrorAlert(message: "Oops! An error ocurred")
+
+            case .success(_):
+                print("Pulbic Partition Realm Opened")
+            }
+        }
+    }
+
     /**
         We have to open a public Realm partition in order to get all the launches that were fetched from there
         The database fetches the launches from SpaceX API
