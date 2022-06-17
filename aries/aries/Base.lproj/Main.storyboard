@@ -11,7 +11,7 @@
         <!--Launches-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LaunchesViewController" customModule="aries" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchesViewController" id="BYZ-38-t0r" customClass="LaunchesViewController" customModule="aries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -506,7 +506,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="xj4-xC-zFV">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="18J-92-NSH" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="18J-92-NSH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="lo5-yC-nRJ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pcr-Wl-pe1">
