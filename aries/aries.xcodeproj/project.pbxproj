@@ -167,6 +167,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		3E86320D2860B48B00CD3BCC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3E86320B2860B39500CD3BCC /* Oxanium-Light.ttf */,
+				3E8632092860B31E00CD3BCC /* Oxanium-ExtraLight.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		3EDD731128256867000FAFD8 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +201,7 @@
 		3EDD731C28256867000FAFD8 /* aries */ = {
 			isa = PBXGroup;
 			children = (
+				3E86320D2860B48B00CD3BCC /* Fonts */,
 				3E7DBC18283E4D5700B92FD7 /* Components */,
 				3E5B8FEC283BD3DF0015B107 /* Models */,
 				3E5B8FEB283BD3C30015B107 /* Cells */,
@@ -207,8 +217,6 @@
 				3E7DBC13283E44CA00B92FD7 /* LoginViewController.swift */,
 				3E7DBC1B283E629C00B92FD7 /* AccountViewController.swift */,
 				3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */,
-				3E86320B2860B39500CD3BCC /* Oxanium-Light.ttf */,
-				3E8632092860B31E00CD3BCC /* Oxanium-ExtraLight.ttf */,
 			);
 			path = aries;
 			sourceTree = "<group>";
