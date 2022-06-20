@@ -19,6 +19,8 @@
 		3E7DBC14283E44CA00B92FD7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7DBC13283E44CA00B92FD7 /* LoginViewController.swift */; };
 		3E7DBC1A283E4D6B00B92FD7 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7DBC19283E4D6B00B92FD7 /* LoadingButton.swift */; };
 		3E7DBC1C283E629C00B92FD7 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7DBC1B283E629C00B92FD7 /* AccountViewController.swift */; };
+		3E86320A2860B32600CD3BCC /* Oxanium-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E8632092860B31E00CD3BCC /* Oxanium-ExtraLight.ttf */; };
+		3E86320C2860B39500CD3BCC /* Oxanium-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E86320B2860B39500CD3BCC /* Oxanium-Light.ttf */; };
 		3EB8D204285B70D0004217DD /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB8D203285B70D0004217DD /* Launch.swift */; };
 		3EC5524C2850A58A00672A20 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5524B2850A58A00672A20 /* FavoriteButton.swift */; };
 		3EC5524E2850BA5200672A20 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC5524D2850BA5200672A20 /* MapKit.framework */; };
@@ -68,6 +70,8 @@
 		3E7DBC13283E44CA00B92FD7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3E7DBC19283E4D6B00B92FD7 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		3E7DBC1B283E629C00B92FD7 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		3E8632092860B31E00CD3BCC /* Oxanium-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxanium-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3E86320B2860B39500CD3BCC /* Oxanium-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxanium-Light.ttf"; sourceTree = "<group>"; };
 		3EB8D203285B70D0004217DD /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		3EC5524B2850A58A00672A20 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		3EC5524D2850BA5200672A20 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -203,6 +207,8 @@
 				3E7DBC13283E44CA00B92FD7 /* LoginViewController.swift */,
 				3E7DBC1B283E629C00B92FD7 /* AccountViewController.swift */,
 				3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */,
+				3E86320B2860B39500CD3BCC /* Oxanium-Light.ttf */,
+				3E8632092860B31E00CD3BCC /* Oxanium-ExtraLight.ttf */,
 			);
 			path = aries;
 			sourceTree = "<group>";
@@ -366,8 +372,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E86320A2860B32600CD3BCC /* Oxanium-ExtraLight.ttf in Resources */,
 				3EDD732A2825686A000FAFD8 /* LaunchScreen.storyboard in Resources */,
 				3EDD73272825686A000FAFD8 /* Assets.xcassets in Resources */,
+				3E86320C2860B39500CD3BCC /* Oxanium-Light.ttf in Resources */,
 				3EDD732528256867000FAFD8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
