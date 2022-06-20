@@ -10,6 +10,7 @@ import RealmSwift
 
 class LoginViewController: UIViewController {
     // MARK: - IBOutlets
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: LoadingButton!
@@ -19,9 +20,16 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        emailTextfield.placeholder = "email@example.com"
-        passwordTextField.placeholder = "Password"
+        // We have to use NSAttributes to change the color of the placeholder
+        emailTextfield.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         passwordTextField.isSecureTextEntry = true
+        
+        loginButton.layer.cornerRadius = 5
+        loginButton.titleLabel?.font = UIFont(name: "Oximanium", size: 20)
+
+        let logoImage = UIImage(named: "logo")?.withTintColor(.white)
+        logoImageView.image = logoImage
         
         setCreateAccountLabel()
     }
