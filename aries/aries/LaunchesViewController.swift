@@ -17,6 +17,7 @@ class LaunchesViewController: UIViewController {
     var pastLaunches: [Launch] = []
     var upcomingLaunches: [Launch] = []
     var launches: Results<Launch>?
+    var myActivityIndicator = UIActivityIndicatorView()
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -25,6 +26,7 @@ class LaunchesViewController: UIViewController {
         setTableView()
         setNavBar()
         setTabBar()
+        showActivityIndicator()
 
         openPrivatePartitionRealm()
         openPublicPartitionRealm()
@@ -49,6 +51,19 @@ class LaunchesViewController: UIViewController {
         self.tabBarController?.tabBar.unselectedItemTintColor = .lightGray
     }
     
+    private func showActivityIndicator() {
+        myActivityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        myActivityIndicator.center = self.view.center
+        myActivityIndicator.hidesWhenStopped = false
+        myActivityIndicator.style = .large
+        myActivityIndicator.color = .white
+
+        self.view.addSubview(myActivityIndicator)
+        myActivityIndicator.startAnimating()
+        // We need to hide the table view while the data is loading
+        self.tableView.isHidden = true
+    }
+    
     // MARK: - Device Sync Methods
     /**
      We have to open a private Realm partition to access to the data of each user
@@ -67,7 +82,7 @@ class LaunchesViewController: UIViewController {
                 self.presentErrorAlert(message: "Oops! An error ocurred")
 
             case .success(_):
-                print("Pulbic Partition Realm Opened")
+                print("Public Partition Realm Opened")
             }
         }
     }
@@ -97,6 +112,7 @@ class LaunchesViewController: UIViewController {
         Function that filters between upcoming and past launches and populates data coming from Realm database
      */
     private func populateTableView() {
+
         if let launches = self.launches {
             for launch in launches {
                 if launch.upcoming ?? false {
@@ -107,6 +123,10 @@ class LaunchesViewController: UIViewController {
             }
         }
         self.tableView.reloadData()
+        // We stop the activity indicator and show the table view
+        self.myActivityIndicator.hidesWhenStopped = true
+        self.myActivityIndicator.stopAnimating()
+        self.tableView.isHidden = false
     }
     
     // MARK: - IBActions
