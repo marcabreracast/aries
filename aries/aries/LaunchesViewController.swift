@@ -119,6 +119,7 @@ class LaunchesViewController: UIViewController {
                     self.upcomingLaunches.append(launch)
                 } else {
                     self.pastLaunches.append(launch)
+                    self.pastLaunches.reverse()
                 }
             }
         }
