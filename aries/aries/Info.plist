@@ -4,6 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Oxanium-Regular.ttf</string>
+		<string>Oxanium-SemiBold.ttf</string>
+		<string>Oxanium-Bold.ttf</string>
 		<string>Oxanium-Light.ttf</string>
 		<string>Oxanium-ExtraLight.ttf</string>
 	</array>
