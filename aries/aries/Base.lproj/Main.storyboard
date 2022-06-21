@@ -30,11 +30,11 @@
             <objects>
                 <viewController storyboardIdentifier="LaunchesViewController" id="BYZ-38-t0r" customClass="LaunchesViewController" customModule="aries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bY8-Ep-sAs">
-                                <rect key="frame" x="124.5" y="104" width="165" height="32"/>
+                                <rect key="frame" x="124.5" y="16" width="165" height="32"/>
                                 <segments>
                                     <segment title="Upcoming"/>
                                     <segment title="Past"/>
@@ -45,7 +45,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PPY-Zz-thc">
-                                <rect key="frame" x="0.0" y="151" width="414" height="662"/>
+                                <rect key="frame" x="0.0" y="63" width="414" height="730"/>
                                 <color key="backgroundColor" red="0.20845571160000001" green="0.21901217100000001" blue="0.29780796170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="launchCell" rowHeight="81" id="3za-Ae-Dqk" customClass="LaunchCell" customModule="aries" customModuleProvider="target">
@@ -125,7 +125,7 @@
             <objects>
                 <viewController id="Exo-BM-XK3" customClass="LoginViewController" customModule="aries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="58E-Bz-P08">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MpT-VU-pxX">
@@ -153,7 +153,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EP-Is-Rp4">
-                                <rect key="frame" x="20" y="822" width="374" height="20"/>
+                                <rect key="frame" x="20" y="802" width="374" height="20"/>
                                 <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -230,23 +230,23 @@
             <objects>
                 <viewController id="z5U-fZ-eMZ" customClass="CreateAccountViewController" customModule="aries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OzS-xf-4JI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJU-dP-jWc">
-                                <rect key="frame" x="20" y="138" width="374" height="30"/>
+                                <rect key="frame" x="20" y="94" width="374" height="30"/>
                                 <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3s-RQ-pA7">
-                                <rect key="frame" x="30" y="208" width="354" height="20"/>
+                                <rect key="frame" x="30" y="164" width="354" height="20"/>
                                 <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uoH-bc-aiz">
-                                <rect key="frame" x="30" y="243" width="354" height="50"/>
+                                <rect key="frame" x="30" y="199" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.2941176593" green="0.3058823645" blue="0.40392160420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Pmr-EO-1Uz"/>
@@ -256,7 +256,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NvP-3i-bRx">
-                                <rect key="frame" x="30" y="368" width="354" height="50"/>
+                                <rect key="frame" x="30" y="324" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.2941176593" green="0.3058823645" blue="0.40392160420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="vbZ-d3-a4h"/>
@@ -266,7 +266,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpD-5i-EbX" customClass="LoadingButton" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="30" y="458" width="354" height="50"/>
+                                <rect key="frame" x="30" y="414" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.59607845540000004" green="0.54901963470000004" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cye-Ry-FkV"/>
@@ -279,7 +279,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR3-g8-otK">
-                                <rect key="frame" x="30" y="333" width="354" height="20"/>
+                                <rect key="frame" x="30" y="289" width="354" height="20"/>
                                 <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -487,11 +487,11 @@
             <objects>
                 <viewController id="iAM-wB-Bde" customClass="AccountViewController" customModule="aries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PUW-Qj-qzo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2g-29-gh5" customClass="LoadingButton" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="15" y="101" width="384" height="31"/>
+                                <rect key="frame" x="15" y="13" width="384" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="LOGOUT"/>
                                 <connections>
@@ -499,7 +499,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="32W-xn-L2Y">
-                                <rect key="frame" x="0.0" y="152" width="414" height="661"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="729"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteLaunchCell" textLabel="5xD-3U-vv9" style="IBUITableViewCellStyleDefault" id="59f-Zl-rH0" customClass="FavoriteLaunchCell" customModule="aries" customModuleProvider="target">
@@ -544,6 +544,7 @@
                     <connections>
                         <outlet property="logoutButton" destination="f2g-29-gh5" id="5gv-ud-kvy"/>
                         <outlet property="tableView" destination="32W-xn-L2Y" id="QWy-sq-qwD"/>
+                        <segue destination="Exo-BM-XK3" kind="show" identifier="goToLoginViewController" id="4YS-Mi-1Ng"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqd-R7-Fzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -573,6 +574,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="a4B-nc-ZVc"/>
+        <segue reference="4YS-Mi-1Ng"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>

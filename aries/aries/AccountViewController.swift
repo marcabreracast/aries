@@ -27,7 +27,6 @@ class AccountViewController: UIViewController {
         setTableView()
 
         // Fetch favorite launches from the database
-
         openPrivatePartitionRealm()
     }
 
@@ -98,7 +97,7 @@ class AccountViewController: UIViewController {
             DispatchQueue.main.async {
                 print("Logged out!")
                 self.logoutButton.hideLoading()
-                self.navigationController?.popViewController(animated: true)
+                self.performSegue(withIdentifier: "goToLoginViewController", sender: nil)
             }
         }
     }
