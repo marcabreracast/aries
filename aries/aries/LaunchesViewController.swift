@@ -82,7 +82,7 @@ class LaunchesViewController: UIViewController {
                 self.presentErrorAlert(message: "Oops! An error ocurred")
 
             case .success(_):
-                print("Public Partition Realm Opened")
+                print("Private Partition Realm Opened")
             }
         }
     }
