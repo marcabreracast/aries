@@ -10,7 +10,8 @@ import RealmSwift
 
 class LoginViewController: UIViewController {
     // MARK: - IBOutlets
-    @IBOutlet weak var emailTextfield: UITextField!
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: LoadingButton!
     @IBOutlet weak var createAccountLabel: UILabel!
@@ -19,9 +20,16 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        emailTextfield.placeholder = "email@example.com"
-        passwordTextField.placeholder = "Password"
+        // We have to use NSAttributes to change the color of the placeholder
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         passwordTextField.isSecureTextEntry = true
+        
+        loginButton.layer.cornerRadius = 5
+        loginButton.titleLabel?.font = UIFont(name: "Oximanium", size: 20)
+
+        let logoImage = UIImage(named: "logo")?.withTintColor(.white)
+        logoImageView.image = logoImage
         
         setCreateAccountLabel()
     }
@@ -47,29 +55,9 @@ class LoginViewController: UIViewController {
 
                 case .success(let user):
                     print("Successfully logged in as user \(user)")
-                    self.openRealmSync()
 
+                    self.performSegue(withIdentifier: "goToLaunches", sender: nil)
                 }
-            }
-        }
-    }
-
-    private func openRealmSync() {
-        let user = app.currentUser!
-
-        // The partition determines which subset of data to access.
-        // Defines a default configuration so the realm being opened on other areas of the app is fetching the right partition
-        Realm.Configuration.defaultConfiguration = user.configuration(partitionValue: user.id)
-
-        Realm.asyncOpen() { (result) in
-            switch result {
-            case .failure(let error):
-                print("Failed to open realm: \(error.localizedDescription)")
-                self.presentErrorAlert(message: "Oops! An error ocurred")
-
-            case .success(_):
-                // Realm opened
-                self.performSegue(withIdentifier: "goToLaunches", sender: nil)
             }
         }
     }

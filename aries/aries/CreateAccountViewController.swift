@@ -11,7 +11,6 @@ import RealmSwift
 class CreateAccountViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var createAccountButton: LoadingButton!
     
@@ -20,6 +19,10 @@ class CreateAccountViewController: UIViewController {
         super.viewDidLoad()
 
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.textContentType = .oneTimeCode
+        
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "email@example.com", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
     }
     
     // MARK: - IBActions
