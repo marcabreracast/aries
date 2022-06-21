@@ -29,7 +29,6 @@ class AccountViewController: UIViewController {
         // Fetch favorite launches from the database
 
         openPrivatePartitionRealm()
-        addFavoritesListener()
     }
 
     deinit {
