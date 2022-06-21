@@ -32,13 +32,13 @@ class User: Object, Codable {
 
 class UserLaunches: EmbeddedObject, Imitable {
     @Persisted var id: String?
-    @Persisted var dateUnix: Double?
+    @Persisted var date_unix: Double?
     @Persisted var details: String?
     @Persisted var name: String?
     @Persisted var upcoming: Bool?
     @Persisted var links: LaunchLinks?
     @Persisted var launchpad: String?
-
+    /*
     enum CodingKeys: String, CodingKey {
         case id
         case name
@@ -48,11 +48,12 @@ class UserLaunches: EmbeddedObject, Imitable {
         case links
         case launchpad
     }
+     */
 
     convenience init(id: String?, dateUnix: Double?, details: String?, name: String?, upcoming: Bool?, links: LaunchLinks?, launchpad: String?) {
         self.init()
         self.id = id
-        self.dateUnix = dateUnix
+        self.date_unix = dateUnix
         self.details = details
         self.name = name
         self.upcoming = upcoming
@@ -61,10 +62,12 @@ class UserLaunches: EmbeddedObject, Imitable {
 }
 
 class LaunchLinks: EmbeddedObject, Codable {
-    @Persisted var youtubeId: String?
+    @Persisted var youtube_id: String?
 
+    /*
     enum CodingKeys: String, CodingKey {
         case youtubeId = "youtube_id"
     }
+     */
 }
 
