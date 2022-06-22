@@ -16,6 +16,15 @@ class LoadingButton: UIButton {
     private var originalButtonText: String?
     var activityIndicator: UIActivityIndicatorView!
 
+    // MARK: - Init Method
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+
+        self.titleLabel?.font = UIFont(name: "Oxanium-Regular", size: 17)
+        self.layer.cornerRadius = 5
+        self.backgroundColor = #colorLiteral(red: 0.6060286164, green: 0.5469256043, blue: 0.5953031778, alpha: 1)
+    }
+
     // MARK: - Helper Methods
     func showLoading() {
         originalButtonText = self.titleLabel?.text
