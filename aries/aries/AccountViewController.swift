@@ -114,7 +114,7 @@ extension AccountViewController: UICollectionViewDelegate, UICollectionViewDataS
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "favoriteLaunchesCell", for: indexPath) as! FavoriteLaunchCell
 
-        cell.setUp(model: favoriteLaunches[indexPath.row])
+        cell.setup(model: favoriteLaunches[indexPath.row])
 
         cell.layer.cornerRadius = 10
 
@@ -129,13 +129,5 @@ extension AccountViewController: UICollectionViewDelegate, UICollectionViewDataS
         let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(numberOfCellsInRow))
 
         return CGSize(width: size, height: size)
-    }
-}
-
-class FavoriteLaunchCell: UICollectionViewCell {
-    @IBOutlet weak var label: UILabel!
-
-    func setUp(model: UserLaunches) {
-        self.label.text = model.name
     }
 }
