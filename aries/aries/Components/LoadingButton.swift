@@ -19,8 +19,8 @@ class LoadingButton: UIButton {
     // MARK: - Init Method
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
+
         self.layer.cornerRadius = 5
-        self.titleLabel?.font = UIFont(name: "Oxanium-ExtraLight", size: 30)
         self.backgroundColor = #colorLiteral(red: 0.6060286164, green: 0.5469256043, blue: 0.5953031778, alpha: 1)
     }
 
