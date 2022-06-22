@@ -114,7 +114,9 @@ class LaunchInfoViewController: UIViewController {
         if !user.launches.contains(where: {$0.id == launchInfo.id}) {
             // We have to create a new UserLaunches object to be able to conform to User schema
             // Data from launches is of Launch type
-            let favoriteLaunch = UserLaunches(id: launchInfo.id, dateUnix: launchInfo.date_unix, details: launchInfo.details, name: launchInfo.name, upcoming: launchInfo.upcoming, links: nil, launchpad: launchInfo.launchpad)
+            let links = LaunchLinks()
+            links.image = launchInfo.links?.patch?.small
+            let favoriteLaunch = UserLaunches(id: launchInfo.id, dateUnix: launchInfo.date_unix, details: launchInfo.details, name: launchInfo.name, upcoming: launchInfo.upcoming, links: links, launchpad: launchInfo.launchpad)
 
             try! realm.write() {
                 // In order to add objects to the database we need to use the copy of it, otherwise it'll cause issues
@@ -132,6 +134,7 @@ class LaunchInfoViewController: UIViewController {
             }
             favoriteButton.flipFavoritedState(false)
         }
+        self.dismiss(animated: true)
     }
 
     /*
