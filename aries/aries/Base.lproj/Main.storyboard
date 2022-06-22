@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -56,13 +57,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vD-pB-vQs">
-                                                    <rect key="frame" x="20" y="16" width="374" height="24"/>
+                                                    <rect key="frame" x="20" y="16" width="374" height="21"/>
                                                     <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K73-6V-hlU">
-                                                    <rect key="frame" x="20" y="53" width="374" height="17"/>
+                                                    <rect key="frame" x="20" y="50" width="374" height="20"/>
                                                     <fontDescription key="fontDescription" name="Oxanium-ExtraLight" family="Oxanium" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemGray2Color"/>
                                                     <nil key="highlightedColor"/>
@@ -337,7 +338,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djO-IB-JA0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="731"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nilesat - 301" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cd-Jo-3FG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nilesat - 301" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cd-Jo-3FG">
                                                 <rect key="frame" x="15" y="60" width="384" height="26"/>
                                                 <fontDescription key="fontDescription" name="Oxanium-Bold" family="Oxanium" pointSize="26"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -506,51 +507,60 @@
                                     <action selector="logoutButtonTapped:" destination="iAM-wB-Bde" eventType="touchUpInside" id="iTH-0Y-vxl"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="32W-xn-L2Y">
-                                <rect key="frame" x="0.0" y="83" width="414" height="710"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NGG-pD-Wuq">
+                                <rect key="frame" x="15" y="88" width="384" height="675"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteLaunchCell" textLabel="5xD-3U-vv9" style="IBUITableViewCellStyleDefault" id="59f-Zl-rH0" customClass="FavoriteLaunchCell" customModule="aries" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="59f-Zl-rH0" id="BJr-Yo-rL2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e0e-3e-I0K">
+                                    <size key="itemSize" width="201" height="170"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="favoriteLaunchesCell" id="HHM-1j-Cwb" customClass="FavoriteLaunchCell" customModule="aries" customModuleProvider="target">
+                                        <rect key="frame" x="91.5" y="0.0" width="201" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xeh-1d-Ev6">
+                                            <rect key="frame" x="0.0" y="0.0" width="201" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5xD-3U-vv9">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbt-Qe-ZMT">
+                                                    <rect key="frame" x="79.5" y="74.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstItem="Sbt-Qe-ZMT" firstAttribute="centerX" secondItem="Xeh-1d-Ev6" secondAttribute="centerX" id="Uyz-Mi-Y7w"/>
+                                                <constraint firstItem="Sbt-Qe-ZMT" firstAttribute="centerY" secondItem="Xeh-1d-Ev6" secondAttribute="centerY" id="qVd-aJ-Pjo"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="title" destination="5xD-3U-vv9" id="WUg-0k-8xN"/>
+                                            <outlet property="label" destination="Sbt-Qe-ZMT" id="cUa-me-oHP"/>
                                         </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eFI-BU-1Wt"/>
                         <color key="backgroundColor" red="0.2117646933" green="0.21960783" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="32W-xn-L2Y" firstAttribute="trailing" secondItem="eFI-BU-1Wt" secondAttribute="trailing" id="Bxi-qD-Pdh"/>
-                            <constraint firstItem="32W-xn-L2Y" firstAttribute="top" secondItem="f2g-29-gh5" secondAttribute="bottom" constant="20" id="GG0-Ne-8bU"/>
+                            <constraint firstItem="NGG-pD-Wuq" firstAttribute="trailing" secondItem="eFI-BU-1Wt" secondAttribute="trailing" constant="-15" id="7Xo-tv-8Ck"/>
                             <constraint firstItem="f2g-29-gh5" firstAttribute="top" secondItem="eFI-BU-1Wt" secondAttribute="top" constant="13" id="KhX-B8-HGy"/>
-                            <constraint firstItem="eFI-BU-1Wt" firstAttribute="bottom" secondItem="32W-xn-L2Y" secondAttribute="bottom" id="iNa-sc-Hnw"/>
+                            <constraint firstItem="NGG-pD-Wuq" firstAttribute="leading" secondItem="eFI-BU-1Wt" secondAttribute="leading" constant="15" id="Uj7-xR-W19"/>
+                            <constraint firstItem="NGG-pD-Wuq" firstAttribute="top" secondItem="f2g-29-gh5" secondAttribute="bottom" constant="25" id="fTn-TH-ZzN"/>
                             <constraint firstItem="f2g-29-gh5" firstAttribute="leading" secondItem="eFI-BU-1Wt" secondAttribute="leading" constant="15" id="qWg-Xi-fRR"/>
-                            <constraint firstItem="32W-xn-L2Y" firstAttribute="leading" secondItem="eFI-BU-1Wt" secondAttribute="leading" id="vh2-L9-9re"/>
+                            <constraint firstItem="eFI-BU-1Wt" firstAttribute="bottom" secondItem="NGG-pD-Wuq" secondAttribute="bottom" constant="30" id="siu-BX-YlA"/>
                             <constraint firstItem="eFI-BU-1Wt" firstAttribute="trailing" secondItem="f2g-29-gh5" secondAttribute="trailing" constant="15" id="zsK-FY-EWZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="person.fill" catalog="system" id="93d-hU-U5n"/>
                     <navigationItem key="navigationItem" id="rwp-yM-sjW"/>
                     <connections>
+                        <outlet property="collectionView" destination="NGG-pD-Wuq" id="S0E-R0-WAB"/>
                         <outlet property="logoutButton" destination="f2g-29-gh5" id="5gv-ud-kvy"/>
-                        <outlet property="tableView" destination="32W-xn-L2Y" id="QWy-sq-qwD"/>
                         <segue destination="Exo-BM-XK3" kind="show" identifier="goToLoginViewController" id="4YS-Mi-1Ng"/>
                     </connections>
                 </viewController>

@@ -11,20 +11,20 @@ import RealmSwift
 class AccountViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var logoutButton: LoadingButton!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     // MARK: - Properties
     let realm = try! Realm()
     var user: User?
     lazy var favoriteLaunches: List<UserLaunches>? = nil
     var notificationToken: NotificationToken?
-    
+
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.setHidesBackButton(true, animated: true)
-        setTableView()
+        setCollectionView()
 
         // Fetch favorite launches from the database
         openPrivatePartitionRealm()
@@ -34,7 +34,7 @@ class AccountViewController: UIViewController {
         // Invalidate notificationToken
         notificationToken?.invalidate()
     }
-    
+
     private func openPrivatePartitionRealm() {
         let user = app.currentUser!
 
@@ -52,37 +52,34 @@ class AccountViewController: UIViewController {
                 print("Private Partition Realm Opened")
                 let result = realm.objects(User.self).first
                 self.favoriteLaunches = result?.launches
-                
+
                 self.addFavoritesListener()
             }
         }
     }
 
     // MARK: - Private Helpers
-    private func setTableView() {
-
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.separatorColor = .white
+    private func setCollectionView() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 
     // Observe the favorites for changes. When changes are received, tableView is updated
     private func addFavoritesListener() {
         notificationToken = favoriteLaunches?.observe { [weak self] (changes) in
-            guard let tableView = self?.tableView else { return }
+         //   guard let tableView = self?.tableView else { return }
+            guard let collectionView = self?.collectionView else { return }
 
             switch changes {
             case .initial:
-                tableView.reloadData()
+             //   tableView.reloadData()
+                collectionView.reloadData()
             case .update(_, let deletions, let insertions, let modifications):
                 // Query results have changed so we need to apply the to the tableView
-                tableView.performBatchUpdates({
-                    tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0) }),
-                        with: .automatic)
-                    tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
-                        with: .automatic)
-                    tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
-                        with: .automatic)
+                collectionView.performBatchUpdates({
+                    collectionView.deleteItems(at: deletions.map({ IndexPath(row: $0, section: 0) }))
+                    collectionView.insertItems(at: insertions.map({ IndexPath(row: $0, section: 0) }))
+                    collectionView.reloadItems(at: modifications.map({ IndexPath(row: $0, section: 0) }))
                 })
             case .error(let error):
                 fatalError("\(error)")
@@ -103,26 +100,42 @@ class AccountViewController: UIViewController {
     }
 }
 
-// MARK: - TableView Delegate
-extension AccountViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+// MARK: - Collection View Delegate
+extension AccountViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return favoriteLaunches?.count ?? 0
+    }
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteLaunchCell", for: indexPath) as! FavoriteLaunchCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        cell.title.text = favoriteLaunches?[indexPath.row].name
-        cell.selectionStyle = .none
+        guard let favoriteLaunches = favoriteLaunches else {
+            return UICollectionViewCell()
+        }
+
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "favoriteLaunchesCell", for: indexPath) as! FavoriteLaunchCell
+
+        cell.setUp(model: favoriteLaunches[indexPath.row])
+
+        cell.layer.cornerRadius = 10
 
         return cell
     }
-}
 
-// MARK: - TableView Data Source
-extension AccountViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favoriteLaunches?.count ?? 0
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numberOfCellsInRow = 2
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+
+        let totalSpace = flowLayout.sectionInset.left + flowLayout.sectionInset.right + (flowLayout.minimumInteritemSpacing * CGFloat(numberOfCellsInRow - 1))
+        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(numberOfCellsInRow))
+
+        return CGSize(width: size, height: size)
     }
 }
 
-class FavoriteLaunchCell: UITableViewCell {
-    @IBOutlet weak var title: UILabel!
+class FavoriteLaunchCell: UICollectionViewCell {
+    @IBOutlet weak var label: UILabel!
+
+    func setUp(model: UserLaunches) {
+        self.label.text = model.name
+    }
 }
