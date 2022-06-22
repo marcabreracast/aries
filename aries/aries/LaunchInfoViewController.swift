@@ -134,6 +134,7 @@ class LaunchInfoViewController: UIViewController {
             }
             favoriteButton.flipFavoritedState(false)
         }
+        self.dismiss(animated: true)
     }
 
     /*
