@@ -303,7 +303,6 @@
                             <constraint firstItem="DR3-g8-otK" firstAttribute="leading" secondItem="vMl-H7-qud" secondAttribute="leading" constant="30" id="YeS-45-2L4"/>
                             <constraint firstItem="vMl-H7-qud" firstAttribute="trailing" secondItem="DR3-g8-otK" secondAttribute="trailing" constant="30" id="cCF-zk-gJs"/>
                             <constraint firstItem="uoH-bc-aiz" firstAttribute="leading" secondItem="vMl-H7-qud" secondAttribute="leading" constant="30" id="cKH-Yn-06o"/>
-                            <constraint firstItem="BJU-dP-jWc" firstAttribute="centerX" secondItem="OzS-xf-4JI" secondAttribute="centerX" id="cx6-gf-HDL"/>
                             <constraint firstItem="GpD-5i-EbX" firstAttribute="leading" secondItem="vMl-H7-qud" secondAttribute="leading" constant="30" id="lM7-Y5-T79"/>
                             <constraint firstItem="vMl-H7-qud" firstAttribute="trailing" secondItem="GpD-5i-EbX" secondAttribute="trailing" constant="30" id="ujK-TJ-x2P"/>
                             <constraint firstItem="vMl-H7-qud" firstAttribute="trailing" secondItem="M3s-RQ-pA7" secondAttribute="trailing" constant="30" id="yW5-Db-DvL"/>
@@ -532,7 +531,6 @@
                             <constraint firstItem="32W-xn-L2Y" firstAttribute="trailing" secondItem="eFI-BU-1Wt" secondAttribute="trailing" id="Bxi-qD-Pdh"/>
                             <constraint firstItem="32W-xn-L2Y" firstAttribute="top" secondItem="f2g-29-gh5" secondAttribute="bottom" constant="20" id="GG0-Ne-8bU"/>
                             <constraint firstItem="f2g-29-gh5" firstAttribute="top" secondItem="eFI-BU-1Wt" secondAttribute="top" constant="13" id="KhX-B8-HGy"/>
-                            <constraint firstItem="f2g-29-gh5" firstAttribute="centerX" secondItem="PUW-Qj-qzo" secondAttribute="centerX" id="USm-xl-ihY"/>
                             <constraint firstItem="eFI-BU-1Wt" firstAttribute="bottom" secondItem="32W-xn-L2Y" secondAttribute="bottom" id="iNa-sc-Hnw"/>
                             <constraint firstItem="f2g-29-gh5" firstAttribute="leading" secondItem="eFI-BU-1Wt" secondAttribute="leading" constant="15" id="qWg-Xi-fRR"/>
                             <constraint firstItem="32W-xn-L2Y" firstAttribute="leading" secondItem="eFI-BU-1Wt" secondAttribute="leading" id="vh2-L9-9re"/>
