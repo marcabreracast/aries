@@ -101,7 +101,7 @@ class AccountViewController: UIViewController {
 }
 
 // MARK: - Collection View Delegate
-extension AccountViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension AccountViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return favoriteLaunches?.count ?? 0
     }
@@ -120,7 +120,9 @@ extension AccountViewController: UICollectionViewDelegate, UICollectionViewDataS
 
         return cell
     }
+}
 
+extension AccountViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let numberOfCellsInRow = 1
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout

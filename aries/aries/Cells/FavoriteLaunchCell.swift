@@ -14,6 +14,11 @@ class FavoriteLaunchCell: UICollectionViewCell {
 
     func setup(model: UserLaunches) {
         self.label.text = model.name
-        self.imageView.setCustomImage(model.links?.image)
+        if let image = model.links?.image {
+            self.imageView.setCustomImage(image)
+        } else {
+            self.imageView.image = UIImage(named: "no-image")
+        }
+
     }
 }
