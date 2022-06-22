@@ -58,10 +58,12 @@ class UserLaunches: EmbeddedObject, Imitable {
         self.name = name
         self.upcoming = upcoming
         self.launchpad = launchpad
+        self.links = links
     }
 }
 
 class LaunchLinks: EmbeddedObject, Codable {
+    @Persisted var image: String?
     @Persisted var youtube_id: String?
 
     /*

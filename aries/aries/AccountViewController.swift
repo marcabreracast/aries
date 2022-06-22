@@ -122,12 +122,12 @@ extension AccountViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let numberOfCellsInRow = 2
+        let numberOfCellsInRow = 1
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
 
         let totalSpace = flowLayout.sectionInset.left + flowLayout.sectionInset.right + (flowLayout.minimumInteritemSpacing * CGFloat(numberOfCellsInRow - 1))
         let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(numberOfCellsInRow))
 
-        return CGSize(width: size, height: size)
+        return CGSize(width: size, height: 110)
     }
 }

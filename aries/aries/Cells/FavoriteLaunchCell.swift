@@ -10,8 +10,10 @@ import UIKit
 
 class FavoriteLaunchCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
 
     func setup(model: UserLaunches) {
         self.label.text = model.name
+        self.imageView.setCustomImage(model.links?.image)
     }
 }
