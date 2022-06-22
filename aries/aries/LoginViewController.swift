@@ -22,14 +22,11 @@ class LoginViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
 
         // We have to use NSAttributes to change the color of the placeholder
-        emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9472092986, green: 0.912545681, blue: 0.8959150314, alpha: 1)])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9472092986, green: 0.912545681, blue: 0.8959150314, alpha: 1)])
         passwordTextField.isSecureTextEntry = true
-        
-        loginButton.layer.cornerRadius = 5
-        loginButton.titleLabel?.font = UIFont(name: "Oximanium", size: 20)
 
-        let logoImage = UIImage(named: "logo")?.withTintColor(.white)
+        let logoImage = UIImage(named: "logo")?.withTintColor(#colorLiteral(red: 0.9472092986, green: 0.912545681, blue: 0.8959150314, alpha: 1))
         logoImageView.image = logoImage
         
         setCreateAccountLabel()
