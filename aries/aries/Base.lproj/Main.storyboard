@@ -130,7 +130,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MpT-VU-pxX">
-                                <rect key="frame" x="20" y="500.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="513" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.2941176593" green="0.3058823645" blue="0.40392160420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tVl-6u-1Pc"/>
@@ -140,7 +140,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DF-Q4-xlD" customClass="LoadingButton" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="20" y="580.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="593" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.59607845540000004" green="0.54901963470000004" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gpi-9f-H9C"/>
@@ -155,7 +155,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EP-Is-Rp4">
-                                <rect key="frame" x="20" y="802" width="374" height="20"/>
+                                <rect key="frame" x="20" y="798.5" width="374" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -165,19 +165,19 @@
                                 <color key="tintColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aries" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeZ-N5-97a">
-                                <rect key="frame" x="20" y="305.5" width="374" height="45"/>
+                                <rect key="frame" x="20" y="305.5" width="374" height="52.5"/>
                                 <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zde-Lg-Mf4">
-                                <rect key="frame" x="20" y="360.5" width="374" height="30"/>
+                                <rect key="frame" x="20" y="368" width="374" height="35"/>
                                 <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMN-5B-ERm">
-                                <rect key="frame" x="20" y="420.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="433" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.2941176593" green="0.3058823645" blue="0.40392160420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hg9-st-qUA"/>
@@ -550,19 +550,19 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbt-Qe-ZMT">
-                                                    <rect key="frame" x="103" y="18" width="237" height="24"/>
+                                                    <rect key="frame" x="103" y="18" width="237" height="17"/>
                                                     <fontDescription key="fontDescription" name="Oxanium-SemiBold" family="Oxanium" pointSize="17"/>
                                                     <color key="textColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Rocket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOo-jo-N2D">
-                                                    <rect key="frame" x="103" y="56" width="189.5" height="18"/>
+                                                    <rect key="frame" x="103" y="49" width="189.5" height="18"/>
                                                     <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="18"/>
                                                     <color key="textColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5p-Z4-PjF">
-                                                    <rect key="frame" x="302.5" y="56" width="37.5" height="18"/>
+                                                    <rect key="frame" x="302.5" y="49" width="37.5" height="17"/>
                                                     <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="17"/>
                                                     <color key="textColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -578,8 +578,6 @@
                                                 <constraint firstItem="c5p-Z4-PjF" firstAttribute="leading" secondItem="gOo-jo-N2D" secondAttribute="trailing" constant="10" id="bai-jg-B1T"/>
                                                 <constraint firstItem="gOo-jo-N2D" firstAttribute="top" secondItem="Sbt-Qe-ZMT" secondAttribute="bottom" constant="14" id="fOj-Fx-wV8"/>
                                                 <constraint firstItem="Sbt-Qe-ZMT" firstAttribute="top" secondItem="Xeh-1d-Ev6" secondAttribute="top" constant="18" id="gce-FJ-jWd"/>
-                                                <constraint firstAttribute="bottom" secondItem="c5p-Z4-PjF" secondAttribute="bottom" constant="33" id="l68-6D-kds"/>
-                                                <constraint firstAttribute="bottom" secondItem="gOo-jo-N2D" secondAttribute="bottom" constant="33" id="lfb-JM-wy4"/>
                                                 <constraint firstItem="Yh0-ig-Qlw" firstAttribute="leading" secondItem="Xeh-1d-Ev6" secondAttribute="leading" constant="15" id="xoD-w7-2vB"/>
                                                 <constraint firstItem="Sbt-Qe-ZMT" firstAttribute="leading" secondItem="Yh0-ig-Qlw" secondAttribute="trailing" constant="18" id="yyv-X9-k7X"/>
                                             </constraints>
