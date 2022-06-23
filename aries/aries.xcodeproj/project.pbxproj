@@ -12,6 +12,7 @@
 		3E17BE672860CAF0006EBF3F /* Oxanium-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E17BE662860CAF0006EBF3F /* Oxanium-Regular.ttf */; };
 		3E2B9D32286351C900CCAF24 /* FavoriteLaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2B9D31286351C900CCAF24 /* FavoriteLaunchCell.swift */; };
 		3E2B9D342863586300CCAF24 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2B9D332863586300CCAF24 /* UIImageView+Extension.swift */; };
+		3E2B9D362863735900CCAF24 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2B9D352863735900CCAF24 /* Rocket.swift */; };
 		3E5967AD2850E245001933A1 /* Launchpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5967AC2850E245001933A1 /* Launchpad.swift */; };
 		3E5967AF2850F4E8001933A1 /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5967AE2850F4E8001933A1 /* MKMapView+Extension.swift */; };
 		3E5B8FEE283BD4D50015B107 /* LaunchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B8FED283BD4D50015B107 /* LaunchInfoViewController.swift */; };
@@ -70,6 +71,7 @@
 		3E17BE662860CAF0006EBF3F /* Oxanium-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxanium-Regular.ttf"; sourceTree = "<group>"; };
 		3E2B9D31286351C900CCAF24 /* FavoriteLaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLaunchCell.swift; sourceTree = "<group>"; };
 		3E2B9D332863586300CCAF24 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		3E2B9D352863735900CCAF24 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		3E5967AC2850E245001933A1 /* Launchpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launchpad.swift; sourceTree = "<group>"; };
 		3E5967AE2850F4E8001933A1 /* MKMapView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
 		3E5B8FED283BD4D50015B107 /* LaunchInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInfoViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				3E6C8A022848FBAE0037B6C6 /* User.swift */,
 				3E5967AC2850E245001933A1 /* Launchpad.swift */,
 				3EB8D203285B70D0004217DD /* Launch.swift */,
+				3E2B9D352863735900CCAF24 /* Rocket.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				3EDD734E28256E3B000FAFD8 /* LaunchCell.swift in Sources */,
 				3E7DBC14283E44CA00B92FD7 /* LoginViewController.swift in Sources */,
 				3E5967AD2850E245001933A1 /* Launchpad.swift in Sources */,
+				3E2B9D362863735900CCAF24 /* Rocket.swift in Sources */,
 				3E7DBC1C283E629C00B92FD7 /* AccountViewController.swift in Sources */,
 				3EB8D204285B70D0004217DD /* Launch.swift in Sources */,
 				3E2B9D342863586300CCAF24 /* UIImageView+Extension.swift in Sources */,
