@@ -550,25 +550,25 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbt-Qe-ZMT">
-                                                    <rect key="frame" x="103" y="18" width="237" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="103" y="18" width="237" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Oxanium-SemiBold" family="Oxanium" pointSize="17"/>
+                                                    <color key="textColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Rocket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOo-jo-N2D">
-                                                    <rect key="frame" x="103" y="53" width="191" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="103" y="56" width="189.5" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="18"/>
+                                                    <color key="textColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5p-Z4-PjF">
-                                                    <rect key="frame" x="304" y="53" width="36" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="302.5" y="56" width="37.5" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="17"/>
+                                                    <color key="textColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" red="0.28068515900000002" green="0.29143473469999998" blue="0.3971553773" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="c5p-Z4-PjF" secondAttribute="trailing" constant="18" id="2HI-R3-7Ml"/>
                                                 <constraint firstItem="Yh0-ig-Qlw" firstAttribute="centerY" secondItem="Xeh-1d-Ev6" secondAttribute="centerY" id="2lv-tg-hMg"/>
@@ -584,6 +584,7 @@
                                                 <constraint firstItem="Sbt-Qe-ZMT" firstAttribute="leading" secondItem="Yh0-ig-Qlw" secondAttribute="trailing" constant="18" id="yyv-X9-k7X"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.280685159001548" green="0.29143473469133546" blue="0.39715537731616157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="customSize" width="358" height="107"/>
                                         <connections>
                                             <outlet property="dateLabel" destination="c5p-Z4-PjF" id="Z54-J7-f04"/>
