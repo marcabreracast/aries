@@ -38,6 +38,7 @@ class UserLaunches: EmbeddedObject, Imitable {
     @Persisted var upcoming: Bool?
     @Persisted var links: LaunchLinks?
     @Persisted var launchpad: String?
+    @Persisted var rocket: String?
     /*
     enum CodingKeys: String, CodingKey {
         case id
@@ -50,7 +51,7 @@ class UserLaunches: EmbeddedObject, Imitable {
     }
      */
 
-    convenience init(id: String?, dateUnix: Double?, details: String?, name: String?, upcoming: Bool?, links: LaunchLinks?, launchpad: String?) {
+    convenience init(id: String?, dateUnix: Double?, details: String?, name: String?, upcoming: Bool?, links: LaunchLinks?, launchpad: String?, rocket: String?) {
         self.init()
         self.id = id
         self.date_unix = dateUnix
@@ -59,6 +60,7 @@ class UserLaunches: EmbeddedObject, Imitable {
         self.upcoming = upcoming
         self.launchpad = launchpad
         self.links = links
+        self.rocket = rocket
     }
 }
 

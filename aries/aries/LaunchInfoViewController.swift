@@ -16,6 +16,7 @@ class LaunchInfoViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var rocketLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var playerView: YTPlayerView!
     @IBOutlet weak var thirdPartyStackView: UIStackView!
@@ -26,6 +27,7 @@ class LaunchInfoViewController: UIViewController {
     var launchInfo: Launch?
     let realm = try! Realm()
     var user: User?
+    var rocket: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,7 @@ class LaunchInfoViewController: UIViewController {
 
         populateLaunchInfoFields()
         fetchLaunchpadInfo()
+        fetchRocketInfo()
     }
 
     // MARK: - Private Helpers
@@ -88,6 +91,19 @@ class LaunchInfoViewController: UIViewController {
             }
         }
     }
+    
+    private func fetchRocketInfo() {
+        guard let rocketId = launchInfo?.rocket else { return }
+        
+        AF.request("https://api.spacexdata.com/v4/rockets/\(rocketId)").responseDecodable(of: Rocket.self) { response in
+            debugPrint("Response: \(response.description)")
+
+            if let response = response.value {
+                self.rocket = response.name ?? ""
+                self.rocketLabel.text = self.rocket
+            }
+        }
+    }
 
     /**
      Function that sets pin on map to make launchpad visible
@@ -116,7 +132,7 @@ class LaunchInfoViewController: UIViewController {
             // Data from launches is of Launch type
             let links = LaunchLinks()
             links.image = launchInfo.links?.patch?.small
-            let favoriteLaunch = UserLaunches(id: launchInfo.id, dateUnix: launchInfo.date_unix, details: launchInfo.details, name: launchInfo.name, upcoming: launchInfo.upcoming, links: links, launchpad: launchInfo.launchpad)
+            let favoriteLaunch = UserLaunches(id: launchInfo.id, dateUnix: launchInfo.date_unix, details: launchInfo.details, name: launchInfo.name, upcoming: launchInfo.upcoming, links: links, launchpad: launchInfo.launchpad, rocket: rocket)
 
             try! realm.write() {
                 // In order to add objects to the database we need to use the copy of it, otherwise it'll cause issues

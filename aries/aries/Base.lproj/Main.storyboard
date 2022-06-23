@@ -130,7 +130,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MpT-VU-pxX">
-                                <rect key="frame" x="20" y="500.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="513" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.2941176593" green="0.3058823645" blue="0.40392160420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tVl-6u-1Pc"/>
@@ -140,7 +140,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DF-Q4-xlD" customClass="LoadingButton" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="20" y="580.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="593" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.59607845540000004" green="0.54901963470000004" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gpi-9f-H9C"/>
@@ -155,7 +155,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EP-Is-Rp4">
-                                <rect key="frame" x="20" y="802" width="374" height="20"/>
+                                <rect key="frame" x="20" y="798.5" width="374" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -165,19 +165,19 @@
                                 <color key="tintColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aries" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeZ-N5-97a">
-                                <rect key="frame" x="20" y="305.5" width="374" height="45"/>
+                                <rect key="frame" x="20" y="305.5" width="374" height="52.5"/>
                                 <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zde-Lg-Mf4">
-                                <rect key="frame" x="20" y="360.5" width="374" height="30"/>
+                                <rect key="frame" x="20" y="368" width="374" height="35"/>
                                 <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMN-5B-ERm">
-                                <rect key="frame" x="20" y="420.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="433" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.2941176593" green="0.3058823645" blue="0.40392160420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hg9-st-qUA"/>
@@ -336,7 +336,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djO-IB-JA0">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="731"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="783"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nilesat - 301" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cd-Jo-3FG">
                                                 <rect key="frame" x="15" y="60" width="384" height="26"/>
@@ -353,12 +353,6 @@
                                                     <action selector="didTapCloseButton:" destination="sTF-1v-KSS" eventType="touchUpInside" id="rFE-D0-Q53"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rasat was carried to the orbit on a first attempt." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3m-YC-iYc">
-                                                <rect key="frame" x="15" y="156" width="384" height="17"/>
-                                                <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHK-pD-s6P">
                                                 <rect key="frame" x="15" y="96" width="92.5" height="40"/>
                                                 <subviews>
@@ -391,8 +385,20 @@
                                                     <action selector="addFavoritesButtonTapped:" destination="sTF-1v-KSS" eventType="touchUpInside" id="jki-8W-XUh"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rocket: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7U2-nT-9Rx">
+                                                <rect key="frame" x="15" y="166" width="63.5" height="17"/>
+                                                <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="17"/>
+                                                <color key="textColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzZ-Y2-cSN">
+                                                <rect key="frame" x="86" y="164.5" width="313" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0Nr-Az-p8v">
-                                                <rect key="frame" x="15" y="203" width="384" height="508"/>
+                                                <rect key="frame" x="15" y="255" width="384" height="508"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coh-rN-wDe" customClass="YTPlayerView">
                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="250"/>
@@ -409,26 +415,37 @@
                                                     </mapView>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rasat was carried to the orbit on a first attempt." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3m-YC-iYc">
+                                                <rect key="frame" x="15" y="208" width="384" height="17"/>
+                                                <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.2117646933" green="0.21960783" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="U3m-YC-iYc" firstAttribute="top" secondItem="fHK-pD-s6P" secondAttribute="bottom" constant="20" id="12p-GM-I80"/>
                                             <constraint firstItem="8Cd-Jo-3FG" firstAttribute="top" secondItem="djO-IB-JA0" secondAttribute="top" constant="60" id="1ld-1r-em0"/>
+                                            <constraint firstItem="GzZ-Y2-cSN" firstAttribute="centerY" secondItem="7U2-nT-9Rx" secondAttribute="centerY" id="6B6-We-aJo"/>
                                             <constraint firstItem="fHK-pD-s6P" firstAttribute="top" secondItem="8Cd-Jo-3FG" secondAttribute="bottom" constant="10" id="BMM-SK-mBE"/>
                                             <constraint firstItem="1aY-Ga-swV" firstAttribute="leading" secondItem="fHK-pD-s6P" secondAttribute="trailing" constant="10" id="EtR-n6-gWh"/>
+                                            <constraint firstAttribute="trailing" secondItem="GzZ-Y2-cSN" secondAttribute="trailing" constant="15" id="FYu-m7-ehF"/>
+                                            <constraint firstItem="GzZ-Y2-cSN" firstAttribute="leading" secondItem="7U2-nT-9Rx" secondAttribute="trailing" constant="7.5" id="GbD-lf-NeJ"/>
                                             <constraint firstAttribute="trailing" secondItem="EYc-0a-VdM" secondAttribute="trailing" constant="15" id="LCz-My-Hbd"/>
                                             <constraint firstItem="U3m-YC-iYc" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="M5M-3D-zfP"/>
                                             <constraint firstAttribute="trailing" secondItem="U3m-YC-iYc" secondAttribute="trailing" constant="15" id="ND0-Wd-kuL"/>
                                             <constraint firstItem="0Nr-Az-p8v" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="OaM-Wz-KVt"/>
                                             <constraint firstItem="fHK-pD-s6P" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="QK8-Mg-8zQ"/>
                                             <constraint firstAttribute="trailing" secondItem="8Cd-Jo-3FG" secondAttribute="trailing" constant="15" id="Qfb-FK-Qe9"/>
+                                            <constraint firstItem="7U2-nT-9Rx" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="RtZ-tw-a38"/>
                                             <constraint firstItem="1aY-Ga-swV" firstAttribute="centerY" secondItem="fHK-pD-s6P" secondAttribute="centerY" id="Wh6-8i-ACt"/>
                                             <constraint firstAttribute="trailing" secondItem="0Nr-Az-p8v" secondAttribute="trailing" constant="15" id="hb6-3X-ZtO"/>
                                             <constraint firstItem="8Cd-Jo-3FG" firstAttribute="leading" secondItem="djO-IB-JA0" secondAttribute="leading" constant="15" id="hra-9B-cS3"/>
                                             <constraint firstAttribute="bottom" secondItem="0Nr-Az-p8v" secondAttribute="bottom" constant="20" symbolic="YES" id="i9z-dY-i6N"/>
                                             <constraint firstItem="EYc-0a-VdM" firstAttribute="top" secondItem="djO-IB-JA0" secondAttribute="top" constant="15" id="jB0-8x-rbR"/>
                                             <constraint firstItem="0Nr-Az-p8v" firstAttribute="top" secondItem="U3m-YC-iYc" secondAttribute="bottom" constant="30" id="oWO-8G-HqB"/>
+                                            <constraint firstItem="U3m-YC-iYc" firstAttribute="top" secondItem="7U2-nT-9Rx" secondAttribute="bottom" constant="25" id="rrv-bp-Agv"/>
                                             <constraint firstItem="1aY-Ga-swV" firstAttribute="top" secondItem="8Cd-Jo-3FG" secondAttribute="bottom" constant="15" id="ymS-aT-lXK"/>
+                                            <constraint firstItem="7U2-nT-9Rx" firstAttribute="top" secondItem="fHK-pD-s6P" secondAttribute="bottom" constant="30" id="zEm-tq-QOP"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -460,6 +477,7 @@
                         <outlet property="mapView" destination="0Vy-JS-KKp" id="Z9o-wF-Owc"/>
                         <outlet property="nameLabel" destination="8Cd-Jo-3FG" id="JSr-WC-wEa"/>
                         <outlet property="playerView" destination="coh-rN-wDe" id="lw3-0x-9i5"/>
+                        <outlet property="rocketLabel" destination="GzZ-Y2-cSN" id="sxg-51-ft1"/>
                         <outlet property="thirdPartyStackView" destination="0Nr-Az-p8v" id="luQ-oI-U5v"/>
                     </connections>
                 </viewController>
@@ -531,26 +549,46 @@
                                                         <constraint firstAttribute="height" constant="70" id="Oy1-10-ZlN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbt-Qe-ZMT">
-                                                    <rect key="frame" x="103" y="18" width="237" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbt-Qe-ZMT">
+                                                    <rect key="frame" x="103" y="18" width="237" height="17"/>
+                                                    <fontDescription key="fontDescription" name="Oxanium-SemiBold" family="Oxanium" pointSize="17"/>
+                                                    <color key="textColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Rocket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOo-jo-N2D">
+                                                    <rect key="frame" x="103" y="49" width="189.5" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="18"/>
+                                                    <color key="textColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5p-Z4-PjF">
+                                                    <rect key="frame" x="302.5" y="49" width="37.5" height="17"/>
+                                                    <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="17"/>
+                                                    <color key="textColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.94117647410000005" green="0.91372549530000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" red="0.28068515900000002" green="0.29143473469999998" blue="0.3971553773" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="c5p-Z4-PjF" secondAttribute="trailing" constant="18" id="2HI-R3-7Ml"/>
                                                 <constraint firstItem="Yh0-ig-Qlw" firstAttribute="centerY" secondItem="Xeh-1d-Ev6" secondAttribute="centerY" id="2lv-tg-hMg"/>
+                                                <constraint firstItem="gOo-jo-N2D" firstAttribute="leading" secondItem="Yh0-ig-Qlw" secondAttribute="trailing" constant="18" id="Lwg-wI-Eyc"/>
                                                 <constraint firstAttribute="trailing" secondItem="Sbt-Qe-ZMT" secondAttribute="trailing" constant="18" id="Rug-m1-HHa"/>
+                                                <constraint firstItem="c5p-Z4-PjF" firstAttribute="top" secondItem="Sbt-Qe-ZMT" secondAttribute="bottom" constant="14" id="Wuv-Em-Gn1"/>
+                                                <constraint firstItem="c5p-Z4-PjF" firstAttribute="leading" secondItem="gOo-jo-N2D" secondAttribute="trailing" constant="10" id="bai-jg-B1T"/>
+                                                <constraint firstItem="gOo-jo-N2D" firstAttribute="top" secondItem="Sbt-Qe-ZMT" secondAttribute="bottom" constant="14" id="fOj-Fx-wV8"/>
                                                 <constraint firstItem="Sbt-Qe-ZMT" firstAttribute="top" secondItem="Xeh-1d-Ev6" secondAttribute="top" constant="18" id="gce-FJ-jWd"/>
                                                 <constraint firstItem="Yh0-ig-Qlw" firstAttribute="leading" secondItem="Xeh-1d-Ev6" secondAttribute="leading" constant="15" id="xoD-w7-2vB"/>
                                                 <constraint firstItem="Sbt-Qe-ZMT" firstAttribute="leading" secondItem="Yh0-ig-Qlw" secondAttribute="trailing" constant="18" id="yyv-X9-k7X"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.280685159001548" green="0.29143473469133546" blue="0.39715537731616157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="customSize" width="358" height="107"/>
                                         <connections>
+                                            <outlet property="dateLabel" destination="c5p-Z4-PjF" id="Z54-J7-f04"/>
                                             <outlet property="imageView" destination="Yh0-ig-Qlw" id="dEU-Hs-kvc"/>
-                                            <outlet property="label" destination="Sbt-Qe-ZMT" id="rkO-AO-2sp"/>
+                                            <outlet property="nameLabel" destination="Sbt-Qe-ZMT" id="rkO-AO-2sp"/>
+                                            <outlet property="rocketLabel" destination="gOo-jo-N2D" id="V7O-LK-chC"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

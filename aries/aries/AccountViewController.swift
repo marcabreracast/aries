@@ -130,6 +130,6 @@ extension AccountViewController: UICollectionViewDelegateFlowLayout {
         let totalSpace = flowLayout.sectionInset.left + flowLayout.sectionInset.right + (flowLayout.minimumInteritemSpacing * CGFloat(numberOfCellsInRow - 1))
         let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(numberOfCellsInRow))
 
-        return CGSize(width: size, height: 110)
+        return CGSize(width: size, height: 90)
     }
 }
