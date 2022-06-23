@@ -17,6 +17,7 @@
 		3E5967AF2850F4E8001933A1 /* MKMapView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5967AE2850F4E8001933A1 /* MKMapView+Extension.swift */; };
 		3E5B8FEE283BD4D50015B107 /* LaunchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B8FED283BD4D50015B107 /* LaunchInfoViewController.swift */; };
 		3E5C64962826D5F900831887 /* Date+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C64952826D5F900831887 /* Date+Helper.swift */; };
+		3E5F841F2864852D00020DD0 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F841E2864852D00020DD0 /* FavoritesViewController.swift */; };
 		3E6C8A032848FBAE0037B6C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C8A022848FBAE0037B6C6 /* User.swift */; };
 		3E763EF72847A89B00A1DDBC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */; };
 		3E763EF92847BAE000A1DDBC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */; };
@@ -76,6 +77,7 @@
 		3E5967AE2850F4E8001933A1 /* MKMapView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extension.swift"; sourceTree = "<group>"; };
 		3E5B8FED283BD4D50015B107 /* LaunchInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInfoViewController.swift; sourceTree = "<group>"; };
 		3E5C64952826D5F900831887 /* Date+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helper.swift"; sourceTree = "<group>"; };
+		3E5F841E2864852D00020DD0 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		3E6C8A022848FBAE0037B6C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				3E7DBC13283E44CA00B92FD7 /* LoginViewController.swift */,
 				3E7DBC1B283E629C00B92FD7 /* AccountViewController.swift */,
 				3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */,
+				3E5F841E2864852D00020DD0 /* FavoritesViewController.swift */,
 			);
 			path = aries;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				3EDD732028256867000FAFD8 /* SceneDelegate.swift in Sources */,
 				3E5C64962826D5F900831887 /* Date+Helper.swift in Sources */,
 				3E5967AF2850F4E8001933A1 /* MKMapView+Extension.swift in Sources */,
+				3E5F841F2864852D00020DD0 /* FavoritesViewController.swift in Sources */,
 				3EC5524C2850A58A00672A20 /* FavoriteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
