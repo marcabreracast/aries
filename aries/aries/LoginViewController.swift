@@ -38,10 +38,8 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: Any) {
         loginButton.showLoading()
 
-        let email = "skroob@example.com"
-        let password = "1234567"
-    //    let email = emailTextfield.text ?? ""
-     //   let password = passwordTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
 
         app.login(credentials: Credentials.emailPassword(email: email, password: password)) { (result) in
             DispatchQueue.main.async {
