@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -606,39 +607,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2g-29-gh5" customClass="LoadingButton" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="15" y="13" width="384" height="50"/>
-                                <color key="backgroundColor" red="0.59607845540000004" green="0.54901963470000004" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="yKy-XF-0su"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="LOGOUT">
-                                    <fontDescription key="titleFontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="17"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="logoutButtonTapped:" destination="iAM-wB-Bde" eventType="touchUpInside" id="iTH-0Y-vxl"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DqP-sH-9eB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="accountCell" rowHeight="100" id="Rf6-tk-BYq" customClass="AccountCell" customModule="aries" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rf6-tk-BYq" id="d4r-cB-ZXv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCY-bZ-kEo">
+                                                    <rect key="frame" x="35" y="11" width="318" height="77.5"/>
+                                                    <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="19"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Miw-J1-x2b">
+                                                    <rect key="frame" x="369" y="40.5" width="25" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="yHE-0a-ndO"/>
+                                                        <constraint firstAttribute="width" constant="25" id="zej-BI-vhP"/>
+                                                    </constraints>
+                                                    <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="Miw-J1-x2b" firstAttribute="centerY" secondItem="kCY-bZ-kEo" secondAttribute="centerY" id="Dxr-LH-BUJ"/>
+                                                <constraint firstItem="Miw-J1-x2b" firstAttribute="trailing" secondItem="d4r-cB-ZXv" secondAttribute="trailingMargin" id="Qgg-Un-ju4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kCY-bZ-kEo" secondAttribute="bottom" constant="0.5" id="Qy7-vE-CP7"/>
+                                                <constraint firstItem="kCY-bZ-kEo" firstAttribute="leading" secondItem="d4r-cB-ZXv" secondAttribute="leadingMargin" constant="15" id="aV2-f1-oAU"/>
+                                                <constraint firstItem="Miw-J1-x2b" firstAttribute="leading" secondItem="kCY-bZ-kEo" secondAttribute="trailing" constant="16" id="hqh-tG-fEI"/>
+                                                <constraint firstItem="kCY-bZ-kEo" firstAttribute="top" secondItem="d4r-cB-ZXv" secondAttribute="topMargin" id="th8-yY-vZx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="icon" destination="Miw-J1-x2b" id="Esi-nI-Soe"/>
+                                            <outlet property="titleLabel" destination="kCY-bZ-kEo" id="7um-1X-gUM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eFI-BU-1Wt"/>
                         <color key="backgroundColor" red="0.2117646933" green="0.21960783" blue="0.2901961207" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="f2g-29-gh5" firstAttribute="top" secondItem="eFI-BU-1Wt" secondAttribute="top" constant="13" id="KhX-B8-HGy"/>
-                            <constraint firstItem="f2g-29-gh5" firstAttribute="leading" secondItem="eFI-BU-1Wt" secondAttribute="leading" constant="15" id="qWg-Xi-fRR"/>
-                            <constraint firstItem="eFI-BU-1Wt" firstAttribute="trailing" secondItem="f2g-29-gh5" secondAttribute="trailing" constant="15" id="zsK-FY-EWZ"/>
+                            <constraint firstItem="eFI-BU-1Wt" firstAttribute="bottom" secondItem="DqP-sH-9eB" secondAttribute="bottom" constant="34" id="SOu-v5-9lJ"/>
+                            <constraint firstItem="DqP-sH-9eB" firstAttribute="trailing" secondItem="eFI-BU-1Wt" secondAttribute="trailing" id="lz9-Ux-aEc"/>
+                            <constraint firstItem="DqP-sH-9eB" firstAttribute="top" secondItem="eFI-BU-1Wt" secondAttribute="top" id="oJx-dQ-cfe"/>
+                            <constraint firstItem="DqP-sH-9eB" firstAttribute="leading" secondItem="eFI-BU-1Wt" secondAttribute="leading" id="xZF-Gy-wmw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="person.fill" catalog="system" id="93d-hU-U5n"/>
                     <navigationItem key="navigationItem" id="rwp-yM-sjW"/>
                     <connections>
-                        <outlet property="logoutButton" destination="f2g-29-gh5" id="5gv-ud-kvy"/>
+                        <outlet property="tableView" destination="DqP-sH-9eB" id="NXr-hF-MiR"/>
                         <segue destination="Exo-BM-XK3" kind="show" identifier="goToLoginViewController" id="4YS-Mi-1Ng"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqd-R7-Fzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3657.971014492754" y="849.77678571428567"/>
+            <point key="canvasLocation" x="2749" y="850"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xj4-xC-zFV">

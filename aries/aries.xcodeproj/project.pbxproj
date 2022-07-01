@@ -18,6 +18,7 @@
 		3E5B8FEE283BD4D50015B107 /* LaunchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B8FED283BD4D50015B107 /* LaunchInfoViewController.swift */; };
 		3E5C64962826D5F900831887 /* Date+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C64952826D5F900831887 /* Date+Helper.swift */; };
 		3E5F841F2864852D00020DD0 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F841E2864852D00020DD0 /* FavoritesViewController.swift */; };
+		3E6A4815286EFC21006F27C9 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A4814286EFC21006F27C9 /* AccountCell.swift */; };
 		3E6C8A032848FBAE0037B6C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C8A022848FBAE0037B6C6 /* User.swift */; };
 		3E763EF72847A89B00A1DDBC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */; };
 		3E763EF92847BAE000A1DDBC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */; };
@@ -78,6 +79,7 @@
 		3E5B8FED283BD4D50015B107 /* LaunchInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInfoViewController.swift; sourceTree = "<group>"; };
 		3E5C64952826D5F900831887 /* Date+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helper.swift"; sourceTree = "<group>"; };
 		3E5F841E2864852D00020DD0 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		3E6A4814286EFC21006F27C9 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		3E6C8A022848FBAE0037B6C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				3EDD734D28256E3B000FAFD8 /* LaunchCell.swift */,
 				3E2B9D31286351C900CCAF24 /* FavoriteLaunchCell.swift */,
+				3E6A4814286EFC21006F27C9 /* AccountCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				3E7DBC1A283E4D6B00B92FD7 /* LoadingButton.swift in Sources */,
 				3EDD732228256867000FAFD8 /* LaunchesViewController.swift in Sources */,
 				3E2B9D32286351C900CCAF24 /* FavoriteLaunchCell.swift in Sources */,
+				3E6A4815286EFC21006F27C9 /* AccountCell.swift in Sources */,
 				3EDD731E28256867000FAFD8 /* AppDelegate.swift in Sources */,
 				3E763EF72847A89B00A1DDBC /* CreateAccountViewController.swift in Sources */,
 				3EDD734E28256E3B000FAFD8 /* LaunchCell.swift in Sources */,
