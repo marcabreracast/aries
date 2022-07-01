@@ -24,10 +24,6 @@ class AccountCell: UITableViewCell {
     public func setup(title: String, isIconPresent: Bool) {
         titleLabel.text = title
 
-        if isIconPresent {
-            icon.image = UIImage(systemName: "chevron.right")
-        } else {
-            icon.isHidden = true
-        }
+        isIconPresent ? (icon.image = UIImage(systemName: "chevron.right")) : (icon.isHidden = true)
     }
 }
