@@ -29,6 +29,7 @@
 		3E80FAC6286F3FB800BE2C9B /* UISegmentedControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E80FAC5286F3FB800BE2C9B /* UISegmentedControl+Extension.swift */; };
 		3E86320A2860B32600CD3BCC /* Oxanium-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E8632092860B31E00CD3BCC /* Oxanium-ExtraLight.ttf */; };
 		3E86320C2860B39500CD3BCC /* Oxanium-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E86320B2860B39500CD3BCC /* Oxanium-Light.ttf */; };
+		3EA3233F2872F11B0057AEA8 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA3233E2872F11B0057AEA8 /* PasswordTextField.swift */; };
 		3EB8D204285B70D0004217DD /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB8D203285B70D0004217DD /* Launch.swift */; };
 		3EC5524C2850A58A00672A20 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5524B2850A58A00672A20 /* FavoriteButton.swift */; };
 		3EC5524E2850BA5200672A20 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC5524D2850BA5200672A20 /* MapKit.framework */; };
@@ -88,6 +89,7 @@
 		3E80FAC5286F3FB800BE2C9B /* UISegmentedControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extension.swift"; sourceTree = "<group>"; };
 		3E8632092860B31E00CD3BCC /* Oxanium-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxanium-ExtraLight.ttf"; sourceTree = "<group>"; };
 		3E86320B2860B39500CD3BCC /* Oxanium-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxanium-Light.ttf"; sourceTree = "<group>"; };
+		3EA3233E2872F11B0057AEA8 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		3EB8D203285B70D0004217DD /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		3EC5524B2850A58A00672A20 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		3EC5524D2850BA5200672A20 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -183,6 +185,7 @@
 			children = (
 				3E7DBC19283E4D6B00B92FD7 /* LoadingButton.swift */,
 				3EC5524B2850A58A00672A20 /* FavoriteButton.swift */,
+				3EA3233E2872F11B0057AEA8 /* PasswordTextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				3E5C64962826D5F900831887 /* Date+Helper.swift in Sources */,
 				3E5967AF2850F4E8001933A1 /* MKMapView+Extension.swift in Sources */,
 				3E5F841F2864852D00020DD0 /* FavoritesViewController.swift in Sources */,
+				3EA3233F2872F11B0057AEA8 /* PasswordTextField.swift in Sources */,
 				3EC5524C2850A58A00672A20 /* FavoriteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

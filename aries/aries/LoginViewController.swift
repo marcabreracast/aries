@@ -24,12 +24,22 @@ class LoginViewController: UIViewController {
         // We have to use NSAttributes to change the color of the placeholder
         emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9472092986, green: 0.912545681, blue: 0.8959150314, alpha: 1)])
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9472092986, green: 0.912545681, blue: 0.8959150314, alpha: 1)])
-        passwordTextField.isSecureTextEntry = true
 
         let logoImage = UIImage(named: "logo")?.withTintColor(#colorLiteral(red: 0.9472092986, green: 0.912545681, blue: 0.8959150314, alpha: 1))
         logoImageView.image = logoImage
         
         setCreateAccountLabel()
+    }
+
+    // MARK: - Private Helpers
+    private func setCreateAccountLabel() {
+        let labelTap = UITapGestureRecognizer(target: self, action: #selector(createAccountLabelTapped(_:)))
+        createAccountLabel.isUserInteractionEnabled = true
+        createAccountLabel.addGestureRecognizer(labelTap)
+    }
+
+    @objc func createAccountLabelTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "goToCreateAccount", sender: nil)
     }
     
     
@@ -57,26 +67,4 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
-    private func setCreateAccountLabel() {
-        let labelTap = UITapGestureRecognizer(target: self, action: #selector(createAccountLabelTapped(_:)))
-        createAccountLabel.isUserInteractionEnabled = true
-        createAccountLabel.addGestureRecognizer(labelTap)
-    }
-    
-    @objc func createAccountLabelTapped(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "goToCreateAccount", sender: nil)
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
