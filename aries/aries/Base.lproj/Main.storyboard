@@ -484,7 +484,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ytg-7r-djw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4549.275362318841" y="83.705357142857139"/>
+            <point key="canvasLocation" x="6210" y="84"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="oRD-eo-rY3">
@@ -575,11 +575,12 @@
                     <tabBarItem key="tabBarItem" title="Favorites" image="star" catalog="system" id="PLJ-kz-knP"/>
                     <connections>
                         <outlet property="collectionView" destination="NGG-pD-Wuq" id="VTg-vj-ScF"/>
+                        <segue destination="sTF-1v-KSS" kind="presentation" identifier="goToLaunchInfoVC" id="DFL-XQ-JdC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogl-qO-tIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5417" y="699"/>
+            <point key="canvasLocation" x="5003" y="850"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xmk-7s-dZA">
@@ -665,6 +666,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Frb-XO-8Tr"/>
+        <segue reference="eaE-l4-wjB"/>
         <segue reference="CPo-00-xRZ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
