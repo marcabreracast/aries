@@ -27,6 +27,7 @@ class LaunchesViewController: UIViewController {
         setNavBar()
         setTabBar()
         showActivityIndicator()
+        setSegmentedControl()
 
         openPrivatePartitionRealm()
         openPublicPartitionRealm()
@@ -63,7 +64,12 @@ class LaunchesViewController: UIViewController {
         // We need to hide the table view while the data is loading
         self.tableView.isHidden = true
     }
-    
+
+    private func setSegmentedControl() {
+        segmentedControl.setTitleColor(.white)
+        segmentedControl.setTitleFont(UIFont(name: "Oxanium-SemiBold", size: 14)!)
+    }
+
     // MARK: - Device Sync Methods
     /**
      We have to open a private Realm partition to access to the data of each user
@@ -201,4 +207,3 @@ extension LaunchesViewController: UITableViewDataSource {
         }
     }
 }
- 

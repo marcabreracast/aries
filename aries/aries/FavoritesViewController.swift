@@ -17,6 +17,7 @@ class FavoritesViewController: UIViewController {
     var user: User?
     lazy var favoriteLaunches: List<UserLaunches>? = nil
     var notificationToken: NotificationToken?
+    var launchInfo: Launch?
 
 
     // MARK: - View Lifecycle
@@ -84,6 +85,12 @@ class FavoritesViewController: UIViewController {
             }
         }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? LaunchInfoViewController {
+            vc.launchInfo = launchInfo
+        }
+    }
 }
 
 // MARK: - Collection View Delegate
@@ -106,6 +113,30 @@ extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDat
         cell.layer.cornerRadius = 10
 
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        openPublicPartitionRealm(indexPath: indexPath)
+    }
+
+    private func openPublicPartitionRealm(indexPath: IndexPath) {
+        let user = app.currentUser!
+
+        Realm.asyncOpen(configuration: user.configuration(partitionValue: "PUBLIC")) { (result) in
+            switch result {
+            case .failure(let error):
+                print("Failed to open realm: \(error.localizedDescription)")
+                self.presentErrorAlert(message: "Oops! An error ocurred")
+
+            case .success(let realm):
+                let launch = realm.objects(Launch.self).where {
+                    $0.id == self.favoriteLaunches?[indexPath.row].id ?? ""
+                }.first!
+                self.launchInfo = launch
+                self.performSegue(withIdentifier: "goToLaunchInfoVC", sender: nil)
+            }
+        }
     }
 }
 
