@@ -92,6 +92,7 @@
 		3E8632092860B31E00CD3BCC /* Oxanium-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxanium-ExtraLight.ttf"; sourceTree = "<group>"; };
 		3E86320B2860B39500CD3BCC /* Oxanium-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxanium-Light.ttf"; sourceTree = "<group>"; };
 		3EA3233E2872F11B0057AEA8 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		3EB6339E2874707900D340F9 /* aries.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = aries.entitlements; sourceTree = "<group>"; };
 		3EB8D203285B70D0004217DD /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		3EC5524B2850A58A00672A20 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		3EC5524D2850BA5200672A20 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -230,6 +231,7 @@
 		3EDD731C28256867000FAFD8 /* aries */ = {
 			isa = PBXGroup;
 			children = (
+				3EB6339E2874707900D340F9 /* aries.entitlements */,
 				3E86320D2860B48B00CD3BCC /* Fonts */,
 				3E7DBC18283E4D5700B92FD7 /* Components */,
 				3E5B8FEC283BD3DF0015B107 /* Models */,
@@ -743,11 +745,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = aries/aries.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XCCW4QCM5F;
+				DEVELOPMENT_TEAM = QX5CR2FTN2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = aries/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Aries;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -758,8 +763,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.marcabrera.aries;
+				PRODUCT_BUNDLE_IDENTIFIER = io.realm.marcabrera.aries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -772,11 +778,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = aries/aries.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XCCW4QCM5F;
+				DEVELOPMENT_TEAM = QX5CR2FTN2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = aries/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Aries;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -787,8 +796,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.marcabrera.aries;
+				PRODUCT_BUNDLE_IDENTIFIER = io.realm.marcabrera.aries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
