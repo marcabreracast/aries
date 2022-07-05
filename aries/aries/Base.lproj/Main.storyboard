@@ -131,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MpT-VU-pxX" customClass="PasswordTextField" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="20" y="500.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="509.5" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.2941176593" green="0.3058823645" blue="0.40392160420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tVl-6u-1Pc"/>
@@ -141,7 +141,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DF-Q4-xlD" customClass="LoadingButton" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="20" y="580.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="589.5" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.59607845540000004" green="0.54901963470000004" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gpi-9f-H9C"/>
@@ -187,6 +187,12 @@
                                 <fontDescription key="fontDescription" name="Oxanium-ExtraLight" family="Oxanium" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC8-6Z-Pjp">
+                                <rect key="frame" x="22" y="477.5" width="372" height="15"/>
+                                <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="15"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dvv-iP-gbe"/>
                         <color key="backgroundColor" red="0.20845571160000001" green="0.21901217100000001" blue="0.29780796170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -197,25 +203,29 @@
                             <constraint firstItem="Zde-Lg-Mf4" firstAttribute="leading" secondItem="dvv-iP-gbe" secondAttribute="leading" constant="20" id="6vJ-fl-9b1"/>
                             <constraint firstItem="aeZ-N5-97a" firstAttribute="leading" secondItem="dvv-iP-gbe" secondAttribute="leading" constant="20" id="9zV-qd-CGj"/>
                             <constraint firstItem="YMN-5B-ERm" firstAttribute="top" secondItem="Zde-Lg-Mf4" secondAttribute="bottom" constant="30" id="BDq-fV-KoH"/>
+                            <constraint firstItem="MpT-VU-pxX" firstAttribute="top" secondItem="bC8-6Z-Pjp" secondAttribute="bottom" constant="17" id="Cwb-vs-QWH"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="8EP-Is-Rp4" secondAttribute="trailing" constant="20" id="EmU-Gq-gtB"/>
                             <constraint firstItem="Zde-Lg-Mf4" firstAttribute="top" secondItem="aeZ-N5-97a" secondAttribute="bottom" constant="10" id="FBa-jH-sF6"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="7DF-Q4-xlD" secondAttribute="trailing" constant="20" id="Iql-9l-Psm"/>
                             <constraint firstItem="r1W-zP-PBX" firstAttribute="top" secondItem="58E-Bz-P08" secondAttribute="top" constant="120" id="RT6-XV-aS5"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="Zde-Lg-Mf4" secondAttribute="trailing" constant="20" id="VE2-sI-Oo8"/>
-                            <constraint firstItem="MpT-VU-pxX" firstAttribute="top" secondItem="YMN-5B-ERm" secondAttribute="bottom" constant="30" id="VU0-04-qmh"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="aeZ-N5-97a" secondAttribute="trailing" constant="20" id="aKO-Em-G5x"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="YMN-5B-ERm" secondAttribute="trailing" constant="20" id="b79-Fl-U92"/>
                             <constraint firstItem="r1W-zP-PBX" firstAttribute="centerX" secondItem="58E-Bz-P08" secondAttribute="centerX" id="dRu-nY-Zmf"/>
                             <constraint firstItem="aeZ-N5-97a" firstAttribute="top" secondItem="r1W-zP-PBX" secondAttribute="bottom" constant="15" id="eWL-6A-AEh"/>
+                            <constraint firstItem="bC8-6Z-Pjp" firstAttribute="leading" secondItem="dvv-iP-gbe" secondAttribute="leading" constant="22" id="hle-mg-VyQ"/>
                             <constraint firstItem="7DF-Q4-xlD" firstAttribute="top" secondItem="MpT-VU-pxX" secondAttribute="bottom" constant="30" id="jN4-g3-1wm"/>
                             <constraint firstItem="7DF-Q4-xlD" firstAttribute="leading" secondItem="dvv-iP-gbe" secondAttribute="leading" constant="20" id="lEI-eB-sGU"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="bottom" secondItem="8EP-Is-Rp4" secondAttribute="bottom" constant="20" id="oXL-a4-i68"/>
+                            <constraint firstItem="bC8-6Z-Pjp" firstAttribute="top" secondItem="YMN-5B-ERm" secondAttribute="bottom" constant="7" id="tkG-v4-EeR"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="MpT-VU-pxX" secondAttribute="trailing" constant="20" id="uF8-1o-zcc"/>
+                            <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="bC8-6Z-Pjp" secondAttribute="trailing" constant="20" id="ySD-DN-brz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rfp-57-pRd"/>
                     <connections>
                         <outlet property="createAccountLabel" destination="8EP-Is-Rp4" id="bIi-FA-kJt"/>
+                        <outlet property="emailErrorLabel" destination="bC8-6Z-Pjp" id="fBI-hf-c6h"/>
                         <outlet property="emailTextField" destination="YMN-5B-ERm" id="r99-XM-Z37"/>
                         <outlet property="loginButton" destination="7DF-Q4-xlD" id="AhH-1X-AxT"/>
                         <outlet property="logoImageView" destination="r1W-zP-PBX" id="qoc-r9-Fe0"/>
@@ -665,7 +675,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Frb-XO-8Tr"/>
+        <segue reference="a4B-nc-ZVc"/>
         <segue reference="eaE-l4-wjB"/>
         <segue reference="CPo-00-xRZ"/>
     </inferredMetricsTieBreakers>
@@ -682,6 +692,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
