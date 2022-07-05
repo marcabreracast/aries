@@ -22,6 +22,7 @@ class PasswordTextField: UITextField {
 
     func setup() {
         self.isSecureTextEntry = true
+        self.textContentType = .oneTimeCode
 
         // Add right icon functionality
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))

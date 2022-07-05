@@ -11,6 +11,7 @@ import RealmSwift
 class LoginViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var emailErrorLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: LoadingButton!
@@ -21,8 +22,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
 
+        setEmailField()
         // We have to use NSAttributes to change the color of the placeholder
-        emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9472092986, green: 0.912545681, blue: 0.8959150314, alpha: 1)])
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9472092986, green: 0.912545681, blue: 0.8959150314, alpha: 1)])
 
         let logoImage = UIImage(named: "logo")?.withTintColor(#colorLiteral(red: 0.9472092986, green: 0.912545681, blue: 0.8959150314, alpha: 1))
@@ -32,6 +33,14 @@ class LoginViewController: UIViewController {
     }
 
     // MARK: - Private Helpers
+    private func setEmailField() {
+        // Set email placeholder
+        emailTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.9472092986, green: 0.912545681, blue: 0.8959150314, alpha: 1)])
+
+        emailTextField.delegate = self
+        emailErrorLabel.isHidden = true
+    }
+
     private func setCreateAccountLabel() {
         let labelTap = UITapGestureRecognizer(target: self, action: #selector(createAccountLabelTapped(_:)))
         createAccountLabel.isUserInteractionEnabled = true
@@ -44,7 +53,6 @@ class LoginViewController: UIViewController {
     
     
     // MARK: - IBActions
-    
     @IBAction func loginButtonTapped(_ sender: Any) {
         loginButton.showLoading()
 
@@ -66,5 +74,22 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+    }
+}
+
+// MARK: - Textfield Delegate
+extension LoginViewController: UITextFieldDelegate {
+    // Email validation when textfield loses focus
+    // Might need to add password validation
+
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        let email = emailTextField.text ?? ""
+        if !Validation().isValidEmail(strToValidate: email) {
+            emailErrorLabel.isHidden = false
+            emailErrorLabel.text = "Please enter a valid email address"
+        } else {
+            emailErrorLabel.isHidden = true
+        }
+        return true
     }
 }
