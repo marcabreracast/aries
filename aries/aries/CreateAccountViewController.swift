@@ -11,17 +11,26 @@ import RealmSwift
 class CreateAccountViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailErrorLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var createAccountButton: LoadingButton!
-    
+
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        passwordTextField.isSecureTextEntry = true
-        passwordTextField.textContentType = .oneTimeCode
-        
+        setEmailField()
+        setPasswordField()
+    }
+
+    // MARK: - Private Helpers
+    private func setEmailField() {
         emailTextField.attributedPlaceholder = NSAttributedString(string: "email@example.com", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        emailTextField.delegate = self
+        emailErrorLabel.isHidden = true
+    }
+
+    private func setPasswordField() {
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
     }
     
@@ -81,5 +90,18 @@ class CreateAccountViewController: UIViewController {
             }
         }
     }
+}
 
+// MARK: - TextField Delegate
+extension CreateAccountViewController: UITextFieldDelegate {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        let email = emailTextField.text ?? ""
+        if !Validation().isValidEmail(strToValidate: email) {
+            emailErrorLabel.isHidden = false
+            emailErrorLabel.text = "Please enter a valid email address"
+        } else {
+            emailErrorLabel.isHidden = true
+        }
+        return true
+    }
 }
