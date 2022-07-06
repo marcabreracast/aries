@@ -18,8 +18,8 @@
 		3E5B8FEE283BD4D50015B107 /* LaunchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B8FED283BD4D50015B107 /* LaunchInfoViewController.swift */; };
 		3E5C64962826D5F900831887 /* Date+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C64952826D5F900831887 /* Date+Helper.swift */; };
 		3E5F841F2864852D00020DD0 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F841E2864852D00020DD0 /* FavoritesViewController.swift */; };
-		3E6A4815286EFC21006F27C9 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A4814286EFC21006F27C9 /* AccountCell.swift */; };
 		3E66E12828731C5A0061A3B4 /* Validation+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E66E12728731C5A0061A3B4 /* Validation+Helper.swift */; };
+		3E6A4815286EFC21006F27C9 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A4814286EFC21006F27C9 /* AccountCell.swift */; };
 		3E6C8A032848FBAE0037B6C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C8A022848FBAE0037B6C6 /* User.swift */; };
 		3E763EF72847A89B00A1DDBC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */; };
 		3E763EF92847BAE000A1DDBC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */; };
@@ -82,8 +82,8 @@
 		3E5B8FED283BD4D50015B107 /* LaunchInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInfoViewController.swift; sourceTree = "<group>"; };
 		3E5C64952826D5F900831887 /* Date+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helper.swift"; sourceTree = "<group>"; };
 		3E5F841E2864852D00020DD0 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		3E6A4814286EFC21006F27C9 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		3E66E12728731C5A0061A3B4 /* Validation+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Validation+Helper.swift"; sourceTree = "<group>"; };
+		3E6A4814286EFC21006F27C9 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		3E6C8A022848FBAE0037B6C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -679,7 +679,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -733,7 +733,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
