@@ -131,8 +131,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MpT-VU-pxX">
-                                <rect key="frame" x="20" y="500.5" width="374" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MpT-VU-pxX" customClass="PasswordTextField" customModule="aries" customModuleProvider="target">
+                                <rect key="frame" x="20" y="509.5" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.2941176593" green="0.3058823645" blue="0.40392160420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tVl-6u-1Pc"/>
@@ -142,7 +142,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DF-Q4-xlD" customClass="LoadingButton" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="20" y="580.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="589.5" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.59607845540000004" green="0.54901963470000004" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gpi-9f-H9C"/>
@@ -188,6 +188,12 @@
                                 <fontDescription key="fontDescription" name="Oxanium-ExtraLight" family="Oxanium" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC8-6Z-Pjp">
+                                <rect key="frame" x="22" y="477.5" width="372" height="15"/>
+                                <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="15"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dvv-iP-gbe"/>
                         <color key="backgroundColor" red="0.20845571160000001" green="0.21901217100000001" blue="0.29780796170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -198,25 +204,32 @@
                             <constraint firstItem="Zde-Lg-Mf4" firstAttribute="leading" secondItem="dvv-iP-gbe" secondAttribute="leading" constant="20" id="6vJ-fl-9b1"/>
                             <constraint firstItem="aeZ-N5-97a" firstAttribute="leading" secondItem="dvv-iP-gbe" secondAttribute="leading" constant="20" id="9zV-qd-CGj"/>
                             <constraint firstItem="YMN-5B-ERm" firstAttribute="top" secondItem="Zde-Lg-Mf4" secondAttribute="bottom" constant="30" id="BDq-fV-KoH"/>
+                            <constraint firstItem="MpT-VU-pxX" firstAttribute="top" secondItem="bC8-6Z-Pjp" secondAttribute="bottom" constant="17" id="Cwb-vs-QWH"/>
+                            <constraint firstItem="bC8-6Z-Pjp" firstAttribute="leading" secondItem="dvv-iP-gbe" secondAttribute="leading" constant="22" id="D6e-Fl-Jxh"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="8EP-Is-Rp4" secondAttribute="trailing" constant="20" id="EmU-Gq-gtB"/>
                             <constraint firstItem="Zde-Lg-Mf4" firstAttribute="top" secondItem="aeZ-N5-97a" secondAttribute="bottom" constant="10" id="FBa-jH-sF6"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="7DF-Q4-xlD" secondAttribute="trailing" constant="20" id="Iql-9l-Psm"/>
+                            <constraint firstItem="bC8-6Z-Pjp" firstAttribute="top" secondItem="YMN-5B-ERm" secondAttribute="bottom" constant="7" id="M3j-5U-yJn"/>
+                            <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="bC8-6Z-Pjp" secondAttribute="trailing" constant="20" id="Q5w-Vz-OMv"/>
                             <constraint firstItem="r1W-zP-PBX" firstAttribute="top" secondItem="58E-Bz-P08" secondAttribute="top" constant="120" id="RT6-XV-aS5"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="Zde-Lg-Mf4" secondAttribute="trailing" constant="20" id="VE2-sI-Oo8"/>
-                            <constraint firstItem="MpT-VU-pxX" firstAttribute="top" secondItem="YMN-5B-ERm" secondAttribute="bottom" constant="30" id="VU0-04-qmh"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="aeZ-N5-97a" secondAttribute="trailing" constant="20" id="aKO-Em-G5x"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="YMN-5B-ERm" secondAttribute="trailing" constant="20" id="b79-Fl-U92"/>
                             <constraint firstItem="r1W-zP-PBX" firstAttribute="centerX" secondItem="58E-Bz-P08" secondAttribute="centerX" id="dRu-nY-Zmf"/>
                             <constraint firstItem="aeZ-N5-97a" firstAttribute="top" secondItem="r1W-zP-PBX" secondAttribute="bottom" constant="15" id="eWL-6A-AEh"/>
+                            <constraint firstItem="bC8-6Z-Pjp" firstAttribute="leading" secondItem="dvv-iP-gbe" secondAttribute="leading" constant="22" id="hle-mg-VyQ"/>
                             <constraint firstItem="7DF-Q4-xlD" firstAttribute="top" secondItem="MpT-VU-pxX" secondAttribute="bottom" constant="30" id="jN4-g3-1wm"/>
                             <constraint firstItem="7DF-Q4-xlD" firstAttribute="leading" secondItem="dvv-iP-gbe" secondAttribute="leading" constant="20" id="lEI-eB-sGU"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="bottom" secondItem="8EP-Is-Rp4" secondAttribute="bottom" constant="20" id="oXL-a4-i68"/>
+                            <constraint firstItem="bC8-6Z-Pjp" firstAttribute="top" secondItem="YMN-5B-ERm" secondAttribute="bottom" constant="7" id="tkG-v4-EeR"/>
                             <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="MpT-VU-pxX" secondAttribute="trailing" constant="20" id="uF8-1o-zcc"/>
+                            <constraint firstItem="dvv-iP-gbe" firstAttribute="trailing" secondItem="bC8-6Z-Pjp" secondAttribute="trailing" constant="20" id="ySD-DN-brz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rfp-57-pRd"/>
                     <connections>
                         <outlet property="createAccountLabel" destination="8EP-Is-Rp4" id="bIi-FA-kJt"/>
+                        <outlet property="emailErrorLabel" destination="bC8-6Z-Pjp" id="fBI-hf-c6h"/>
                         <outlet property="emailTextField" destination="YMN-5B-ERm" id="r99-XM-Z37"/>
                         <outlet property="loginButton" destination="7DF-Q4-xlD" id="AhH-1X-AxT"/>
                         <outlet property="logoImageView" destination="r1W-zP-PBX" id="qoc-r9-Fe0"/>
@@ -259,8 +272,8 @@
                                 <fontDescription key="fontDescription" name="Oxanium-ExtraLight" family="Oxanium" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NvP-3i-bRx">
-                                <rect key="frame" x="30" y="368" width="354" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NvP-3i-bRx" customClass="PasswordTextField" customModule="aries" customModuleProvider="target">
+                                <rect key="frame" x="30" y="365" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.2941176593" green="0.3058823645" blue="0.40392160420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="vbZ-d3-a4h"/>
@@ -270,7 +283,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpD-5i-EbX" customClass="LoadingButton" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="30" y="458" width="354" height="50"/>
+                                <rect key="frame" x="30" y="455" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.59607845540000004" green="0.54901963470000004" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cye-Ry-FkV"/>
@@ -285,24 +298,32 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR3-g8-otK">
-                                <rect key="frame" x="30" y="333" width="354" height="20"/>
+                                <rect key="frame" x="30" y="330" width="354" height="20"/>
                                 <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wi3-KA-gRC">
+                                <rect key="frame" x="30" y="300" width="364" height="15"/>
+                                <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="15"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vMl-H7-qud"/>
                         <color key="backgroundColor" red="0.20845571160000001" green="0.21901217100000001" blue="0.29780796170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Wi3-KA-gRC" firstAttribute="top" secondItem="uoH-bc-aiz" secondAttribute="bottom" constant="7" id="6rU-e4-hPg"/>
                             <constraint firstItem="vMl-H7-qud" firstAttribute="trailing" secondItem="uoH-bc-aiz" secondAttribute="trailing" constant="30" id="9Tw-Jn-XvC"/>
                             <constraint firstItem="vMl-H7-qud" firstAttribute="trailing" secondItem="NvP-3i-bRx" secondAttribute="trailing" constant="30" id="B1m-HL-hBf"/>
                             <constraint firstItem="BJU-dP-jWc" firstAttribute="leading" secondItem="vMl-H7-qud" secondAttribute="leading" constant="20" id="BNM-rJ-gyN"/>
-                            <constraint firstItem="DR3-g8-otK" firstAttribute="top" secondItem="uoH-bc-aiz" secondAttribute="bottom" constant="40" id="C3I-6a-n3k"/>
                             <constraint firstItem="uoH-bc-aiz" firstAttribute="top" secondItem="M3s-RQ-pA7" secondAttribute="bottom" constant="15" id="FDT-MC-da5"/>
                             <constraint firstItem="BJU-dP-jWc" firstAttribute="top" secondItem="vMl-H7-qud" secondAttribute="top" constant="50" id="LQN-7V-3H8"/>
                             <constraint firstItem="vMl-H7-qud" firstAttribute="trailing" secondItem="BJU-dP-jWc" secondAttribute="trailing" constant="20" id="OK6-s1-Df9"/>
                             <constraint firstItem="GpD-5i-EbX" firstAttribute="top" secondItem="NvP-3i-bRx" secondAttribute="bottom" constant="40" id="PCB-6N-Iup"/>
                             <constraint firstItem="NvP-3i-bRx" firstAttribute="leading" secondItem="vMl-H7-qud" secondAttribute="leading" constant="30" id="Q9u-ko-MfY"/>
+                            <constraint firstItem="vMl-H7-qud" firstAttribute="trailing" secondItem="Wi3-KA-gRC" secondAttribute="trailing" constant="20" id="S1K-Qq-icT"/>
+                            <constraint firstItem="Wi3-KA-gRC" firstAttribute="leading" secondItem="vMl-H7-qud" secondAttribute="leading" constant="30" id="UDk-m7-amJ"/>
                             <constraint firstItem="M3s-RQ-pA7" firstAttribute="top" secondItem="BJU-dP-jWc" secondAttribute="bottom" constant="40" id="Uvy-1a-usB"/>
                             <constraint firstItem="M3s-RQ-pA7" firstAttribute="leading" secondItem="vMl-H7-qud" secondAttribute="leading" constant="30" id="WWM-QQ-xwx"/>
                             <constraint firstItem="NvP-3i-bRx" firstAttribute="top" secondItem="DR3-g8-otK" secondAttribute="bottom" constant="15" id="XNS-9V-Ilb"/>
@@ -311,12 +332,14 @@
                             <constraint firstItem="uoH-bc-aiz" firstAttribute="leading" secondItem="vMl-H7-qud" secondAttribute="leading" constant="30" id="cKH-Yn-06o"/>
                             <constraint firstItem="GpD-5i-EbX" firstAttribute="leading" secondItem="vMl-H7-qud" secondAttribute="leading" constant="30" id="lM7-Y5-T79"/>
                             <constraint firstItem="vMl-H7-qud" firstAttribute="trailing" secondItem="GpD-5i-EbX" secondAttribute="trailing" constant="30" id="ujK-TJ-x2P"/>
+                            <constraint firstItem="DR3-g8-otK" firstAttribute="top" secondItem="Wi3-KA-gRC" secondAttribute="bottom" constant="15" id="yLu-yY-3H0"/>
                             <constraint firstItem="vMl-H7-qud" firstAttribute="trailing" secondItem="M3s-RQ-pA7" secondAttribute="trailing" constant="30" id="yW5-Db-DvL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j9o-pz-thP"/>
                     <connections>
                         <outlet property="createAccountButton" destination="GpD-5i-EbX" id="NYe-5s-beU"/>
+                        <outlet property="emailErrorLabel" destination="Wi3-KA-gRC" id="5jg-hY-7CZ"/>
                         <outlet property="emailTextField" destination="uoH-bc-aiz" id="CMa-SY-nMX"/>
                         <outlet property="passwordTextField" destination="NvP-3i-bRx" id="a2m-hz-Pip"/>
                         <segue destination="18J-92-NSH" kind="show" identifier="goToLaunchesVC" id="Frb-XO-8Tr"/>
@@ -714,6 +737,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
