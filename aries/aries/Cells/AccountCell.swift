@@ -13,12 +13,10 @@ class AccountCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
 
     public func setup(title: String, isIconPresent: Bool) {

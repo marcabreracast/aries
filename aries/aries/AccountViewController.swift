@@ -41,6 +41,29 @@ class AccountViewController: UIViewController {
             }
         }
     }
+
+    private func resetPassword() {
+        let email = app.currentUser?.profile.email ?? ""
+        let client = app.emailPasswordAuth
+
+        client.sendResetPasswordEmail(email) { (error) in
+            DispatchQueue.main.async {
+                guard error == nil else {
+                    print("Reset password email not sent: \(error!.localizedDescription)")
+                    return
+                }
+
+                print("Password reset email sent tp the following address: \(email)")
+
+                // Present alert to notify user
+                let alert = UIAlertController(title: "Reset Password", message: "An email has been sent. Please check your inbox and follow the next steps!", preferredStyle: UIAlertController.Style.alert)
+
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
 }
 
 extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
@@ -70,8 +93,7 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
 
         switch cellType {
         case .resetPassword:
-            // TODO
-            print("Reset password")
+            resetPassword()
         case .logout:
             logoutUser()
         case .none:
