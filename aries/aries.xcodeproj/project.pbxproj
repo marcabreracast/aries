@@ -23,6 +23,7 @@
 		3E6A4815286EFC21006F27C9 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A4814286EFC21006F27C9 /* AccountCell.swift */; };
 		3E6C8A032848FBAE0037B6C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C8A022848FBAE0037B6C6 /* User.swift */; };
 		3E6E4204287C59EA00862037 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E4203287C59EA00862037 /* URL+Extension.swift */; };
+		3E6E4206287C6DA900862037 /* CheckYourEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E4205287C6DA900862037 /* CheckYourEmailViewController.swift */; };
 		3E763EF72847A89B00A1DDBC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */; };
 		3E763EF92847BAE000A1DDBC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */; };
 		3E7DBC10283E3ADB00B92FD7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7DBC0F283E3ADB00B92FD7 /* Realm */; };
@@ -89,6 +90,7 @@
 		3E6A4814286EFC21006F27C9 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		3E6C8A022848FBAE0037B6C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E6E4203287C59EA00862037 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		3E6E4205287C6DA900862037 /* CheckYourEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckYourEmailViewController.swift; sourceTree = "<group>"; };
 		3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		3E7DBC13283E44CA00B92FD7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */,
 				3E5F841E2864852D00020DD0 /* FavoritesViewController.swift */,
 				3E59793B2875E5DE009E7707 /* ResetPasswordViewController.swift */,
+				3E6E4205287C6DA900862037 /* CheckYourEmailViewController.swift */,
 			);
 			path = aries;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				3EA3233F2872F11B0057AEA8 /* PasswordTextField.swift in Sources */,
 				3E66E12828731C5A0061A3B4 /* Validation+Helper.swift in Sources */,
 				3EC5524C2850A58A00672A20 /* FavoriteButton.swift in Sources */,
+				3E6E4206287C6DA900862037 /* CheckYourEmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -515,11 +515,11 @@
             <objects>
                 <viewController id="5yr-6r-9Ti" customClass="FavoritesViewController" customModule="aries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pgl-MK-3Yr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NGG-pD-Wuq">
-                                <rect key="frame" x="15" y="25" width="384" height="738"/>
+                                <rect key="frame" x="15" y="69" width="384" height="714"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e0e-3e-I0K">
                                     <size key="itemSize" width="358" height="107"/>
@@ -720,11 +720,11 @@
             <objects>
                 <viewController id="iAM-wB-Bde" customClass="AccountViewController" customModule="aries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PUW-Qj-qzo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DqP-sH-9eB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="735"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="accountCell" rowHeight="100" id="Rf6-tk-BYq" customClass="AccountCell" customModule="aries" customModuleProvider="target">
@@ -783,11 +783,62 @@
                         <outlet property="tableView" destination="DqP-sH-9eB" id="NXr-hF-MiR"/>
                         <segue destination="Exo-BM-XK3" kind="show" identifier="goToLoginViewController" id="4YS-Mi-1Ng"/>
                         <segue destination="9Ih-IZ-97Q" kind="show" id="F3a-Ql-QYX"/>
+                        <segue destination="H1v-ey-PAu" kind="show" identifier="goToCheckYourEmailVC" id="gij-4c-DoS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqd-R7-Fzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1658" y="1597"/>
+            <point key="canvasLocation" x="516" y="1829"/>
+        </scene>
+        <!--Check Your Email View Controller-->
+        <scene sceneID="6kI-1V-WyQ">
+            <objects>
+                <viewController id="H1v-ey-PAu" customClass="CheckYourEmailViewController" customModule="aries" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oLK-0d-ubh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email-rocket" translatesAutoresizingMaskIntoConstraints="NO" id="QhE-kw-WiI">
+                                <rect key="frame" x="20" y="74" width="374" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="hYu-cN-PDm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Sent" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHr-ZU-wfd">
+                                <rect key="frame" x="20" y="314" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your inbox and follow the next steps." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVF-Nr-cdY">
+                                <rect key="frame" x="20" y="364" width="374" height="46"/>
+                                <fontDescription key="fontDescription" name="Oxanium-Light" family="Oxanium" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OIE-Jo-cqD"/>
+                        <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KVF-Nr-cdY" firstAttribute="top" secondItem="nHr-ZU-wfd" secondAttribute="bottom" constant="20" id="7R9-UI-EXG"/>
+                            <constraint firstItem="QhE-kw-WiI" firstAttribute="leading" secondItem="OIE-Jo-cqD" secondAttribute="leading" constant="20" id="LZr-r0-E7h"/>
+                            <constraint firstItem="OIE-Jo-cqD" firstAttribute="trailing" secondItem="QhE-kw-WiI" secondAttribute="trailing" constant="20" id="Nt3-Z5-L7k"/>
+                            <constraint firstItem="QhE-kw-WiI" firstAttribute="top" secondItem="OIE-Jo-cqD" secondAttribute="top" constant="30" id="Yst-ad-dGE"/>
+                            <constraint firstItem="OIE-Jo-cqD" firstAttribute="trailing" secondItem="KVF-Nr-cdY" secondAttribute="trailing" constant="20" id="Yvt-Zc-3Hd"/>
+                            <constraint firstItem="nHr-ZU-wfd" firstAttribute="top" secondItem="QhE-kw-WiI" secondAttribute="bottom" constant="40" id="f6S-7a-kLe"/>
+                            <constraint firstItem="OIE-Jo-cqD" firstAttribute="trailing" secondItem="nHr-ZU-wfd" secondAttribute="trailing" constant="20" id="g88-08-fud"/>
+                            <constraint firstItem="KVF-Nr-cdY" firstAttribute="leading" secondItem="OIE-Jo-cqD" secondAttribute="leading" constant="20" id="i6H-5a-sKa"/>
+                            <constraint firstItem="nHr-ZU-wfd" firstAttribute="leading" secondItem="OIE-Jo-cqD" secondAttribute="leading" constant="20" id="qy7-tt-HJy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AvD-Od-RcN"/>
+                    <connections>
+                        <outlet property="imageView" destination="QhE-kw-WiI" id="w61-XX-LaY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cio-1k-r0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.0000000000002" y="1828.7946428571427"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xj4-xC-zFV">
@@ -812,13 +863,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0iD-HK-YA7"/>
+        <segue reference="fbD-Dd-IW4"/>
+        <segue reference="a4B-nc-ZVc"/>
         <segue reference="DFL-XQ-JdC"/>
-        <segue reference="ldT-gc-f81"/>
+        <segue reference="4YS-Mi-1Ng"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="email-rocket" width="128" height="128"/>
         <image name="logo" width="170.5" height="170.5"/>
         <image name="no-image" width="170.5" height="170.5"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
