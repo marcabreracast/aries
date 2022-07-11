@@ -35,7 +35,7 @@ class AccountViewController: UIViewController {
     // MARK: - Private Helpers
 
     private func showActivityIndicator() {
-        myActivityIndicator = UIgiActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        myActivityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         myActivityIndicator.center = self.view.center
         myActivityIndicator.hidesWhenStopped = false
         myActivityIndicator.style = .large
