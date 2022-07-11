@@ -515,11 +515,11 @@
             <objects>
                 <viewController id="5yr-6r-9Ti" customClass="FavoritesViewController" customModule="aries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pgl-MK-3Yr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NGG-pD-Wuq">
-                                <rect key="frame" x="15" y="69" width="384" height="714"/>
+                                <rect key="frame" x="15" y="25" width="384" height="738"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e0e-3e-I0K">
                                     <size key="itemSize" width="358" height="107"/>
@@ -621,7 +621,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jt-OX-rZz" customClass="PasswordTextField" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="20" y="164" width="374" height="50"/>
+                                <rect key="frame" x="20" y="187" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.2941176593" green="0.3058823645" blue="0.40392160420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="fAP-Z2-IsN"/>
@@ -631,7 +631,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLZ-eH-GHW" customClass="PasswordTextField" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="20" y="254" width="374" height="50"/>
+                                <rect key="frame" x="20" y="305" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.2941176593" green="0.3058823645" blue="0.40392160420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tOZ-Yf-GBG"/>
@@ -641,7 +641,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cj1-8U-CUZ" customClass="LoadingButton" customModule="aries" customModuleProvider="target">
-                                <rect key="frame" x="20" y="359" width="374" height="50"/>
+                                <rect key="frame" x="20" y="410" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.59607845540000004" green="0.54901963470000004" blue="0.59215688710000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="P4C-C3-WSb"/>
@@ -657,9 +657,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ley-Wh-aSQ">
-                                <rect key="frame" x="22" y="314" width="372" height="15"/>
+                                <rect key="frame" x="22" y="365" width="372" height="15"/>
                                 <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="15"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnP-HD-2a8">
+                                <rect key="frame" x="21" y="159" width="373" height="16"/>
+                                <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiA-FE-X4z">
+                                <rect key="frame" x="21" y="277" width="372" height="16"/>
+                                <fontDescription key="fontDescription" name="Oxanium-Regular" family="Oxanium" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -670,16 +682,22 @@
                             <constraint firstItem="ISq-ZD-uIy" firstAttribute="trailing" secondItem="Cj1-8U-CUZ" secondAttribute="trailing" constant="20" id="1Gq-XE-5Ks"/>
                             <constraint firstItem="Qua-eG-T8V" firstAttribute="leading" secondItem="ISq-ZD-uIy" secondAttribute="leading" constant="20" id="7Qa-2K-kMK"/>
                             <constraint firstItem="ley-Wh-aSQ" firstAttribute="leading" secondItem="ISq-ZD-uIy" secondAttribute="leading" constant="22" id="7co-vS-1dZ"/>
+                            <constraint firstItem="wiA-FE-X4z" firstAttribute="leading" secondItem="ISq-ZD-uIy" secondAttribute="leading" constant="21" id="7ux-ne-DlN"/>
                             <constraint firstItem="Qua-eG-T8V" firstAttribute="top" secondItem="ISq-ZD-uIy" secondAttribute="top" constant="50" id="7yc-Ge-Kv9"/>
                             <constraint firstItem="pLZ-eH-GHW" firstAttribute="leading" secondItem="ISq-ZD-uIy" secondAttribute="leading" constant="20" id="8N4-qT-f06"/>
                             <constraint firstItem="ley-Wh-aSQ" firstAttribute="top" secondItem="pLZ-eH-GHW" secondAttribute="bottom" constant="10" id="9u3-zE-PJr"/>
                             <constraint firstItem="7jt-OX-rZz" firstAttribute="leading" secondItem="ISq-ZD-uIy" secondAttribute="leading" constant="20" id="A7U-Q9-Mhr"/>
+                            <constraint firstItem="ISq-ZD-uIy" firstAttribute="trailing" secondItem="wiA-FE-X4z" secondAttribute="trailing" constant="21" id="CGN-pq-Ulo"/>
+                            <constraint firstItem="gnP-HD-2a8" firstAttribute="top" secondItem="Qua-eG-T8V" secondAttribute="bottom" constant="35" id="DlP-D0-4Hb"/>
+                            <constraint firstItem="7jt-OX-rZz" firstAttribute="top" secondItem="gnP-HD-2a8" secondAttribute="bottom" constant="12" id="E30-sw-E9E"/>
                             <constraint firstItem="ISq-ZD-uIy" firstAttribute="trailing" secondItem="7jt-OX-rZz" secondAttribute="trailing" constant="20" id="EMt-Ow-b50"/>
                             <constraint firstItem="Cj1-8U-CUZ" firstAttribute="top" secondItem="ley-Wh-aSQ" secondAttribute="bottom" constant="30" id="I6Z-ic-S39"/>
                             <constraint firstItem="ISq-ZD-uIy" firstAttribute="trailing" secondItem="ley-Wh-aSQ" secondAttribute="trailing" constant="20" id="Vhp-Y0-y2b"/>
+                            <constraint firstItem="gnP-HD-2a8" firstAttribute="leading" secondItem="ISq-ZD-uIy" secondAttribute="leading" constant="21" id="akr-Y9-3kz"/>
                             <constraint firstItem="ISq-ZD-uIy" firstAttribute="trailing" secondItem="Qua-eG-T8V" secondAttribute="trailing" constant="20" id="bGg-u7-pkG"/>
-                            <constraint firstItem="pLZ-eH-GHW" firstAttribute="top" secondItem="7jt-OX-rZz" secondAttribute="bottom" constant="40" id="gg3-Ke-Ta0"/>
-                            <constraint firstItem="7jt-OX-rZz" firstAttribute="top" secondItem="Qua-eG-T8V" secondAttribute="bottom" constant="40" id="wCT-lm-Uc1"/>
+                            <constraint firstItem="pLZ-eH-GHW" firstAttribute="top" secondItem="wiA-FE-X4z" secondAttribute="bottom" constant="12" id="dQZ-Oj-Myf"/>
+                            <constraint firstItem="wiA-FE-X4z" firstAttribute="top" secondItem="7jt-OX-rZz" secondAttribute="bottom" constant="40" id="lTJ-R9-ZNk"/>
+                            <constraint firstItem="ISq-ZD-uIy" firstAttribute="trailing" secondItem="gnP-HD-2a8" secondAttribute="trailing" constant="20" id="ufH-KH-x1Z"/>
                             <constraint firstItem="ISq-ZD-uIy" firstAttribute="trailing" secondItem="pLZ-eH-GHW" secondAttribute="trailing" constant="20" id="yh3-Hn-1Gk"/>
                         </constraints>
                     </view>
@@ -720,11 +738,11 @@
             <objects>
                 <viewController id="iAM-wB-Bde" customClass="AccountViewController" customModule="aries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PUW-Qj-qzo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DqP-sH-9eB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="735"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.21960784310000001" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="accountCell" rowHeight="100" id="Rf6-tk-BYq" customClass="AccountCell" customModule="aries" customModuleProvider="target">
@@ -863,10 +881,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fbD-Dd-IW4"/>
-        <segue reference="a4B-nc-ZVc"/>
+        <segue reference="0iD-HK-YA7"/>
         <segue reference="DFL-XQ-JdC"/>
-        <segue reference="4YS-Mi-1Ng"/>
+        <segue reference="ldT-gc-f81"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
