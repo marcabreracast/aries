@@ -10,7 +10,7 @@ import UIKit
 class CheckYourEmailViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var imageView: UIImageView!
-q
+
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
