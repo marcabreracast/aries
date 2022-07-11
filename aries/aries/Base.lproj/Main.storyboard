@@ -690,11 +690,12 @@
                         <outlet property="errorLabel" destination="ley-Wh-aSQ" id="eLP-e0-B67"/>
                         <outlet property="passwordTextField" destination="7jt-OX-rZz" id="7b4-IE-OVD"/>
                         <segue destination="Exo-BM-XK3" kind="show" identifier="goToLoginViewController" id="ldT-gc-f81"/>
+                        <segue destination="18J-92-NSH" kind="show" identifier="goToLaunchesViewController" id="0iD-HK-YA7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1d-Fm-5Lm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="477" y="1576"/>
+            <point key="canvasLocation" x="517" y="830"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xmk-7s-dZA">
@@ -786,7 +787,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqd-R7-Fzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1658" y="830"/>
+            <point key="canvasLocation" x="1658" y="1597"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xj4-xC-zFV">
@@ -811,7 +812,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Frb-XO-8Tr"/>
+        <segue reference="0iD-HK-YA7"/>
         <segue reference="DFL-XQ-JdC"/>
         <segue reference="ldT-gc-f81"/>
     </inferredMetricsTieBreakers>

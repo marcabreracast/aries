@@ -49,7 +49,12 @@ class ResetPasswordViewController: UIViewController {
         let alert = UIAlertController(title: "Reset Password", message: "Your password was reset successfully", preferredStyle: UIAlertController.Style.alert)
 
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in
-            self.performSegue(withIdentifier: "goToLoginViewController", sender: nil)
+            // If user is logged in then we continue in app, if not it's redirected to Login
+            if let _ = app.currentUser {
+                self.performSegue(withIdentifier: "goToLaunchesViewController", sender: nil)
+            } else {
+                self.performSegue(withIdentifier: "goToLoginViewController", sender: nil)
+            }
         }))
 
         self.present(alert, animated: true, completion: nil)
