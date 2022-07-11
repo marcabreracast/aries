@@ -20,6 +20,7 @@ class AccountViewController: UIViewController {
     // MARK: - Properties
     let realm = try! Realm()
     var user: User?
+    var myActivityIndicator = UIActivityIndicatorView()
 
 
     // MARK: - View Lifecycle
@@ -33,6 +34,25 @@ class AccountViewController: UIViewController {
 
     // MARK: - Private Helpers
 
+    private func showActivityIndicator() {
+        myActivityIndicator = UIgiActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        myActivityIndicator.center = self.view.center
+        myActivityIndicator.hidesWhenStopped = false
+        myActivityIndicator.style = .large
+        myActivityIndicator.color = .white
+
+        self.view.addSubview(myActivityIndicator)
+        myActivityIndicator.startAnimating()
+        // We need to hide the table view while the data is loading
+        self.tableView.isHidden = true
+    }
+
+    private func hideActivityIndicator() {
+        self.myActivityIndicator.hidesWhenStopped = true
+        self.myActivityIndicator.stopAnimating()
+        self.tableView.isHidden = false
+    }
+
     private func logoutUser() {
         app.currentUser?.logOut(){ (_) in
             DispatchQueue.main.async {
@@ -45,9 +65,9 @@ class AccountViewController: UIViewController {
     private func resetPassword() {
         let email = app.currentUser?.profile.email ?? ""
         let client = app.emailPasswordAuth
+        self.showActivityIndicator()
 
         client.sendResetPasswordEmail(email) { (error) in
-            // There should be something to show loading
             DispatchQueue.main.async {
                 guard error == nil else {
                     print("Reset password email not sent: \(error!.localizedDescription)")
@@ -55,6 +75,7 @@ class AccountViewController: UIViewController {
                 }
 
                 print("Password reset email sent to the following address: \(email)")
+                self.hideActivityIndicator()
 
                 self.performSegue(withIdentifier: "goToCheckYourEmailVC", sender: nil)
             }
