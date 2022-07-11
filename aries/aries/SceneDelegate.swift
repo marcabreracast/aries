@@ -30,14 +30,42 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
         }
+        
+
     }
 
     // UNIVERSAL LINKS HANDLING
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        
+        if let url = userActivity.webpageURL {
+            // We get the token and tokenId URL parameters, they're necessary in order to reset password
+            let token = url.valueOf("token")
+            let tokenId = url.valueOf("tokenId")
 
-        guard let url = userActivity.webpageURL else { return }
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let resetPasswordViewController = storyboard.instantiateViewController(identifier: "ResetPasswordViewController") as! ResetPasswordViewController
+            // We might not need a navigation controller 
+            let navigationController = UINavigationController(rootViewController: resetPasswordViewController)
+            resetPasswordViewController.token = token
+            resetPasswordViewController.tokenId = tokenId
 
-        print(url)
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+        }
+        /*
+        if let windowScene = scene as? UIWindowScene {
+            for window in windowScene.windows {
+                if let rootViewController = window.rootViewController {
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    if let yourVC = storyboard.instantiateViewController(withIdentifier: "ResetPasswordViewController") as? ResetPasswordViewController,
+                       let navController = rootViewController as? UINavigationController {
+                      //  yourVC.data = url
+                        navController.pushViewController(yourVC, animated: true)
+                    }
+                }
+            }
+        }
+        */
 
     }
 
@@ -67,6 +95,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+}
+
+extension URL {
+    // Function that returns a specific query parameter from the URL
+    func valueOf(_ queryParameterName: String) -> String? {
+        guard let url = URLComponents(string: self.absoluteString) else { return nil }
+
+        return url.queryItems?.first(where: {$0.name == queryParameterName})?.value
     }
 }
 
