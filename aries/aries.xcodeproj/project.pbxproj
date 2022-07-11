@@ -22,6 +22,7 @@
 		3E66E12828731C5A0061A3B4 /* Validation+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E66E12728731C5A0061A3B4 /* Validation+Helper.swift */; };
 		3E6A4815286EFC21006F27C9 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A4814286EFC21006F27C9 /* AccountCell.swift */; };
 		3E6C8A032848FBAE0037B6C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C8A022848FBAE0037B6C6 /* User.swift */; };
+		3E6E4204287C59EA00862037 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E4203287C59EA00862037 /* URL+Extension.swift */; };
 		3E763EF72847A89B00A1DDBC /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */; };
 		3E763EF92847BAE000A1DDBC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */; };
 		3E7DBC10283E3ADB00B92FD7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3E7DBC0F283E3ADB00B92FD7 /* Realm */; };
@@ -87,6 +88,7 @@
 		3E66E12728731C5A0061A3B4 /* Validation+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Validation+Helper.swift"; sourceTree = "<group>"; };
 		3E6A4814286EFC21006F27C9 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		3E6C8A022848FBAE0037B6C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3E6E4203287C59EA00862037 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		3E763EF62847A89B00A1DDBC /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		3E7DBC13283E44CA00B92FD7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -180,13 +182,21 @@
 			isa = PBXGroup;
 			children = (
 				3E5C64952826D5F900831887 /* Date+Helper.swift */,
-				3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */,
-				3E5967AE2850F4E8001933A1 /* MKMapView+Extension.swift */,
-				3E2B9D332863586300CCAF24 /* UIImageView+Extension.swift */,
-				3E80FAC5286F3FB800BE2C9B /* UISegmentedControl+Extension.swift */,
 				3E66E12728731C5A0061A3B4 /* Validation+Helper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3E6E4202287C59AC00862037 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E763EF82847BAE000A1DDBC /* UIViewController+Extension.swift */,
+				3E5967AE2850F4E8001933A1 /* MKMapView+Extension.swift */,
+				3E80FAC5286F3FB800BE2C9B /* UISegmentedControl+Extension.swift */,
+				3E2B9D332863586300CCAF24 /* UIImageView+Extension.swift */,
+				3E6E4203287C59EA00862037 /* URL+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3E7DBC18283E4D5700B92FD7 /* Components */ = {
@@ -241,6 +251,7 @@
 				3E7DBC18283E4D5700B92FD7 /* Components */,
 				3E5B8FEC283BD3DF0015B107 /* Models */,
 				3E5B8FEB283BD3C30015B107 /* Cells */,
+				3E6E4202287C59AC00862037 /* Extensions */,
 				3E5C64972826D7B700831887 /* Helpers */,
 				3EDD731D28256867000FAFD8 /* AppDelegate.swift */,
 				3EDD731F28256867000FAFD8 /* SceneDelegate.swift */,
@@ -574,6 +585,7 @@
 				3EDD732028256867000FAFD8 /* SceneDelegate.swift in Sources */,
 				3E5C64962826D5F900831887 /* Date+Helper.swift in Sources */,
 				3E5967AF2850F4E8001933A1 /* MKMapView+Extension.swift in Sources */,
+				3E6E4204287C59EA00862037 /* URL+Extension.swift in Sources */,
 				3E5F841F2864852D00020DD0 /* FavoritesViewController.swift in Sources */,
 				3EA3233F2872F11B0057AEA8 /* PasswordTextField.swift in Sources */,
 				3E66E12828731C5A0061A3B4 /* Validation+Helper.swift in Sources */,

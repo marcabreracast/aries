@@ -97,13 +97,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 }
-
-extension URL {
-    // Function that returns a specific query parameter from the URL
-    func valueOf(_ queryParameterName: String) -> String? {
-        guard let url = URLComponents(string: self.absoluteString) else { return nil }
-
-        return url.queryItems?.first(where: {$0.name == queryParameterName})?.value
-    }
-}
-
